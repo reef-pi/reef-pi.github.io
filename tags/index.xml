@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on reef-pi - A Rasoberry Pi based opensource reef tank controller</title>
-    <link>http://reef-pi.com/tags/</link>
+    <link>https://reef-pi.com/tags/</link>
     <description>Recent content in Tags on reef-pi - A Rasoberry Pi based opensource reef tank controller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://reef-pi.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://reef-pi.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -3,28 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://reef-pi.com/release/0.0.7/</loc>
+    <loc>https://reef-pi.com/release/0.0.7/</loc>
     <lastmod>2017-07-17T21:10:38-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://reef-pi.com/categories/</loc>
+    <loc>https://reef-pi.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://reef-pi.com/release/</loc>
+    <loc>https://reef-pi.com/release/</loc>
     <lastmod>2017-07-17T21:10:38-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://reef-pi.com/tags/</loc>
+    <loc>https://reef-pi.com/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://reef-pi.com/</loc>
+    <loc>https://reef-pi.com/</loc>
     <lastmod>2017-07-17T21:10:38-07:00</lastmod>
     <priority>0</priority>
   </url>
