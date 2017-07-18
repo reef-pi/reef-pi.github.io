@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Releases on reef-pi - A Rasoberry Pi based opensource reef tank controller</title>
+    <link>http://reef-pi.com/release/</link>
+    <description>Recent content in Releases on reef-pi - A Rasoberry Pi based opensource reef tank controller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Jul 2017 21:10:38 -0700</lastBuildDate>
+    
+	<atom:link href="http://reef-pi.com/release/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0.0.7</title>
+      <link>http://reef-pi.com/release/0.0.7/</link>
+      <pubDate>Mon, 17 Jul 2017 21:10:38 -0700</pubDate>
+      
+      <guid>http://reef-pi.com/release/0.0.7/</guid>
+      <description> Features  DFRobot&amp;rsquo;s photo electric sensor based ATO controller Temperature sensor &amp;amp; controller, based on ds18b20. Controller to switch on/off heater/cooler based on configuration Admin User Interface: Allow shutdown of raspberry pi, reboot from UI  Bugfix  Lighting minimum threshold to ensure pwm value is set to 0 Equipment state should reflect original state, instead of always &amp;ldquo;off&amp;rdquo; on tab change Fix exception during shutdown in dev_mode  Documentation  Draft manual for reef-pi  </description>
+    </item>
+    
+  </channel>
+</rss>
