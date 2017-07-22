@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>Electronics</title>
+      <link>https://reef-pi.github.io/guides/electronics/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/guides/electronics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Building a power controller with reef-pi</title>
       <link>https://reef-pi.github.io/guides/power_controller/</link>
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
@@ -63,6 +72,26 @@
       
       <guid>https://reef-pi.github.io/guides/temperature_controller/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://reef-pi.github.io/guides/tools/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/guides/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://reef-pi.github.io/guides/troubleshooting/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/guides/troubleshooting/</guid>
+      <description>Check if reef-pi is running
+sudo ystemctl status reef-pi.service  Check for errors in logA
+sudo journalctl -fu reef-pi.service  Connecting reef-pi using a TTL cable</description>
     </item>
     
     <item>
