@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>reef-pi - A Rasoberry Pi based opensource reef tank controller</title>
-    <link>https://reef-pi.github.io/</link>
-    <description>Recent content on reef-pi - A Rasoberry Pi based opensource reef tank controller</description>
+    <title>Guides on reef-pi - A Rasoberry Pi based opensource reef tank controller</title>
+    <link>https://reef-pi.github.io/guides/</link>
+    <description>Recent content in Guides on reef-pi - A Rasoberry Pi based opensource reef tank controller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://reef-pi.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://reef-pi.github.io/guides/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -73,15 +73,6 @@
       <guid>https://reef-pi.github.io/guides/development/</guid>
       <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
 Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
-    </item>
-    
-    <item>
-      <title>0.0.7</title>
-      <link>https://reef-pi.github.io/blogs/release-0.0.7/</link>
-      <pubDate>Mon, 17 Jul 2017 21:10:38 -0700</pubDate>
-      
-      <guid>https://reef-pi.github.io/blogs/release-0.0.7/</guid>
-      <description> Features  DFRobot&amp;rsquo;s photo electric sensor based ATO controller Temperature sensor &amp;amp; controller, based on ds18b20. Controller to switch on/off heater/cooler based on configuration Admin User Interface: Allow shutdown of raspberry pi, reboot from UI  Bugfix  Lighting minimum threshold to ensure pwm value is set to 0 Equipment state should reflect original state, instead of always &amp;ldquo;off&amp;rdquo; on tab change Fix exception during shutdown in dev_mode  Documentation  Draft manual for reef-pi  </description>
     </item>
     
   </channel>
