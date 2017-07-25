@@ -3,53 +3,68 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://reef-pi.github.io/guides/kessil_build/</loc>
+    <loc>https://reef-pi.github.io/build-guides/01_power/</loc>
+    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/general-guides/01_tools/</loc>
+    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/build-guides/02_ato/</loc>
+    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/general-guides/02_electronics/</loc>
+    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/build-guides/03_kessil/</loc>
     <lastmod>2017-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/guides/aio_build/</loc>
+    <loc>https://reef-pi.github.io/general-guides/03_touchscreen_display/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/guides/ato_build/</loc>
+    <loc>https://reef-pi.github.io/build-guides/04_temperature/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/guides/touchscreen_display/</loc>
+    <loc>https://reef-pi.github.io/general-guides/04_troubleshooting/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/guides/electronics/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+    <loc>https://reef-pi.github.io/build-guides/05_doser/</loc>
+    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/guides/power_controller/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/guides/temperature_controller/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/guides/tools/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/guides/troubleshooting/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/guides/development/</loc>
+    <loc>https://reef-pi.github.io/general-guides/05_development/</loc>
     <lastmod>2017-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/build-guides/06_aio/</loc>
+    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/build-guides/</loc>
+    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/general-guides/</loc>
+    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -69,19 +84,13 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/guides/</loc>
-    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://reef-pi.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://reef-pi.github.io/</loc>
-    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

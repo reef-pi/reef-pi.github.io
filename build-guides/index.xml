@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Build guides on reef-pi - A Rasoberry Pi based opensource reef tank controller</title>
+    <link>https://reef-pi.github.io/build-guides/</link>
+    <description>Recent content in Build guides on reef-pi - A Rasoberry Pi based opensource reef tank controller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://reef-pi.github.io/build-guides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to build a power controller</title>
+      <link>https://reef-pi.github.io/build-guides/01_power/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/01_power/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to build an auto-top-off system</title>
+      <link>https://reef-pi.github.io/build-guides/02_ato/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/02_ato/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to build a kessil controller</title>
+      <link>https://reef-pi.github.io/build-guides/03_kessil/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/03_kessil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to build a temperature controller</title>
+      <link>https://reef-pi.github.io/build-guides/04_temperature/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/04_temperature/</guid>
+      <description> A temperature controller
+Electronics  Raspberry Pi DS18B20 temperature probe relay (at least two channels) 110V Electrical receptacles Inlet module plug Jumper wires and electrical wires Audio jack cable Female audio jack (panel mount)  Tools Wiring Housing Configuration Using temeprature controller </description>
+    </item>
+    
+    <item>
+      <title>How to build a dosing controller</title>
+      <link>https://reef-pi.github.io/build-guides/05_doser/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/05_doser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to build an all-in-one controller</title>
+      <link>https://reef-pi.github.io/build-guides/06_aio/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/06_aio/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

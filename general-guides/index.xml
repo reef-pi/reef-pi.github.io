@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>General Guides on reef-pi - A Rasoberry Pi based opensource reef tank controller</title>
+    <link>https://reef-pi.github.io/general-guides/</link>
+    <description>Recent content in General Guides on reef-pi - A Rasoberry Pi based opensource reef tank controller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://reef-pi.github.io/general-guides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What tools you need?</title>
+      <link>https://reef-pi.github.io/general-guides/01_tools/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/01_tools/</guid>
+      <description> reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron multimeter plier wire stripper  Wood working  Scroll saw Clamps -  </description>
+    </item>
+    
+    <item>
+      <title>What electronics you need?</title>
+      <link>https://reef-pi.github.io/general-guides/02_electronics/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/02_electronics/</guid>
+      <description> Raspberry Pi Raspberrt Pi 7&amp;rdquo; Touchscreen display Relays PCA9685 L293D ULN2803a Connectors  3.5 mm right angle, male audio jacks with bare wire 3.5 mm female panel mount audio jack DC female panel mount barel jack 5 volt 2.5 amp micro USB power supply 12 volt, 1 amp DC barrel jack power supply  Electrical components  Power socket with fuse Universal power cord: NEMA5 110v electrical receptacles  Peristaltic pumps PN2222 transistor 1K and 10K resistors    </description>
+    </item>
+    
+    <item>
+      <title>How to setup a touchscreen display</title>
+      <link>https://reef-pi.github.io/general-guides/03_touchscreen_display/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/03_touchscreen_display/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to troubleshoot and ask for help</title>
+      <link>https://reef-pi.github.io/general-guides/04_troubleshooting/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/04_troubleshooting/</guid>
+      <description>Check if reef-pi is running
+sudo ystemctl status reef-pi.service  Check for errors in logA
+sudo journalctl -fu reef-pi.service  Connecting reef-pi using a TTL cable</description>
+    </item>
+    
+    <item>
+      <title>How to setup reef-pi development environment</title>
+      <link>https://reef-pi.github.io/general-guides/05_development/</link>
+      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/05_development/</guid>
+      <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
+Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
+    </item>
+    
+  </channel>
+</rss>
