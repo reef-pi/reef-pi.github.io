@@ -35,7 +35,9 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/03_touchscreen_display/</guid>
-      <description></description>
+      <description> reef-pi can be configured to be used with the offical Raspberry Pi Touchscreen display. This can be used to directly siwtch on/off equipments, control light intensity and a general purpose dashboard of controller health.
+Note: The touchscreen display only works with Raspberry Pi 3, it does not work with pi zero.
+Things you need  Raspberry Pi 3 Raspberry Pi Official Touchscreen Camera cable  Configuration  Enabling display in reef-pi configuration Auto-starting dashboard on-boot Adjusting rotation  </description>
     </item>
     
     <item>
@@ -44,9 +46,9 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/04_troubleshooting/</guid>
-      <description>Check if reef-pi is running
-sudo ystemctl status reef-pi.service  Check for errors in logA
-sudo journalctl -fu reef-pi.service  Connecting reef-pi using a TTL cable</description>
+      <description>Check if reef-pi is running  sudo ystemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
+ Check reef-pi version (helps in bug reports)
+  reef-pi -version   Resetting reef-pi &amp;rsquo;s data base  sudo systemctl stop reef-pi.</description>
     </item>
     
     <item>
@@ -57,6 +59,34 @@ sudo journalctl -fu reef-pi.service  Connecting reef-pi using a TTL cable</descr
       <guid>https://reef-pi.github.io/general-guides/05_development/</guid>
       <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
 Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
+    </item>
+    
+    <item>
+      <title>How to build a housing</title>
+      <link>https://reef-pi.github.io/general-guides/06_housing/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/06_housing/</guid>
+      <description>Building an appropriate housing is critical part of a controller build. Housing or enclosure secures the elctronics from outside environment, as well as provides mounting place for the different probes, equipments and display panels.
+Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
+    </item>
+    
+    <item>
+      <title>How to install reef-pi on Raspberry Pi</title>
+      <link>https://reef-pi.github.io/general-guides/07_install/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/07_install/</guid>
+      <description> Prepare Raspberry Pi image  Download raspbian image Write raspbian image to micro SD card  Configure raspberry pi  Configure wifi Update system Change password Enable i2c,onewire,spi,uart Configure and enable ssh  Install reef-pi  Download latest reef-pi release Install reef-pi  dpkg -i reef-pi-&amp;lt;version&amp;gt;.deb   Check reef-pi is running  systemctl status reef-pi.service  Configure reef-pi  Enable accessing UI from other devices  address: 0.0.0.0:8080   Define outlets  </description>
+    </item>
+    
+    <item>
+      <title>How to setup telemetry and dashboatd with reef-pi</title>
+      <link>https://reef-pi.github.io/general-guides/08_telemetry/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/08_telemetry/</guid>
+      <description> Signing up for adafruit.io account Configuring reef-pi with adafruit.io key </description>
     </item>
     
   </channel>

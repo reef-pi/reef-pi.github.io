@@ -17,7 +17,7 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/01_power/</guid>
-      <description></description>
+      <description> Things you need  Raspberry Pi. Both Pi zero or Pi 3 will work Relays, any type of relay that can support 110v or 220v AC outlets using 5 volt logic will work. Remember Solid State Relays run longer than mechanical relays. Number of channels in relay will limit how many outlets you can have Jumper wires 5v 2.5 amp micro usb power supply for raspberry pi Unviersal powe chord Power socket with fuse AC receptacles  Wiring Configuring reef-pi  Declare outlets Restart reef-pi Configure high relay  </description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/02_ato/</guid>
-      <description></description>
+      <description> Things you need  Raspberry Pi. Both Pi zero or Pi 3 will work Single channel relay Photo electric water level sensor 3.5mm female, panel mount audio jack Jumper wires 3.5mm Right angle, bare wire male audio connector 5 volt 2.5 amp micro usb power supply for raspberry pi Submercible water pump Unviersal powe chord Power socket with fuse AC receptacles  Wiring Configuring reef-pi  Enable and configure ATO in reef-pi configuration file Restart reef-pi  </description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/03_kessil/</guid>
-      <description></description>
+      <description> Things you need  Raspberry Pi. Both Pi zero or Pi 3 will work PCA9685 breakout board 2 PN2222 transistors 2 10k resistors, 2 1K resistors 3.5mm female, panel mount audio jack 3.5mm Right angle, bare wire male audio connector 5 volt 2.5 amp micro usb power supply for raspberry pi 10v DC power adapter Jumper wires  Wiring Configuring reef-pi  Enable and configure led channels reef-pi configuration file Restart reef-pi  Setting up 24 hour lighting cycle </description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       
       <guid>https://reef-pi.github.io/build-guides/04_temperature/</guid>
       <description> A temperature controller
-Electronics  Raspberry Pi DS18B20 temperature probe relay (at least two channels) 110V Electrical receptacles Inlet module plug Jumper wires and electrical wires Audio jack cable Female audio jack (panel mount)  Tools Wiring Housing Configuration Using temeprature controller </description>
+Electronics  Raspberry Pi DS18B20 temperature probe relay (at least two channels) 110V Electrical receptacles Inlet module plug Jumper wires and electrical wires Audio jack cable Female audio jack (panel mount)  Wiring Configuration </description>
     </item>
     
     <item>

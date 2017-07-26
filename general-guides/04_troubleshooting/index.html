@@ -73,17 +73,37 @@ ga('send', 'pageview');
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="blogpost">
-              <p>Check if reef-pi is running</p>
+              <ul>
+<li>Check if reef-pi is running</li>
+</ul>
 
 <pre><code>sudo ystemctl status reef-pi.service
 </code></pre>
 
-<p>Check for errors in logA</p>
+<ul>
+<li>Check for errors in log</li>
+</ul>
 
 <pre><code>sudo journalctl -fu reef-pi.service
 </code></pre>
 
-<p>Connecting reef-pi using a TTL cable</p>
+<ul>
+<li><p>Connecting reef-pi using a TTL cable. Adafruit has an excellent <a href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable?view=all">tutorial</a> on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.</p></li>
+
+<li><p>Check reef-pi version (helps in bug reports)</p></li>
+</ul>
+
+<pre><code>reef-pi -version
+</code></pre>
+
+<ul>
+<li>Resetting reef-pi &rsquo;s data base</li>
+</ul>
+
+<pre><code>sudo systemctl stop reef-pi.service
+sudo rm -rf /var/lib/reef-pi/reef-pi.db
+sudo ststemctl start reef-pi.service
+</code></pre>
 
             </div>
           </div>
