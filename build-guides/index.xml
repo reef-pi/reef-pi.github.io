@@ -17,7 +17,7 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/01_power/</guid>
-      <description> Things you need  Raspberry Pi. Both Pi zero or Pi 3 will work Relays, any type of relay that can support 110v or 220v AC outlets using 5 volt logic will work. Remember Solid State Relays run longer than mechanical relays. Number of channels in relay will limit how many outlets you can have Jumper wires 5v 2.5 amp micro usb power supply for raspberry pi Unviersal powe chord Power socket with fuse AC receptacles  Wiring Configuring reef-pi  Declare outlets Restart reef-pi Configure high relay  </description>
+      <description>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. Timers can be used to turn on/off light or skimmer daily. On-demand controls allow turning off equipments like ATO and return pump during water changes. It also involve minimal electronics and configuration among all other controller based on reef-pi. This build guide will go through step by step process of building a four outlet power strip controller based on reef-pi.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       
       <guid>https://reef-pi.github.io/build-guides/04_temperature/</guid>
       <description> A temperature controller
-Electronics  Raspberry Pi DS18B20 temperature probe relay (at least two channels) 110V Electrical receptacles Inlet module plug Jumper wires and electrical wires Audio jack cable Female audio jack (panel mount)  Wiring Configuration </description>
+Electronics  Raspberry Pi DS18B20 temperature probe relay (at least two channels) 110V Electrical receptacles Inlet module plug Jumper wires and electrical wires Audio jack cable Female audio jack (panel mount)  Wiring Configuration Resources  Adafruit tutorial  </description>
     </item>
     
     <item>

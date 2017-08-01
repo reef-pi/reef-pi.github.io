@@ -37,7 +37,8 @@ ga('send', 'pageview');
     <div id="wrap">
 
       
-      <nav class="navbar navbar-default">
+      <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/img.css" />
+<nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="https://reef-pi.github.io/"><i class="fa fa-home"></i></a>
@@ -75,27 +76,70 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<h3 id="things-you-need">Things you need</h3>
+<p>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. Timers can be used to turn on/off light or skimmer daily. On-demand controls allow turning off equipments like ATO and return pump during water changes. It also involve minimal electronics and configuration among all other controller based on reef-pi. This build guide will go through step by step process of building a four outlet power strip controller based on reef-pi.</p>
+
+<h3 id="things-to-consider">Things to consider</h3>
 
 <ul>
-<li>Raspberry Pi. Both Pi zero or Pi 3 will work</li>
-<li>Relays, any type of relay that can support 110v or 220v AC outlets using 5 volt logic will work. Remember Solid State Relays run longer than mechanical relays. Number of channels in relay will limit how many outlets you can have</li>
-<li>Jumper wires</li>
-<li>5v 2.5 amp micro usb power supply for raspberry pi</li>
-<li>Unviersal powe chord</li>
-<li>Power socket with fuse</li>
-<li>AC receptacles</li>
+<li>Relay types: Controlling high AC voltahes via Raspbwrry Pi involves relays. Relays can be opto-couplers, mechanical or solid state. Mechanical relays are cheapest, optocouplers are safest and expensive. Solid state relays are somewhere in the middle, safer and last longer than mechanical relays and cheaper, readily available that opto coupler.</li>
+<li>Number of channels: The number of channels in a relay board determines how many AC connections can be controller. Since we are building a 4 outlet powerstrip, we&rsquo;ll go with a 4 channel ssd relay. We&rsquo;ll need one GPIO pin of Raspberry Pi for each channel on the relay. It is possible to control around 18 channel relays using raspberry pi alone (it can be extend to thousands using an IO expander).</li>
+</ul>
+
+<h3 id="bill-of-materials">Bill of Materials</h3>
+
+<ul>
+<li><a href="https://www.adafruit.com/product/3400">Pi zero</a></li>
+<li><a href="https://www.adafruit.com/product/2693">micro sd card</a></li>
+<li>4 Channel SSD relay. <a href="https://www.amazon.com/gp/product/B00ZZVQR5Q/">example</a></li>
+<li>5v 2.4 amp <a href="https://www.adafruit.com/product/1995">adapter</a> for Raspberry Pi</li>
+<li>AC Power adapter with fuse. <a href="https://www.amazon.com/gp/product/B00ME5YAPK">example</a></li>
+<li>AC Power cord. <a href="https://www.amazon.com/gp/product/B00005113L/">example</a></li>
+<li>AC receptacles <a href="https://www.amazon.com/gp/product/B002DQT5UK/">example</a></li>
+<li>Female female jumper wires. <a href="https://www.amazon.com/gp/product/B00DJY4RS0">example</a></li>
 </ul>
 
 <h3 id="wiring">Wiring</h3>
 
-<h3 id="configuring-reef-pi">Configuring reef-pi</h3>
+<p><img src="/img/power_strip/breadboard.png" alt="breadboard" /></p>
+
+<h3 id="install-configure-reef-pi">Install &amp; Configure reef-pi</h3>
+
+<p>Follow reef-pi installation <a href="http://reef-pi.com/general-guides/07_install">guide</a> to setup reef-pi on Raspberry Pi zero.</p>
 
 <ul>
-<li>Declare outlets</li>
-<li>Restart reef-pi</li>
-<li>Configure high relay</li>
+<li>Declare outlets and equipments</li>
 </ul>
+
+<pre><code class="language-yaml">outlets:
+	AC1:
+		pin: 4
+  AC2:
+    pin: 18
+  AC3:
+    pin: 14
+  AC4:
+    pin:
+equipments:
+   Heater: AC0
+   Return: AC1
+   Light: 
+  
+</code></pre>
+
+<p>Note: the pin number represent the GPIO Pin number, not their position on the Raspberry Pi.</p>
+
+<ul>
+<li>Restart reef-pi</li>
+</ul>
+
+<pre><code>sudo systemctl restart reef-pi.service
+</code></pre>
+
+<h3 id="usage">Usage</h3>
+
+<h4 id="controlling-equipments-on-demand">Controlling equipments on-demand</h4>
+
+<h4 id="controlling-equipments-using-timers">Controlling equipments using timers</h4>
 
             </div>
           </div>
