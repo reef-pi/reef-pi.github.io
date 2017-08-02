@@ -76,22 +76,67 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
+<p>This guide will walk you throug the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assume prior familiarity with computers, no programming knowledge is required.</p>
+
 <h3 id="prepare-raspberry-pi-image">Prepare Raspberry Pi image</h3>
 
-<ul>
-<li>Download raspbian image</li>
-<li>Write raspbian image to micro SD card</li>
-</ul>
+<p>We recommend a microSD card of Class10 and atleast 8Gb capacity for reef-pi. reef-pi is tested on raspbian, but it should work on most other linux OS, on Raspberry Pi. Follow the official raspberry pi guide for details instructions:
+- <a href="https://www.raspberrypi.org/documentation/installation/installing-images/">Download and write raspbian image to micro SD card</a></p>
 
 <h3 id="configure-raspberry-pi">Configure raspberry pi</h3>
 
+<p>Oncei raspbian image is written on microSD card, plug it in Raspberry Pi and power it. Once started configure following things at leat, for optimal performance of reef-pi.</p>
+
 <ul>
-<li>Configure wifi</li>
-<li>Update system</li>
-<li>Change password</li>
-<li>Enable i2c,onewire,spi,uart</li>
-<li>Configure and enable ssh</li>
+<li>Configure wifi: Enabling wifi or ethernet based internet connection allows reef-pi to be accessible from any web browser (mobile, tablet or computers). Note, this is not a manadatory requirement for running wifi. It is just a convenience.</li>
 </ul>
+
+<p>Next set of steps assume you are working on terminal:
+- Update system: Perform a system update with following command. Note: if internet is not enabled, this will not work, and should be skipped.</p>
+
+<pre><code>sudo apt-get update -y
+sudo apt-get upgrade -y
+</code></pre>
+
+<ul>
+<li>Change password: Raspbian images comes with stock password for the &ldquo;pi&rdquo; user. Reset it to something unique and stronger</li>
+</ul>
+
+<pre><code>passwd
+</code></pre>
+
+<ul>
+<li>Enable i2c,onewire,spi,uart: Different types of electronics in reef-pi requires a number of kernel modules and device drivers to be loaded in kernel. Edit <code>/boot/config.txt</code> to load these modules</li>
+</ul>
+
+<pre><code>dtparam=i2c_arm=on
+dtparam=spi=on
+dtparam=audio=on
+enable_uart=1
+dtoverlay=w1-gpio
+</code></pre>
+
+<ul>
+<li>Configure and enable ssh: ssh is used to remotely control and troubleshoot the Raspberry Pi directly.</li>
+</ul>
+
+<pre><code>sudo systemctl start ssh.service
+sudo systemctl enable ssh.service
+</code></pre>
+
+<ul>
+<li>Set time and date: Configure raspbian to use network time to synchronize its date &amp; time information. Also set specific locale, to reflect the local time instead of UTC</li>
+</ul>
+
+<pre><code>sudo systemctl start ntp.service
+sudo systemctl enable ntp.service
+sudo dpkg-reconfigure locales
+</code></pre>
+
+<p>Finally, reboot Raspberry Pi to apply all the kernel configuration changes</p>
+
+<pre><code>sudo reboot
+</code></pre>
 
 <h3 id="install-reef-pi">Install reef-pi</h3>
 
@@ -118,10 +163,6 @@ ga('send', 'pageview');
 
 <pre><code class="language-yaml">address: 0.0.0.0:8080
 </code></pre>
-
-<ul>
-<li>Define outlets</li>
-</ul>
 
             </div>
           </div>

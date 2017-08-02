@@ -17,7 +17,7 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/01_power/</guid>
-      <description>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. Timers can be used to turn on/off light or skimmer daily. On-demand controls allow turning off equipments like ATO and return pump during water changes. It also involve minimal electronics and configuration among all other controller based on reef-pi. This build guide will go through step by step process of building a four outlet power strip controller based on reef-pi.</description>
+      <description>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-deman controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</description>
     </item>
     
     <item>
@@ -132,7 +132,7 @@ Housing material Depending upon where and what type of controller you are buildi
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/07_install/</guid>
-      <description> Prepare Raspberry Pi image  Download raspbian image Write raspbian image to micro SD card  Configure raspberry pi  Configure wifi Update system Change password Enable i2c,onewire,spi,uart Configure and enable ssh  Install reef-pi  Download latest reef-pi release Install reef-pi  dpkg -i reef-pi-&amp;lt;version&amp;gt;.deb   Check reef-pi is running  systemctl status reef-pi.service  Configure reef-pi  Enable accessing UI from other devices  address: 0.0.0.0:8080   Define outlets  </description>
+      <description>This guide will walk you throug the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assume prior familiarity with computers, no programming knowledge is required.</description>
     </item>
     
     <item>

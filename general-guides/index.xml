@@ -77,7 +77,7 @@ Housing material Depending upon where and what type of controller you are buildi
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/07_install/</guid>
-      <description> Prepare Raspberry Pi image  Download raspbian image Write raspbian image to micro SD card  Configure raspberry pi  Configure wifi Update system Change password Enable i2c,onewire,spi,uart Configure and enable ssh  Install reef-pi  Download latest reef-pi release Install reef-pi  dpkg -i reef-pi-&amp;lt;version&amp;gt;.deb   Check reef-pi is running  systemctl status reef-pi.service  Configure reef-pi  Enable accessing UI from other devices  address: 0.0.0.0:8080   Define outlets  </description>
+      <description>This guide will walk you throug the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assume prior familiarity with computers, no programming knowledge is required.</description>
     </item>
     
     <item>
