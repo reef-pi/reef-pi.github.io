@@ -12,40 +12,29 @@
     
     
     <item>
-      <title>What tools you need?</title>
-      <link>https://reef-pi.github.io/general-guides/01_tools/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      <title>How to install reef-pi on Raspberry Pi</title>
+      <link>https://reef-pi.github.io/general-guides/install/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/general-guides/01_tools/</guid>
-      <description> reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron multimeter plier wire stripper  Wood working  Scroll saw Clamps -  </description>
+      <guid>https://reef-pi.github.io/general-guides/install/</guid>
+      <description>This guide will walk you throug the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assume prior familiarity with computers, no programming knowledge is required.</description>
     </item>
     
     <item>
-      <title>What electronics you need?</title>
-      <link>https://reef-pi.github.io/general-guides/02_electronics/</link>
+      <title>How to setup telemetry and dashboatd with reef-pi</title>
+      <link>https://reef-pi.github.io/general-guides/telemetry/</link>
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/general-guides/02_electronics/</guid>
-      <description> Raspberry Pi Raspberrt Pi 7&amp;rdquo; Touchscreen display Relays PCA9685 L293D ULN2803a Connectors  3.5 mm right angle, male audio jacks with bare wire 3.5 mm female panel mount audio jack DC female panel mount barel jack 5 volt 2.5 amp micro USB power supply 12 volt, 1 amp DC barrel jack power supply  Electrical components  Power socket with fuse Universal power cord: NEMA5 110v electrical receptacles  Peristaltic pumps PN2222 transistor 1K and 10K resistors    </description>
-    </item>
-    
-    <item>
-      <title>How to setup a touchscreen display</title>
-      <link>https://reef-pi.github.io/general-guides/03_touchscreen_display/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/03_touchscreen_display/</guid>
-      <description> reef-pi can be configured to be used with the offical Raspberry Pi Touchscreen display. This can be used to directly siwtch on/off equipments, control light intensity and a general purpose dashboard of controller health.
-Note: The touchscreen display only works with Raspberry Pi 3, it does not work with pi zero.
-Things you need  Raspberry Pi 3 Raspberry Pi Official Touchscreen Camera cable  Configuration  Enabling display in reef-pi configuration Auto-starting dashboard on-boot Adjusting rotation  </description>
+      <guid>https://reef-pi.github.io/general-guides/telemetry/</guid>
+      <description> Signing up for adafruit.io account Configuring reef-pi with adafruit.io key </description>
     </item>
     
     <item>
       <title>How to troubleshoot and ask for help</title>
-      <link>https://reef-pi.github.io/general-guides/04_troubleshooting/</link>
+      <link>https://reef-pi.github.io/general-guides/troubleshooting/</link>
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/general-guides/04_troubleshooting/</guid>
+      <guid>https://reef-pi.github.io/general-guides/troubleshooting/</guid>
       <description>Check if reef-pi is running  sudo ystemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
  Check reef-pi version (helps in bug reports)
   reef-pi -version   Resetting reef-pi &amp;rsquo;s data base  sudo systemctl stop reef-pi.</description>
@@ -53,40 +42,63 @@ Things you need  Raspberry Pi 3 Raspberry Pi Official Touchscreen Camera cable  
     
     <item>
       <title>How to setup reef-pi development environment</title>
-      <link>https://reef-pi.github.io/general-guides/05_development/</link>
+      <link>https://reef-pi.github.io/general-guides/development/</link>
       <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/general-guides/05_development/</guid>
+      <guid>https://reef-pi.github.io/general-guides/development/</guid>
       <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
 Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
     </item>
     
     <item>
       <title>How to build a housing</title>
-      <link>https://reef-pi.github.io/general-guides/06_housing/</link>
+      <link>https://reef-pi.github.io/general-guides/housing/</link>
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/general-guides/06_housing/</guid>
+      <guid>https://reef-pi.github.io/general-guides/housing/</guid>
       <description>Building an appropriate housing is critical part of a controller build. Housing or enclosure secures the elctronics from outside environment, as well as provides mounting place for the different probes, equipments and display panels.
 Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
     </item>
     
     <item>
-      <title>How to install reef-pi on Raspberry Pi</title>
-      <link>https://reef-pi.github.io/general-guides/07_install/</link>
-      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      <title>How to setup a touchscreen display</title>
+      <link>https://reef-pi.github.io/general-guides/touchscreen_display/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/general-guides/07_install/</guid>
-      <description>This guide will walk you throug the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assume prior familiarity with computers, no programming knowledge is required.</description>
+      <guid>https://reef-pi.github.io/general-guides/touchscreen_display/</guid>
+      <description> reef-pi can be configured to be used with the offical Raspberry Pi Touchscreen display. This can be used to directly siwtch on/off equipments, control light intensity and a general purpose dashboard of controller health.
+Note: The touchscreen display only works with Raspberry Pi 3, it does not work with pi zero.
+Things you need  Raspberry Pi 3 Raspberry Pi Official Touchscreen Camera cable  Configuration  Enabling display in reef-pi configuration Auto-starting dashboard on-boot Adjusting rotation  </description>
     </item>
     
     <item>
-      <title>How to setup telemetry and dashboatd with reef-pi</title>
-      <link>https://reef-pi.github.io/general-guides/08_telemetry/</link>
+      <title>What tools you need?</title>
+      <link>https://reef-pi.github.io/general-guides/tools/</link>
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/general-guides/08_telemetry/</guid>
-      <description> Signing up for adafruit.io account Configuring reef-pi with adafruit.io key </description>
+      <guid>https://reef-pi.github.io/general-guides/tools/</guid>
+      <description> reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron multimeter plier wire stripper  Wood working  Scroll saw Clamps -  </description>
+    </item>
+    
+    <item>
+      <title>An overview of different reef-pi electronics components</title>
+      <link>https://reef-pi.github.io/general-guides/electronics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/electronics/</guid>
+      <description> Raspberry Pi Raspberrt Pi 7&amp;rdquo; Touchscreen display Relays PCA9685 L293D ULN2803a Connectors  3.5 mm right angle, male audio jacks with bare wire 3.5 mm female panel mount audio jack DC female panel mount barel jack 5 volt 2.5 amp micro USB power supply 12 volt, 1 amp DC barrel jack power supply  Electrical components  Power socket with fuse Universal power cord: NEMA5 110v electrical receptacles  Peristaltic pumps PN2222 transistor 1K and 10K resistors    </description>
+    </item>
+    
+    <item>
+      <title>Timer specification</title>
+      <link>https://reef-pi.github.io/general-guides/timer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/timer/</guid>
+      <description>Each job in reef-pi is executed at a given schedule. A job&amp;rsquo;s schedule specifies day and time related details.
+reef-pi uses cron like specification to define job schedules.
+Following is a summary of the specification
+ &amp;ldquo;day of month&amp;rdquo; represent which day of every month the job will be triggered. Values can range from 1 to 31 &amp;ldquo;hour&amp;rdquo; represent which hour of the day job will be triggered. Values can range from 0 to 23 &amp;ldquo;minute&amp;rdquo; represent which minute of the hour job will be triggered.</description>
     </item>
     
   </channel>

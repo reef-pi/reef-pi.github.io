@@ -7,7 +7,7 @@
     <meta name="author" content="map[]" />
     <meta name="description" content="reef-pi - A Rasoberry Pi based opensource reef tank controller">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
-    <title>Build guides</title>
+    <title>Timer specification</title>
     <meta name="generator" content="Hugo 0.25.1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -35,6 +35,7 @@ ga('send', 'pageview');
 
   <body>
     <div id="wrap">
+
       
       <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/img.css" />
 <nav class="navbar navbar-default">
@@ -58,55 +59,73 @@ ga('send', 'pageview');
   </div>
 </nav>
 
+      
       <div class="container">
-        <h3 style="text-align: left" >Build guides</h3>
-          <div class="panel panel-default">
-					  <h6 style="text-align: left">
-					    <p>This section contains specific build guides using reef-pi. If you are new to reef-pi and looking for building a controller with it, you should start here, choose one of the guides that meet your need and follow along. These build guides are ordered with increasing complexity/cost level.</p>
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://reef-pi.github.io/general-guides/timer/">Timer specification</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              <p>Each job in reef-pi is executed at a given schedule. A job&rsquo;s schedule specifies day and time related details.</p>
 
-					  </h6>
-            <div class="panel-body">
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/power/">How to build a power controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/ato/">Auto Top Off (ATO)</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/lighting/">LED Lighting</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/temperature/">How to build a temperature controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/doser/">Dosing controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/aio/">All-in-one controller</a>
-                </h5>
-              </div>
-							
+<p>reef-pi uses <a href="https://en.wikipedia.org/wiki/Cron">cron</a> like specification to define job schedules.</p>
+
+<p>Following is a summary of the specification</p>
+
+<ul>
+<li>&ldquo;day of month&rdquo; represent which day of every month the job will be triggered. Values can range from 1 to 31</li>
+<li>&ldquo;hour&rdquo; represent which hour of the day job will be triggered. Values can range from 0 to 23</li>
+<li>&ldquo;minute&rdquo; represent which minute of the hour job will be triggered. Value can range from 0 to 59</li>
+<li>&ldquo;second&rdquo; represent which second of the minute job will be triggered. Values can range from 0 to 59</li>
+</ul>
+
+<p>Other than their mentioned ranges, each of this field can also take few special entries.</p>
+
+<p>They are:</p>
+
+<ul>
+<li>&ldquo;*&rdquo; represents <strong>every</strong> . Like every hour, every day etc</li>
+<li>&rdquo;-&rdquo; to represent <strong>ranges</strong>. Example: hour can be &ldquo;2-6&rdquo; to trigger a job every hour from 2 to 6</li>
+<li>&rdquo;/&rdquo; to represent <strong>after every</strong>. Example: Hour value &ldquo;*/3&rdquo; represents after every 3 hours</li>
+</ul>
+
+<p>More details can be found in  the underlying library&rsquo;s <a href="https://godoc.org/github.com/robfig/cron#hdr-CRON_Expression_Format">documentation</a></p>
+
             </div>
           </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
       </div>
+      
     </div>
+
     
     <footer>
   <div id="footer">
@@ -131,5 +150,6 @@ ga('send', 'pageview');
 
 
 
+    
   </body>
 </html>

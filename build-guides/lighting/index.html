@@ -7,7 +7,7 @@
     <meta name="author" content="map[]" />
     <meta name="description" content="reef-pi - A Rasoberry Pi based opensource reef tank controller">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
-    <title>Build guides</title>
+    <title>LED Lighting</title>
     <meta name="generator" content="Hugo 0.25.1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -35,6 +35,7 @@ ga('send', 'pageview');
 
   <body>
     <div id="wrap">
+
       
       <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/img.css" />
 <nav class="navbar navbar-default">
@@ -58,55 +59,75 @@ ga('send', 'pageview');
   </div>
 </nav>
 
+      
       <div class="container">
-        <h3 style="text-align: left" >Build guides</h3>
-          <div class="panel panel-default">
-					  <h6 style="text-align: left">
-					    <p>This section contains specific build guides using reef-pi. If you are new to reef-pi and looking for building a controller with it, you should start here, choose one of the guides that meet your need and follow along. These build guides are ordered with increasing complexity/cost level.</p>
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://reef-pi.github.io/build-guides/lighting/">LED Lighting</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
 
-					  </h6>
-            <div class="panel-body">
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/power/">How to build a power controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/ato/">Auto Top Off (ATO)</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/lighting/">LED Lighting</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/temperature/">How to build a temperature controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/doser/">Dosing controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/aio/">All-in-one controller</a>
-                </h5>
-              </div>
-							
+<h3 id="things-you-need">Things you need</h3>
+
+<ul>
+<li>Raspberry Pi. Both Pi zero or Pi 3 will work</li>
+<li>PCA9685 breakout board</li>
+<li>2 PN2222 transistors</li>
+<li>2 10k resistors, 2 1K resistors</li>
+<li>3.5mm female, panel mount audio jack</li>
+<li>3.5mm Right angle, bare wire male audio connector</li>
+<li>5 volt 2.5 amp micro usb power supply  for raspberry pi</li>
+<li>10v DC power adapter</li>
+<li>Jumper wires</li>
+</ul>
+
+<h3 id="wiring">Wiring</h3>
+
+<h3 id="configuring-reef-pi">Configuring reef-pi</h3>
+
+<ul>
+<li>Enable and configure led channels reef-pi configuration file</li>
+<li>Restart reef-pi</li>
+</ul>
+
+<h3 id="setting-up-24-hour-lighting-cycle">Setting up 24 hour lighting cycle</h3>
+
             </div>
           </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
       </div>
+      
     </div>
+
     
     <footer>
   <div id="footer">
@@ -131,5 +152,6 @@ ga('send', 'pageview');
 
 
 
+    
   </body>
 </html>

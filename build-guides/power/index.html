@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="map[]" />
+    <meta name="description" content="reef-pi - A Rasoberry Pi based opensource reef tank controller">
+    <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
+    <title>How to build a power controller</title>
+    <meta name="generator" content="Hugo 0.25.1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-102968086-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/img.css" />
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://reef-pi.github.io/"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/general-guides/">GENERAL GUIDES</a></li>
+        
+        <li><a href="/build-guides/">BUILD GUIDES</a></li>
+        
+        <li><a href="/blogs/">BLOGS</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://reef-pi.github.io/build-guides/power/">How to build a power controller</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<p>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-deman controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</p>
+
+<h3 id="things-to-consider">Things to consider</h3>
+
+<ul>
+<li><p>Which relay to use? Controlling high AC voltages via Raspbwrry Pi involves relays. Relays can be opto-couplers, mechanical or solid state. Mechanical relays are cheapest, optocouplers are safest and expensive. Solid state relays are somewhere in the middle, safer and last longer than mechanical relays and cheaper, readily available that opto coupler.</p></li>
+
+<li><p>Relay capacity: Almost all relays are rated to work with a voltage and current range. Most mechanical relays are raterd for 10 amp, 240volt ac, while solid state relays are generally rater for 240volt ac, 2 amp. Depending upon what type of equipment you will be powering, choose appropriate relays. Equipments are generally rated with watts, and watt = volt x ampere. i.e. a 100 watt heater will rquire at least 1 amp relay to be powered safely by 110volt ac.</p></li>
+
+<li><p>Number of relay channels: The number of channels in a relay board determines how many AC connections can be controller. Since we are building a 4 outlet powerstrip, we&rsquo;ll go with a 4 channel ssd relay. We&rsquo;ll need one GPIO pin of Raspberry Pi for each channel on the relay. It is possible to control around 18 channel relays using raspberry pi alone (it can be extend to thousands using an IO expander).</p></li>
+</ul>
+
+<h3 id="bill-of-materials">Bill of Materials</h3>
+
+<ul>
+<li><a href="https://www.adafruit.com/product/3400">Pi zero</a></li>
+<li><a href="https://www.adafruit.com/product/2693">micro sd card</a></li>
+<li>4 Channel SSD relay. <a href="https://www.amazon.com/gp/product/B00ZZVQR5Q/">example</a></li>
+<li>5v 2.4 amp <a href="https://www.adafruit.com/product/1995">adapter</a> for Raspberry Pi</li>
+<li>AC Power adapter with fuse. <a href="https://www.amazon.com/gp/product/B00ME5YAPK">example</a></li>
+<li>AC Power cord. <a href="https://www.amazon.com/gp/product/B00005113L/">example</a></li>
+<li>AC receptacles <a href="https://www.amazon.com/gp/product/B002DQT5UK/">example</a></li>
+<li>Female female jumper wires. <a href="https://www.amazon.com/gp/product/B00DJY4RS0">example</a></li>
+</ul>
+
+<h3 id="wiring">Wiring</h3>
+
+<p><img src="/img/power_strip/breadboard.png" alt="breadboard" /></p>
+
+<h3 id="install-configure-reef-pi">Install &amp; Configure reef-pi</h3>
+
+<p>Follow reef-pi installation <a href="http://reef-pi.com/general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</p>
+
+<ul>
+<li>Declare outlets and equipments</li>
+</ul>
+
+<pre><code class="language-yaml">outlets:
+  AC1:
+    pin: 17
+  AC2:
+    pin: 27
+  AC3:
+    pin: 22
+  AC4:
+    pin: 24
+equipments:
+   Heater: AC1
+   Return: AC2
+   Light:  AC3
+   Filter: AC4
+</code></pre>
+
+<p>Note: the pin number represent the GPIO Pin number, not their position on the Raspberry Pi. Refer Raspberry Pi pinout <a href="http://www.jameco.com/Jameco/workshop/circuitnotes/raspberry_pi_circuit_note_fig2.jpg">diagram</a> for GPIO numbers.</p>
+
+<ul>
+<li>Restart reef-pi</li>
+</ul>
+
+<pre><code>sudo systemctl restart reef-pi.service
+</code></pre>
+
+<p>Thats it, you should be able to access reef-pi user interface from the browser and control all four equipments.</p>
+
+<h3 id="usage">Usage</h3>
+
+<h4 id="controlling-equipments-on-demand">Controlling equipments on-demand</h4>
+
+<p>Any equipment specified in the configurartion file can be switched on or off any time using reef-pi web interface. Use the equipment tab to navigate to the list of equipments and click on the on/off button to switch the equipment on/off. Every equipment should have a dedicated button indicating the equipment&rsquo;s real time state.</p>
+
+<p><img src="/img/power_strip/on-demand.png" alt="on-demand ui" /></p>
+
+<h4 id="controlling-equipments-using-timers">Controlling equipments using timers</h4>
+
+<p>In the following example we are setting up heater to start at night 10:00 PM and stop at morning 6:00 AM. Use the &ldquo;Jobs&rdquo; tab to define two jobs. Each job represent a period action reef-pi takes.</p>
+
+<p>The first job starts the heater at night. reef-pi allowes us to specify which equipment to take action against, time details (day of the month, hour, minute, second etc) and the action (on or off). Notice &ldquo;*&rdquo; is used to denote every day of the month.</p>
+
+<p><img src="/img/power_strip/timer_start.png" alt="timer start" /></p>
+
+<p>And another job to stop the heater every morning 6 AM.</p>
+
+<p><img src="/img/power_strip/timer_stop.png" alt="timer start" /></p>
+
+<p>reef-pi uses cron style specification for denoting time schedule, this allows much more elaborate way of specifying schedules, check the <a href="http://reef-pi.com/build-guides/timer">timer</a> guide for details.</p>
+
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">2016-17 &copy; Ranjib Dey, All rights reserved. Site powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://reef-pi.github.io/js/docs.min.js"></script>
+<script src="https://reef-pi.github.io/js/main.js"></script>
+
+<script src="https://reef-pi.github.io/js/ie10-viewport-bug-workaround.js"></script><!-- Syntax highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+</html>
