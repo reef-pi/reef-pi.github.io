@@ -41,6 +41,16 @@
     </item>
     
     <item>
+      <title>Glossary</title>
+      <link>https://reef-pi.github.io/general-guides/glossary/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/glossary/</guid>
+      <description>Raspberry Pi A single board computer
+reef-pi software part of the reef tank controller</description>
+    </item>
+    
+    <item>
       <title>How to setup reef-pi development environment</title>
       <link>https://reef-pi.github.io/general-guides/development/</link>
       <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
