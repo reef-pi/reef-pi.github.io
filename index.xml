@@ -78,13 +78,26 @@ Electronics  Raspberry Pi DS18B20 temperature probe relay (at least two channels
     </item>
     
     <item>
+      <title>Application Programmers Interface</title>
+      <link>https://reef-pi.github.io/general-guides/api/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/api/</guid>
+      <description>Operating system reef-pi can be developed on linux, OS X and windows. The physical control part can only be run on linux. reef-pi in particular been tested and developed on raspbian running on Raspberry Pi.
+reef-pi software architecture composed of three main components - A physical backend: Part that controls physical devices (pwm, relay, sensor) - A HTTP server: Part that converts the physical control part to reef hobby specific terms.</description>
+    </item>
+    
+    <item>
       <title>Glossary</title>
       <link>https://reef-pi.github.io/general-guides/glossary/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/glossary/</guid>
-      <description>Raspberry Pi A single board computer
-reef-pi software part of the reef tank controller</description>
+      <description>Previous information included below
+0-10v A method of diming leds using voltage.
+3.5mm right angle, female panel mount audio jack A mini audio connector used in the LED controller and possibly other builds.
+3.5mm right angle, bare wire male audio connector A mini right angle audio connector used in the LED controller and possibly other builds.
+5 volt 2.5 amp micro USD power supply A power supply that will provide ample power for a Raspberry Pi.</description>
     </item>
     
     <item>

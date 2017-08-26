@@ -7,7 +7,7 @@
     <meta name="author" content="map[]" />
     <meta name="description" content="reef-pi - A Rasoberry Pi based opensource reef tank controller">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
-    <title>General Guides</title>
+    <title>Application Programmers Interface</title>
     <meta name="generator" content="Hugo 0.25.1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -35,6 +35,7 @@ ga('send', 'pageview');
 
   <body>
     <div id="wrap">
+
       
       <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/img.css" />
 <nav class="navbar navbar-default">
@@ -58,85 +59,76 @@ ga('send', 'pageview');
   </div>
 </nav>
 
+      
       <div class="container">
-        <h3 style="text-align: left" >General Guides</h3>
-          <div class="panel panel-default">
-					  <h6 style="text-align: left">
-					    <p>This section contains reef-pi specific guides that are not specific to any builds. Some of these (e.g Installing &amp; Configuring reef-pi) are pre-requisite for all build guides, while others (e.g. Touchscreen setup, Troubleshooting ) are for things that ar not a must, but can be useful for any reef-pi based controllers.</p>
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://reef-pi.github.io/general-guides/api/">Application Programmers Interface</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
 
-					  </h6>
-            <div class="panel-body">
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/install/">How to install reef-pi on Raspberry Pi</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/telemetry/">How to setup telemetry and dashboatd with reef-pi</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/troubleshooting/">How to troubleshoot and ask for help</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/api/">Application Programmers Interface</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/glossary/">Glossary</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/development/">How to setup reef-pi development environment</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/housing/">How to build a housing</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/touchscreen_display/">How to setup a touchscreen display</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/tools/">What tools you need?</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/electronics/">An overview of different reef-pi electronics components</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/general-guides/timer/">Timer specification</a>
-                </h5>
-              </div>
-							
+<h3 id="operating-system">Operating system</h3>
+
+<p>reef-pi can be developed on linux, OS X and windows. The physical control part can only be run on linux. reef-pi in particular been tested and developed on raspbian running on Raspberry Pi.</p>
+
+<p>reef-pi software architecture composed of three main components
+- A physical backend: Part that controls physical devices (pwm, relay, sensor)
+- A HTTP server: Part that converts the physical control part to reef hobby specific terms.
+- UI: JavaScript specific user interface, or the code that is executed in browers, depending upon where the reef-pi user is this code is run on that computer (or mobile devices)</p>
+
+<h3 id="database">Database</h3>
+
+<p>reef-pi uses [boltdb], a [go] based key,value database. All configuration data (lights, equipments, atos etc) is stored in a single bolt database file. Telemetry data (historical values of sensors, lighting) that is used for charting/graphing is sent to adafruit.io and not stored on the bolt database. reef-pi users can backup the boltdb file present on the microSD card, for redundancy.</p>
+
+<h3 id="configuration-files">Configuration files</h3>
+
+<p>reef-pi uses a configuration file to boot and control a handful of critical settings about reef-pi. Configuration file is specified in [YAML]() specification. Configuration file is located at /etc/reef-pi/config.yaml. Since reef-pi is under heavy development the configration file format is changing frequently, this will be stabilied as part of 1.0 release. Specific configuration file for any version can be found at build/reef-pi.yaml location of the repository.</p>
+
+<h3 id="protocols">Protocols</h3>
+
+<p>reef-pi porvides a simple HTTP JSON based interface. Following is a list of currently available endpoints. A note of caution, till reef-pi hits 1.0 release the API is likely to undergo a lot of changes. 1.0 will mark the first major release, which signifies 1.0 API will not have any breaking change (that is consumers will always work on 1.0 based releases, it can have new improvements, but it cant remove anything existing, or change it in a way that impacts users directly) for 1 year.</p>
+
+<h4 id="api-endpoints">API Endpoints</h4>
+
+<h5 id="get-api-capabilities">GET /api/capabilities</h5>
+
+<h5 id="get-api-settings">GET /api/settings</h5>
+
+<h5 id="post-api-settings">POST /api/settings</h5>
+
+<h5 id="get-api-equipments-id">GET /api/equipments/{id}</h5>
+
+<h5 id="get-api-equipments">GET /api/equipments</h5>
+
+<h5 id="get-api-equipments-1">GET /api/equipments</h5>
+
+<h5 id="get-api-equipments-2">GET /api/equipments</h5>
+
+<h5 id="get-api-equipments-3">GET /api/equipments</h5>
+
+<h5 id="get-api-outlets">GET /api/outlets</h5>
+
+<h5 id="get-api-lights">GET /api/lights</h5>
+
+<h5 id="get-api-jacks">GET /api/jacks</h5>
+
             </div>
           </div>
+          <hr>
+        </div>
       </div>
+      
     </div>
+
     
     <footer>
   <div id="footer">
@@ -161,5 +153,6 @@ ga('send', 'pageview');
 
 
 
+    
   </body>
 </html>
