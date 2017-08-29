@@ -93,8 +93,7 @@ reef-pi software architecture composed of three main components - A physical bac
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/glossary/</guid>
-      <description>Previous information included below
-0-10v A method of diming leds using voltage.
+      <description>0-10v A method of diming leds using voltage.
 3.5mm right angle, female panel mount audio jack A mini audio connector used in the LED controller and possibly other builds.
 3.5mm right angle, bare wire male audio connector A mini right angle audio connector used in the LED controller and possibly other builds.
 5 volt 2.5 amp micro USD power supply A power supply that will provide ample power for a Raspberry Pi.</description>
