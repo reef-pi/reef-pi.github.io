@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>How to install reef-pi on Raspberry Pi</title>
+      <title>Install &amp; configuration</title>
       <link>https://reef-pi.github.io/general-guides/install/</link>
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
@@ -38,6 +38,16 @@
       <description>Check if reef-pi is running  sudo ystemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
  Check reef-pi version (helps in bug reports)
   reef-pi -version   Resetting reef-pi &amp;rsquo;s data base  sudo systemctl stop reef-pi.</description>
+    </item>
+    
+    <item>
+      <title>Remote Access</title>
+      <link>https://reef-pi.github.io/general-guides/remote/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/remote/</guid>
+      <description>This guide meant to assist in establishing a remote connection to your reef-pi main control page using one of the two popular options, RealVNC and Tor. reef-pi is normally accessible only within the home wifi network, using any of these two approaches you can access reef-pi from anywhere.
+RealVNC The first option is to use software such as Real VNC. They offer a cloud option that will allow you to access your Raspberry Pi from anywhere.</description>
     </item>
     
     <item>

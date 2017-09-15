@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="reef-pi, reef tank, controller, raspberry pi, coral" name="keywords">
     <meta name="author" content="map[]" />
     <meta name="description" content="reef-pi - A Rasoberry Pi based opensource reef tank controller">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
-    <title>How to install reef-pi on Raspberry Pi</title>
+    <title>Install &amp; configuration</title>
     <meta name="generator" content="Hugo 0.25.1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -63,7 +64,7 @@ ga('send', 'pageview');
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="https://reef-pi.github.io/general-guides/install/">How to install reef-pi on Raspberry Pi</a></strong>
+            <strong><a href="https://reef-pi.github.io/general-guides/install/">Install &amp; configuration</a></strong>
           </h3>
         </div>
         <div class="blog-title">
@@ -83,9 +84,15 @@ ga('send', 'pageview');
 <p>We recommend a microSD card of Class10 and atleast 8Gb capacity for reef-pi. reef-pi is tested on raspbian, but it should work on most other linux OS, on Raspberry Pi. Follow the official raspberry pi guide for details instructions:
 - <a href="https://www.raspberrypi.org/documentation/installation/installing-images/">Download and write raspbian image to micro SD card</a></p>
 
+<h3 id="connecting-to-raspberry-pi">Connecting to Raspberry Pi</h3>
+
+<p>You can either use console cable of and HDMI based display (monitor or TV) to access raspberry pi.</p>
+
+<p>For console access setup follow <a href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable?view=all">this adafruit tutorial</a>. HDMI based access is fairly easy, just hook up any HDMI enabled display (monitor or TV) to raspberry pi using an HDMI cable.</p>
+
 <h3 id="configure-raspberry-pi">Configure raspberry pi</h3>
 
-<p>Oncei raspbian image is written on microSD card, plug it in Raspberry Pi and power it. Once started configure following things at leat, for optimal performance of reef-pi.</p>
+<p>Once raspbian image is written on microSD card, plug it in Raspberry Pi and power it. Once started configure following things at leat, for optimal performance of reef-pi.</p>
 
 <ul>
 <li>Configure wifi: Enabling wifi or ethernet based internet connection allows reef-pi to be accessible from any web browser (mobile, tablet or computers). Note, this is not a manadatory requirement for running wifi. It is just a convenience.</li>
@@ -117,7 +124,14 @@ dtoverlay=w1-gpio
 </code></pre>
 
 <ul>
-<li>Configure and enable ssh: ssh is used to remotely control and troubleshoot the Raspberry Pi directly.</li>
+<li>Click the Raspberry Pi icon in the upper left.</li>
+<li>Go to Preferences&gt;Raspberry Pi Configuration</li>
+
+<li><p>On the Interfaces tab enable the necessary items (time, localization etc)</p></li>
+
+<li><p>Configure and enable ssh: ssh is used to remotely control and troubleshoot the Raspberry Pi directly.</p></li>
+
+<li><p>The same can be done from terminal as well, using following commands:</p></li>
 </ul>
 
 <pre><code>sudo systemctl start ssh.service
@@ -141,28 +155,22 @@ sudo dpkg-reconfigure locales
 <h3 id="install-reef-pi">Install reef-pi</h3>
 
 <ul>
-<li>Download latest reef-pi release</li>
-<li>Install reef-pi</li>
+<li>On the raspberry pi, navigate to and download the latest <a href="https://github.com/reef-pi/reef-pi/releases">release</a></li>
+<li>Copy the .deb out of the downloads folder to your desired location (generally in Documents folder).</li>
+<li>Open Terminal and type following commands to install reef-pi</li>
 </ul>
 
-<pre><code>dpkg -i reef-pi-&lt;version&gt;.deb
+<pre><code>sudo dpkg -i reef-pi-&lt;version&gt;.deb
 </code></pre>
 
 <ul>
 <li>Check reef-pi is running</li>
 </ul>
 
-<pre><code>systemctl status reef-pi.service
+<pre><code>sudo systemctl status reef-pi.service
 </code></pre>
 
-<h3 id="configure-reef-pi">Configure reef-pi</h3>
-
-<ul>
-<li>Enable accessing UI from other devices</li>
-</ul>
-
-<pre><code class="language-yaml">address: 0.0.0.0:8080
-</code></pre>
+<p>After this you should be able to access reef-pi from the browser</p>
 
             </div>
           </div>
