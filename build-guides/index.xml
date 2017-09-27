@@ -35,7 +35,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/lighting/</guid>
-      <description> Things you need  Raspberry Pi. Both Pi zero or Pi 3 will work PCA9685 breakout board 2 PN2222 transistors 2 10k resistors, 2 1K resistors 3.5mm female, panel mount audio jack 3.5mm Right angle, bare wire male audio connector 5 volt 2.5 amp micro usb power supply for raspberry pi 10v DC power adapter Jumper wires  Wiring Configuring reef-pi  Enable and configure led channels reef-pi configuration file Restart reef-pi  Setting up 24 hour lighting cycle </description>
+      <description>Lighting is one of the key aspects of a maintaining a thriving reef tank. Most corals in reef tanks are photo synthetic and requires lighting from a specific spectrum (400-700 nm). Different corals prefer different intensity of lighting for their optimal growth, these are geneally specified in PAR (photosynthetically active radiation) values. For example, acroporas prefer higher PARs (250 and above) while acans and mushrooms prefers lower PARs (less than 150).</description>
     </item>
     
     <item>
