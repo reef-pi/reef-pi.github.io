@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="reef-pi, reef tank, controller, raspberry pi, iot, adafruit" name="keywords">
+    <meta content="reef-pi, reef tank, controller, raspberry pi, iot" name="keywords">
     <meta name="author" content="map[]" />
     <meta name="description" content="reef-pi - A Rasoberry Pi based opensource reef tank controller">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
-    <title>Build guides</title>
+    <title>Camera controller</title>
     <meta name="generator" content="Hugo 0.25.1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -36,6 +36,7 @@ ga('send', 'pageview');
 
   <body>
     <div id="wrap">
+
       
       <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/img.css" />
 <nav class="navbar navbar-default">
@@ -59,61 +60,65 @@ ga('send', 'pageview');
   </div>
 </nav>
 
+      
       <div class="container">
-        <h3 style="text-align: left" >Build guides</h3>
-          <div class="panel panel-default">
-					  <h6 style="text-align: left">
-					    <p>This section contains specific build guides using reef-pi. If you are new to reef-pi and looking for building a controller with it, you should start here, choose one of the guides that meet your need and follow along. These build guides are ordered with increasing complexity/cost level.</p>
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://reef-pi.github.io/build-guides/camera/">Camera controller</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
 
-					  </h6>
-            <div class="panel-body">
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/power/">Power controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/ato/">Auto Top Off</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/camera/">Camera controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/lighting/">Lighting controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/temperature/">Temperature controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/doser/">Dosing controller</a>
-                </h5>
-              </div>
-							
-              <div class="row">
-                <h5 >
-                  <a href="/build-guides/aio/">All-in-one controller</a>
-                </h5>
-              </div>
-							
+<p>The camera controller provides an easy and convenient way to take reef tank photos on demand and at periodic intervals. reef-pi can also be configured to upload the images taken to google drive. This is useful when users are far from the tank for longer periods (like in vacataion), the uploaded images can provides an easy way to stay up to date with current state of the tank. The camera controller does not involve any other electronics other than the official camera module.</p>
+
+<h3 id="things-to-consider">Things to consider</h3>
+
+<ul>
+<li>The camera cable that ships with pi camera is rathet small (6 inches) and likely to be insufficient for most practical usage. Before ordering the bill of materials, consider where the actual raspberry pi controller will be located and where the camera itself will be mounted. Then choose camera flex cable of appropriate length.</li>
+</ul>
+
+<h3 id="bill-of-materials">Bill of materials</h3>
+
+<ul>
+<li><a href="https://www.adafruit.com/product/3400">Pi zero</a> or <a href="https://www.adafruit.com/product/3055">Pi 3</a></li>
+<li><a href="https://www.adafruit.com/product/2693">micro sd card</a></li>
+<li>5v 2.4 amp <a href="https://www.adafruit.com/product/1995">adapter</a> for Raspberry Pi</li>
+<li><a href="https://www.adafruit.com/product/1367l">Pi Camera board</a></li>
+<li><a href="https://www.adafruit.com/product/2144">Flex cable</a> for camera board</li>
+</ul>
+
+<h3 id="installation-configuration">Installation &amp; Configuration</h3>
+
+<ul>
+<li><p>Follow reef-pi installation <a href="../../general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</p></li>
+
+<li><p>Install camera</p></li>
+
+<li><p>Enable camera capability from system tab and restart reef-pi</p></li>
+
+<li><p>Enable camera controller from camera tab and click on <em>take photo</em> button</p></li>
+
+<li><p>Setup periodic image capture</p></li>
+
+<li><p>Setup automatic image upload to google drive</p></li>
+</ul>
+
             </div>
           </div>
+          <hr>
+        </div>
       </div>
+      
     </div>
+
     
     <footer>
   <div id="footer">
@@ -138,5 +143,6 @@ ga('send', 'pageview');
 
 
 
+    
   </body>
 </html>

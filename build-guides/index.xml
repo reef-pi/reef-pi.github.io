@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>How to build a power controller</title>
+      <title>Power controller</title>
       <link>https://reef-pi.github.io/build-guides/power/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -21,31 +21,39 @@
     </item>
     
     <item>
-      <title>Auto Top Off (ATO)</title>
+      <title>Auto Top Off</title>
       <link>https://reef-pi.github.io/build-guides/ato/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/ato/</guid>
-      <description> Things you need  Raspberry Pi. Both Pi zero or Pi 3 will work Single channel relay Photo electric water level sensor 3.5mm female, panel mount audio jack Jumper wires 3.5mm Right angle, bare wire male audio connector 5 volt 2.5 amp micro usb power supply for raspberry pi Submercible water pump Unviersal powe chord Power socket with fuse AC receptacles  Wiring Configuring reef-pi  Enable and configure ATO in reef-pi configuration file Restart reef-pi  </description>
+      <description>Atutomatic top off units are systems that maintains a constant water volume inside a reef tank. Reef tanks undergoes water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect to corals. Auto top off units monitors water level periodically and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume.</description>
     </item>
     
     <item>
-      <title>LED Lighting</title>
+      <title>Camera controller</title>
+      <link>https://reef-pi.github.io/build-guides/camera/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/camera/</guid>
+      <description>The camera controller provides an easy and convenient way to take reef tank photos on demand and at periodic intervals. reef-pi can also be configured to upload the images taken to google drive. This is useful when users are far from the tank for longer periods (like in vacataion), the uploaded images can provides an easy way to stay up to date with current state of the tank. The camera controller does not involve any other electronics other than the official camera module.</description>
+    </item>
+    
+    <item>
+      <title>Lighting controller</title>
       <link>https://reef-pi.github.io/build-guides/lighting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/lighting/</guid>
       <description>Lighting is one of the key aspects of a maintaining a thriving reef tank. Most corals in reef tanks are photo synthetic and requires lighting from a specific spectrum (400-700 nm). Different corals prefer different intensity of lighting for their optimal growth, these are geneally specified in PAR (photosynthetically active radiation) values. For example, acroporas prefer higher PARs (250 and above) while acans and mushrooms prefers lower PARs (less than 150).</description>
     </item>
     
     <item>
-      <title>How to build a temperature controller</title>
+      <title>Temperature controller</title>
       <link>https://reef-pi.github.io/build-guides/temperature/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/temperature/</guid>
-      <description> A temperature controller
-Electronics  Raspberry Pi DS18B20 temperature probe relay (at least two channels) 110V Electrical receptacles Inlet module plug Jumper wires and electrical wires Audio jack cable Female audio jack (panel mount)  Wiring Configuration Resources  Adafruit tutorial  </description>
+      <description>Maintain stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller.</description>
     </item>
     
     <item>

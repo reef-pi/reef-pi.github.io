@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="reef-pi, reef tank, controller, raspberry pi, coral, temperature controller" name="keywords">
+    <meta content="reef-pi, reef tank, controller, raspberry pi, coral, temperature controller, iot" name="keywords">
     <meta name="author" content="map[]" />
     <meta name="description" content="reef-pi - A Rasoberry Pi based opensource reef tank controller">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
-    <title>How to build a temperature controller</title>
+    <title>Temperature controller</title>
     <meta name="generator" content="Hugo 0.25.1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -64,7 +64,7 @@ ga('send', 'pageview');
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="https://reef-pi.github.io/build-guides/temperature/">How to build a temperature controller</a></strong>
+            <strong><a href="https://reef-pi.github.io/build-guides/temperature/">Temperature controller</a></strong>
           </h3>
         </div>
         <div class="blog-title">
@@ -77,24 +77,53 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<p>A temperature controller</p>
+<p>Maintain stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller. Heaters are also most frequently failed equipments in reef tank, leading to tank crash. Temperature controllers are helps in avoiding such catastrophic situation as well.</p>
 
-<h3 id="electronics">Electronics</h3>
+<p>In this guide we&rsquo;ll be using reef-pi to build a temperature controller that will monitor the temperature of reef tank and turn on heater or cooler when the temperature goes above or below a specified range.</p>
+
+<h3 id="how-it-works">How it works ?</h3>
+
+<h3 id="things-to-consider">Things to consider</h3>
 
 <ul>
-<li>Raspberry Pi</li>
-<li>DS18B20 temperature probe</li>
-<li>relay (at least two channels)</li>
-<li>110V Electrical receptacles</li>
-<li>Inlet module plug</li>
-<li>Jumper wires and electrical wires</li>
-<li>Audio jack cable</li>
-<li>Female audio jack (panel mount)</li>
+<li><p>Temperature probe and rust protection. <a href="https://www.adafruit.com/product/1020">heat shrink tube</a>, <a href="https://www.amazon.com/dp/B00I9SK8XY/">plasti dip</a> or silicone dip</p></li>
+
+<li><p>Heater and cooler choice</p></li>
+
+<li><p>Relay</p></li>
+</ul>
+
+<h3 id="bill-of-materials">Bill of materials</h3>
+
+<ul>
+<li><a href="https://www.adafruit.com/product/3400">Pi zero</a> or <a href="https://www.adafruit.com/product/3055">Pi 3</a></li>
+<li><a href="https://www.adafruit.com/product/2693">micro sd card</a></li>
+<li>5v 2.4 amp <a href="https://www.adafruit.com/product/1995">power adapter</a> for Raspberry Pi</li>
+<li><a href="https://www.amazon.com/dp/B01B27R21Y/">DS18B20 temperature probe</a></li>
+<li>Relay, with at least 2 channels <a href="https://www.amazon.com/dp/B00E0NTPP4">example</a></li>
+<li>AC receptacles <a href="https://www.amazon.com/gp/product/B002DQT5UK/">example</a></li>
+<li><a href="https://www.amazon.com/dp/B013AP77T8">3.5mm female, panel mount audio jack</a></li>
+<li><a href="https://www.amazon.com/dp/B00MFRZ2SG/">3.5mm male audio jack</a></li>
+<li><a href="https://www.amazon.com/dp/B00DJY4RS0">Jumper wires</a></li>
 </ul>
 
 <h3 id="wiring">Wiring</h3>
 
-<h3 id="configuration">Configuration</h3>
+<p><img src="/img/temperature/breadboard.png" alt="breadboard" /></p>
+
+<h3 id="installation-configuration">Installation &amp; Configuration</h3>
+
+<ul>
+<li><p>Follow reef-pi installation <a href="../../general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</p></li>
+
+<li><p>Connect DS18B20</p></li>
+
+<li><p>Enable temperature capability under system tab</p></li>
+
+<li><p>Enabling temperature monitoring</p></li>
+
+<li><p>Enabling temperature control</p></li>
+</ul>
 
 <h3 id="resources">Resources</h3>
 
