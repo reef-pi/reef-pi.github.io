@@ -79,10 +79,14 @@ ga('send', 'pageview');
 
 <p>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-deman controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</p>
 
+<h3 id="how-this-works">How this works ?</h3>
+
+<p>reef-pi software uses Raspberry Pi&rsquo;s GPIO pins to control digital relays, which in turn controls  high voltage, high current AC or DC equipments. This mechanism is used across timer or sensor based (like temperature or ato controllers) equipment controls.</p>
+
 <h3 id="things-to-consider">Things to consider</h3>
 
 <ul>
-<li><p>Which relay to use? Controlling high AC voltages via Raspbwrry Pi involves relays. Relays can be opto-couplers, mechanical or solid state. Mechanical relays are cheapest, optocouplers are safest and expensive. Solid state relays are somewhere in the middle, safer and last longer than mechanical relays and cheaper, readily available that opto coupler.</p></li>
+<li><p>Choice of relay: Controlling high AC voltages via Raspbwrry Pi involves relays. Relays can be opto-couplers, mechanical or solid state. Mechanical relays are cheapest, optocouplers are safest and expensive. Solid state relays are somewhere in the middle, safer, more expensive and last longer than mechanical relays but cheaper more readily available that opto coupler. We recommend optocoupler based relays where price is not a factor, solid state relays where current requirements are low (less then 2 amp) and mechanical relays for beginner or anything else.</p></li>
 
 <li><p>Relay capacity: Almost all relays are rated to work with a voltage and current range. Most mechanical relays are raterd for 10 amp, 240volt ac, while solid state relays are generally rater for 240volt ac, 2 amp. Depending upon what type of equipment you will be powering, choose appropriate relays. Equipments are generally rated with watts, and watt = volt x ampere. i.e. a 100 watt heater will rquire at least 1 amp relay to be powered safely by 110volt ac.</p></li>
 
@@ -104,42 +108,48 @@ ga('send', 'pageview');
 
 <h3 id="wiring">Wiring</h3>
 
-<p><img src="/img/power_strip/breadboard.png" alt="breadboard" /></p>
+<p><img src="/img/power/breadboard.png" alt="breadboard" /></p>
 
 <h3 id="install-configure-reef-pi">Install &amp; Configure reef-pi</h3>
 
-<p>Follow reef-pi installation <a href="http://reef-pi.com/general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</p>
-
 <ul>
-<li>Declare outlets and equipments</li>
+<li><p>Follow reef-pi installation <a href="/general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</p></li>
+
+<li><p>Enable equipment capability and turn off dev mode under setting section on system tab</p></li>
 </ul>
 
-<pre><code class="language-yaml">outlets:
-  AC1:
-    pin: 17
-  AC2:
-    pin: 27
-  AC3:
-    pin: 22
-  AC4:
-    pin: 24
-equipments:
-   Heater: AC1
-   Return: AC2
-   Light:  AC3
-   Filter: AC4
-</code></pre>
+<p><img src="/img/power/capability.png" alt="capability" /></p>
+
+<ul>
+<li><p>Click on the <em>update</em> button to save settings followed by <em>reload</em> button to ensure the changes are loaded immediately. Refresh your browser (since reef-pi is reloading, it may take few seconds). You should see equipments tab now.</p></li>
+
+<li><p>Navigate to system tab again and declare outlets. Use the GPIO pin numbers (<em>not serial number</em>) to define one outlet per relay channels. You can use the recommend pinout scheme to decide which GPIOs to use. They should mimic the exact wiring.</p></li>
+</ul>
+
+<p><img src="/img/power/outlet_add.png" alt="add outlet" /></p>
+
+<ul>
+<li>Since this guide follows a four channel relay, we are declaring 4 outlets.</li>
+</ul>
+
+<p><img src="/img/power/outlet_all.png" alt="add outlets" /></p>
 
 <p>Note: the pin number represent the GPIO Pin number, not their position on the Raspberry Pi. Refer Raspberry Pi pinout <a href="http://www.jameco.com/Jameco/workshop/circuitnotes/raspberry_pi_circuit_note_fig2.jpg">diagram</a> for GPIO numbers.</p>
 
 <ul>
-<li>Restart reef-pi</li>
+<li><p>The outlet declaration is one time work, it will not change unless electronics are updated.</p></li>
+
+<li><p>Next declare equipments under the equipment tab. Each equipment should have an assigned outlet.</p></li>
 </ul>
 
-<pre><code>sudo systemctl restart reef-pi.service
-</code></pre>
+<p><img src="/img/power/add_equipment.png" alt="add equipment" /></p>
 
-<p>Thats it, you should be able to access reef-pi user interface from the browser and control all four equipments.</p>
+<ul>
+<li>Since we have four outlets in this build, we are declaring four essential equipments for a pico reef tank.
+<img src="/img/power/all_equipment.png" alt="all equipment" /></li>
+</ul>
+
+<p>Thats it, you should be able to use reef-pi to control all four equipments.</p>
 
 <h3 id="usage">Usage</h3>
 
@@ -147,21 +157,27 @@ equipments:
 
 <p>Any equipment specified in the configurartion file can be switched on or off any time using reef-pi web interface. Use the equipment tab to navigate to the list of equipments and click on the on/off button to switch the equipment on/off. Every equipment should have a dedicated button indicating the equipment&rsquo;s real time state.</p>
 
-<p><img src="/img/power_strip/on-demand.png" alt="on-demand ui" /></p>
+<p><img src="/img/power/on-demand.png" alt="on-demand ui" /></p>
 
 <h4 id="controlling-equipments-using-timers">Controlling equipments using timers</h4>
 
-<p>In the following example we are setting up heater to start at night 10:00 PM and stop at morning 6:00 AM. Use the &ldquo;Jobs&rdquo; tab to define two jobs. Each job represent a period action reef-pi takes.</p>
+<p>In the following example we are setting up heater to start at night 10:00 PM and stop at morning 6:00 AM. Use the &ldquo;timers&rdquo; tab to define two timers. Each timer represent a period action reef-pi takes.</p>
 
 <p>The first job starts the heater at night. reef-pi allowes us to specify which equipment to take action against, time details (day of the month, hour, minute, second etc) and the action (on or off). Notice &ldquo;*&rdquo; is used to denote every day of the month.</p>
 
-<p><img src="/img/power_strip/timer_start.png" alt="timer start" /></p>
+<p><img src="/img/power/timer_start.png" alt="timer start" /></p>
 
 <p>And another job to stop the heater every morning 6 AM.</p>
 
-<p><img src="/img/power_strip/timer_stop.png" alt="timer start" /></p>
+<p><img src="/img/power/timer_stop.png" alt="timer start" /></p>
 
-<p>reef-pi uses cron style specification for denoting time schedule, this allows much more elaborate way of specifying schedules, check the <a href="http://reef-pi.com/build-guides/timer">timer</a> guide for details.</p>
+<p>reef-pi uses cron style specification for denoting time schedule, this allows much more elaborate way of specifying schedules, check the <a href="/general-guides/timer">timer</a> guide for details.</p>
+
+<h3 id="resources">Resources</h3>
+
+<ul>
+<li><a href="https://github.com/reef-pi/DesignFiles/raw/master/PowerStrip.fzz">Fritzing project file</a></li>
+</ul>
 
             </div>
           </div>
