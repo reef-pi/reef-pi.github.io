@@ -77,18 +77,18 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<p>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-deman controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</p>
+<p>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-demand controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</p>
 
-<h3 id="how-this-works">How this works ?</h3>
+<h3 id="how-this-work">How this work</h3>
 
 <p>reef-pi software uses Raspberry Pi&rsquo;s GPIO pins to control digital relays, which in turn controls  high voltage, high current AC or DC equipments. This mechanism is used across timer or sensor based (like temperature or ato controllers) equipment controls.</p>
 
 <h3 id="things-to-consider">Things to consider</h3>
 
 <ul>
-<li><p>Choice of relay: Controlling high AC voltages via Raspbwrry Pi involves relays. Relays can be opto-couplers, mechanical or solid state. Mechanical relays are cheapest, optocouplers are safest and expensive. Solid state relays are somewhere in the middle, safer, more expensive and last longer than mechanical relays but cheaper more readily available that opto coupler. We recommend optocoupler based relays where price is not a factor, solid state relays where current requirements are low (less then 2 amp) and mechanical relays for beginner or anything else.</p></li>
+<li><p>Choice of relay: Controlling high AC voltages via Raspberry Pi involves relays. Relays can be optocouplers, mechanical or solid state. Mechanical relays are cheapest, optocouplers are safest and expensive. Solid state relays are somewhere in the middle, safer, more expensive and last longer than mechanical relays but cheaper more readily available that optocoupler. We recommend optocoupler based relays where price is not a factor, solid state relays where current requirements are low (less than 2 amp) and mechanical relays for beginners or anything else.</p></li>
 
-<li><p>Relay capacity: Almost all relays are rated to work with a voltage and current range. Most mechanical relays are raterd for 10 amp, 240volt ac, while solid state relays are generally rater for 240volt ac, 2 amp. Depending upon what type of equipment you will be powering, choose appropriate relays. Equipments are generally rated with watts, and watt = volt x ampere. i.e. a 100 watt heater will rquire at least 1 amp relay to be powered safely by 110volt ac.</p></li>
+<li><p>Relay capacity: Almost all relays are rated to work with a voltage and current range. Most mechanical relays are rated for 10 amp, 240volt ac, while solid state relays are generally rated for 240volt ac, 2 amp. Depending upon what type of equipment you will be powering, choose appropriate relays. Equipments are generally rated with watts, and watt = volt x ampere. i.e. a 100 watt heater will require at least 1 amp relay to be powered safely by 110volt ac.</p></li>
 
 <li><p>Number of relay channels: The number of channels in a relay board determines how many AC connections can be controller. Since we are building a 4 outlet powerstrip, we&rsquo;ll go with a 4 channel ssd relay. We&rsquo;ll need one GPIO pin of Raspberry Pi for each channel on the relay. It is possible to control around 18 channel relays using raspberry pi alone (it can be extend to thousands using an IO expander).</p></li>
 </ul>
@@ -103,7 +103,7 @@ ga('send', 'pageview');
 <li>AC Power adapter with fuse. <a href="https://www.amazon.com/gp/product/B00ME5YAPK">example</a></li>
 <li>AC Power cord. <a href="https://www.amazon.com/gp/product/B00005113L/">example</a></li>
 <li>AC receptacles <a href="https://www.amazon.com/gp/product/B002DQT5UK/">example</a></li>
-<li>Female female jumper wires. <a href="https://www.amazon.com/gp/product/B00DJY4RS0">example</a></li>
+<li>Female-female jumper wires. <a href="https://www.amazon.com/gp/product/B00DJY4RS0">example</a></li>
 </ul>
 
 <h3 id="wiring">Wiring</h3>
@@ -134,10 +134,10 @@ ga('send', 'pageview');
 
 <p><img src="/img/power/outlet_all.png" alt="add outlets" /></p>
 
-<p>Note: the pin number represent the GPIO Pin number, not their position on the Raspberry Pi. Refer Raspberry Pi pinout <a href="http://www.jameco.com/Jameco/workshop/circuitnotes/raspberry_pi_circuit_note_fig2.jpg">diagram</a> for GPIO numbers.</p>
+<p>Note: the pin number represents the GPIO Pin number, not their position on the Raspberry Pi. Refer Raspberry Pi pinout <a href="http://www.jameco.com/Jameco/workshop/circuitnotes/raspberry_pi_circuit_note_fig2.jpg">diagram</a> for GPIO numbers.</p>
 
 <ul>
-<li><p>The outlet declaration is one time work, it will not change unless electronics are updated.</p></li>
+<li><p>The outlet declaration is one-time work; it will not change unless electronics are updated.</p></li>
 
 <li><p>Next declare equipments under the equipment tab. Each equipment should have an assigned outlet.</p></li>
 </ul>
@@ -149,21 +149,21 @@ ga('send', 'pageview');
 <img src="/img/power/all_equipment.png" alt="all equipment" /></li>
 </ul>
 
-<p>Thats it, you should be able to use reef-pi to control all four equipments.</p>
+<p>That&rsquo;s it, you should be able to use reef-pi to control all four equipments.</p>
 
 <h3 id="usage">Usage</h3>
 
 <h4 id="controlling-equipments-on-demand">Controlling equipments on-demand</h4>
 
-<p>Any equipment specified in the configurartion file can be switched on or off any time using reef-pi web interface. Use the equipment tab to navigate to the list of equipments and click on the on/off button to switch the equipment on/off. Every equipment should have a dedicated button indicating the equipment&rsquo;s real time state.</p>
+<p>Any equipment specified in the configuration file can be switched on or off any time using reef-pi web interface. Use the equipment tab to navigate to the list of equipments and click on the on/off button to switch the equipment on/off. Every equipment should have a dedicated button indicating the equipment&rsquo;s real-time state.</p>
 
 <p><img src="/img/power/on-demand.png" alt="on-demand ui" /></p>
 
 <h4 id="controlling-equipments-using-timers">Controlling equipments using timers</h4>
 
-<p>In the following example we are setting up heater to start at night 10:00 PM and stop at morning 6:00 AM. Use the &ldquo;timers&rdquo; tab to define two timers. Each timer represent a period action reef-pi takes.</p>
+<p>In the following example we are setting up heater to start at night 10:00 PM and stop at morning 6:00 AM. Use the &ldquo;timers&rdquo; tab to define two timers. Each timer represents a period action reef-pi takes.</p>
 
-<p>The first job starts the heater at night. reef-pi allowes us to specify which equipment to take action against, time details (day of the month, hour, minute, second etc) and the action (on or off). Notice &ldquo;*&rdquo; is used to denote every day of the month.</p>
+<p>The first job starts the heater at night. reef-pi allows us to specify which equipment to take action against, time details (day of the month, hour, minute, second etc) and the action (on or off). Notice &ldquo;*&rdquo; is used to denote every day of the month.</p>
 
 <p><img src="/img/power/timer_start.png" alt="timer start" /></p>
 

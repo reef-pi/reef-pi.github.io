@@ -17,7 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/power/</guid>
-      <description>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-deman controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</description>
+      <description>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-demand controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/ato/</guid>
-      <description>Atutomatic top off units are systems that maintains a constant water volume inside a reef tank. Reef tanks undergoes water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect to corals. Auto top off units monitors water level periodically and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume.</description>
+      <description>Automatic top off units are systems that maintain a constant water volume inside a reef tank. Reef tanks undergoe water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect to corals. Auto top off units monitors water level periodically and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume.</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/camera/</guid>
-      <description>The camera controller provides an easy and convenient way to take reef tank photos on demand and at periodic intervals. reef-pi can also be configured to upload the images taken to google drive. This is useful when users are far from the tank for longer periods (like in vacataion), the uploaded images can provides an easy way to stay up to date with current state of the tank. The camera controller does not involve any other electronics other than the official camera module.</description>
+      <description>The camera controller provides easy and convenient way to take reef tank photos on demand and at periodic intervals. reef-pi can also be configured to upload the images taken to google drive. This is useful when users are far from the tank for longer periods (like in vacation), the uploaded images can provide an easy way to stay up to date with current state of the tank. The camera controller does not involve any other electronics other than the official camera module.</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/lighting/</guid>
-      <description>Lighting is one of the key aspects of a maintaining a thriving reef tank. Most corals in reef tanks are photo synthetic and requires lighting from a specific spectrum (400-700 nm). Different corals prefer different intensity of lighting for their optimal growth, these are geneally specified in PAR (photosynthetically active radiation) values. For example, acroporas prefer higher PARs (250 and above) while acans and mushrooms prefers lower PARs (less than 150).</description>
+      <description>Lighting is one of the key aspects of a maintaining a thriving reef tank. Most corals in reef tanks are photo synthetic and require lighting from a specific spectrum (400-700 nm). Different corals prefer different intensity of lighting for their optimal growth; these are generally specified in PAR (photosynthetically active radiation) values. For example, acroporas prefer higher PARs (250 and above) while acans and mushrooms prefers lower PARs (less than 150).</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@
       
       <guid>https://reef-pi.github.io/build-guides/doser/</guid>
       <description> The guide provides details on how to build a two part dosing system. Though we are covering only two pparts dosing system where each part if controlled by one dosing pump, this guide can be used to build dosing controller to automate as many as 16 dosing pumps.
-Bill of Material  pi zero PCA9685 breakout board L293D motor control IC 2 peristaltic pump 12 volt  Electronics Calibration Setup </description>
+How this work Bill of Material  pi zero PCA9685 breakout board L293D motor control IC 2 peristaltic pump 12 volt  Electronics Calibration Setup </description>
     </item>
     
     <item>
