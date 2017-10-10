@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="reef-pi, reef tank, controller, raspberry pi, coral" name="keywords">
     <meta name="author" content="map[]" />
-    <meta name="description" content="reef-pi - A Raspberry Pi based opensource reef tank controller">
+    <meta name="description" content="reef-pi - An opensource reef tank controller based on Raspberry Pi">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
     <title>Install &amp; configuration</title>
     <meta name="generator" content="Hugo 0.25.1" />
@@ -52,6 +52,8 @@ ga('send', 'pageview');
         
         <li><a href="/build-guides/">BUILD GUIDES</a></li>
         
+        <li><a href="/additional-documentation/">ADDITIONAL DOCUMENTATION</a></li>
+        
         <li><a href="/blogs/">BLOGS</a></li>
         
       
@@ -77,11 +79,11 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<p>This guide will walk you throug the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assume prior familiarity with computers, no programming knowledge is required.</p>
+<p>This guide will walk you through the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assumes prior familiarity with computers, no programming knowledge is required.</p>
 
 <h3 id="prepare-raspberry-pi-image">Prepare Raspberry Pi image</h3>
 
-<p>We recommend a microSD card of Class10 and atleast 8Gb capacity for reef-pi. reef-pi is tested on raspbian, but it should work on most other linux OS, on Raspberry Pi. Follow the official raspberry pi guide for details instructions:
+<p>We recommend a microSD card of Class10 and at least 8Gb capacity for reef-pi. reef-pi is tested on raspbian, but it should work on most other linux OS, on Raspberry Pi. Follow the official raspberry pi guide for details instructions:
 - <a href="https://www.raspberrypi.org/documentation/installation/installing-images/">Download and write raspbian image to micro SD card</a></p>
 
 <h3 id="connecting-to-raspberry-pi">Connecting to Raspberry Pi</h3>
@@ -92,21 +94,21 @@ ga('send', 'pageview');
 
 <h3 id="configure-raspberry-pi">Configure raspberry pi</h3>
 
-<p>Once raspbian image is written on microSD card, plug it in Raspberry Pi and power it. Once started configure following things at leat, for optimal performance of reef-pi.</p>
+<p>Once raspbian image is written on microSD card, plug it in Raspberry Pi and power it. Once Raspbian OS is started, configure following things internet, date and ssh access.</p>
 
 <ul>
-<li>Configure wifi: Enabling wifi or ethernet based internet connection allows reef-pi to be accessible from any web browser (mobile, tablet or computers). Note, this is not a manadatory requirement for running wifi. It is just a convenience.</li>
+<li>Configure wifi: Enabling wifi or ethernet based internet connection allows reef-pi to be accessible from any web browser (mobile, tablet or computers). Note, this is not a mandatory requirement for running wifi. It is just a convenience.</li>
 </ul>
 
 <p>Next set of steps assume you are working on terminal:
-- Update system: Perform a system update with following command. Note: if internet is not enabled, this will not work, and should be skipped.</p>
+- Update system: Perform a system update with the following command. Note: if internet is not enabled, this will not work, and should be skipped.</p>
 
 <pre><code>sudo apt-get update -y
 sudo apt-get upgrade -y
 </code></pre>
 
 <ul>
-<li>Change password: Raspbian images comes with stock password for the &ldquo;pi&rdquo; user. Reset it to something unique and stronger</li>
+<li>Change password: Raspbian images comes with a stock password for the &ldquo;pi&rdquo; user. Reset it to something unique and stronger</li>
 </ul>
 
 <pre><code>passwd
@@ -131,7 +133,7 @@ dtoverlay=w1-gpio
 
 <li><p>Configure and enable ssh: ssh is used to remotely control and troubleshoot the Raspberry Pi directly.</p></li>
 
-<li><p>The same can be done from terminal as well, using following commands:</p></li>
+<li><p>The same can be done from the terminal as well, using following commands:</p></li>
 </ul>
 
 <pre><code>sudo systemctl start ssh.service
@@ -170,7 +172,7 @@ sudo dpkg-reconfigure locales
 <pre><code>sudo systemctl status reef-pi.service
 </code></pre>
 
-<p>After this you should be able to access reef-pi from the browser</p>
+<p>After this, you should be able to access reef-pi from the browser</p>
 
             </div>
           </div>

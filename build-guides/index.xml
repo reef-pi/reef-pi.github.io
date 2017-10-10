@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Build guides on reef-pi - A Raspberry Pi based opensource reef tank controller</title>
+    <title>Build guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
     <link>https://reef-pi.github.io/build-guides/</link>
-    <description>Recent content in Build guides on reef-pi - A Raspberry Pi based opensource reef tank controller</description>
+    <description>Recent content in Build guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
@@ -21,12 +21,39 @@
     </item>
     
     <item>
+      <title>Lighting controller</title>
+      <link>https://reef-pi.github.io/build-guides/lighting/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/lighting/</guid>
+      <description>Lighting is one of the key aspects of a maintaining a thriving reef tank. Most corals in reef tanks are photo synthetic and require lighting from a specific spectrum (400-700 nm). Different corals prefer different intensity of lighting for their optimal growth; these are generally specified in PAR (photosynthetically active radiation) values. For example, acroporas prefer higher PARs (250 and above) while acans and mushrooms prefers lower PARs (less than 150).</description>
+    </item>
+    
+    <item>
       <title>Auto Top Off</title>
       <link>https://reef-pi.github.io/build-guides/ato/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/ato/</guid>
       <description>Automatic top off units are systems that maintain a constant water volume inside a reef tank. Reef tanks undergoe water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect to corals. Auto top off units monitors water level periodically and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume.</description>
+    </item>
+    
+    <item>
+      <title>Temperature controller</title>
+      <link>https://reef-pi.github.io/build-guides/temperature/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/temperature/</guid>
+      <description>Maintain stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller.</description>
+    </item>
+    
+    <item>
+      <title>Telemetry</title>
+      <link>https://reef-pi.github.io/build-guides/telemetry/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/build-guides/telemetry/</guid>
+      <description> Signing up for adafruit.io account Configuring reef-pi with adafruit.io key </description>
     </item>
     
     <item>
@@ -39,21 +66,12 @@
     </item>
     
     <item>
-      <title>Lighting controller</title>
-      <link>https://reef-pi.github.io/build-guides/lighting/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Touchscreen display</title>
+      <link>https://reef-pi.github.io/build-guides/display/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/build-guides/lighting/</guid>
-      <description>Lighting is one of the key aspects of a maintaining a thriving reef tank. Most corals in reef tanks are photo synthetic and require lighting from a specific spectrum (400-700 nm). Different corals prefer different intensity of lighting for their optimal growth; these are generally specified in PAR (photosynthetically active radiation) values. For example, acroporas prefer higher PARs (250 and above) while acans and mushrooms prefers lower PARs (less than 150).</description>
-    </item>
-    
-    <item>
-      <title>Temperature controller</title>
-      <link>https://reef-pi.github.io/build-guides/temperature/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/build-guides/temperature/</guid>
-      <description>Maintain stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller.</description>
+      <guid>https://reef-pi.github.io/build-guides/display/</guid>
+      <description>reef-pi can be configured to be used with the offical Raspberry Pi Touchscreen display to provide a direct access to reef-pi, without any network dependency. With a touchscreen it is possible to run reef-pi without any internet or even home wifi connection ( albeit modules like telemetry will not work). Activities like equipment on/off during water change, light intensity controls are all possible with touchscreen. Workflows involving editing text (like the one involved in creating new timer or equipment) are harder to setup, but can be done using on screen keyboard software (e.</description>
     </item>
     
     <item>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>additional guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
+    <link>https://reef-pi.github.io/additional-documentation/</link>
+    <description>Recent content in additional guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://reef-pi.github.io/additional-documentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://reef-pi.github.io/additional-documentation/troubleshooting/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/troubleshooting/</guid>
+      <description>Check if reef-pi is running  sudo ystemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
+ Check reef-pi version (helps in bug reports)
+  reef-pi -version   Resetting reef-pi &amp;rsquo;s data base  sudo systemctl stop reef-pi.</description>
+    </item>
+    
+    <item>
+      <title>Upgrade</title>
+      <link>https://reef-pi.github.io/additional-documentation/upgrade/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/upgrade/</guid>
+      <description>Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the release page. Choose latest relase if you are unsure. For this documentation we&amp;rsquo;ll use 1.0 release version on pi zero.
+ ssh into raspberry pi, running reef-pi and upgrade using following commands in a terminal
+ Download the release package on reef-pi
+wget -c https://github.com/reef-pi/reef-pi/releases/download/0.5/reef-pi-1.0-pi0.deb  Remove the existing reef-pi
+sudo apt-get remove reef-pi -y -f --purge  Install the downloaded reef-pi version</description>
+    </item>
+    
+    <item>
+      <title>Remote Access</title>
+      <link>https://reef-pi.github.io/additional-documentation/remote/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/remote/</guid>
+      <description>This guide meant to assist in establishing a remote connection to your reef-pi main control page using one of the two popular options, RealVNC and Tor. reef-pi is normally accessible only within the home wifi network, using any of these two approaches you can access reef-pi from anywhere.
+RealVNC The first option is to use software such as Real VNC. They offer a cloud option that will allow you to access your Raspberry Pi from anywhere.</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://reef-pi.github.io/additional-documentation/tools/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/tools/</guid>
+      <description> reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron, solder, faux etc. plier wire stripper Screw driver (philips, m8 etc) multimeter  Wood working  Dremel or some other rotary tools Scroll saw Clamps  </description>
+    </item>
+    
+    <item>
+      <title>Glossary</title>
+      <link>https://reef-pi.github.io/additional-documentation/glossary/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/glossary/</guid>
+      <description>0-10v A method of diming leds using voltage.
+3.5mm right angle, female panel mount audio jack A mini audio connector used in the LED controller and possibly other builds.
+3.5mm right angle, bare wire male audio connector A mini right angle audio connector used in the LED controller and possibly other builds.
+5 volt 2.5 amp micro USD power supply A power supply that will provide ample power for a Raspberry Pi.</description>
+    </item>
+    
+    <item>
+      <title>Development environment</title>
+      <link>https://reef-pi.github.io/additional-documentation/development/</link>
+      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/development/</guid>
+      <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
+Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
+    </item>
+    
+    <item>
+      <title>API</title>
+      <link>https://reef-pi.github.io/additional-documentation/api/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/api/</guid>
+      <description>Operating system reef-pi can be developed on linux, OS X and windows. The physical control part can only be run on linux. reef-pi in particular been tested and developed on raspbian running on Raspberry Pi.
+reef-pi software architecture composed of three main components - A physical backend: Part that controls physical devices (pwm, relay, sensor) - A HTTP server: Part that converts the physical control part to reef hobby specific terms.</description>
+    </item>
+    
+  </channel>
+</rss>

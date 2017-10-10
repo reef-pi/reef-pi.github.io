@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>General Guides on reef-pi - A Raspberry Pi based opensource reef tank controller</title>
+    <title>General Guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
     <link>https://reef-pi.github.io/general-guides/</link>
-    <description>Recent content in General Guides on reef-pi - A Raspberry Pi based opensource reef tank controller</description>
+    <description>Recent content in General Guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
@@ -17,120 +17,26 @@
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/install/</guid>
-      <description>This guide will walk you throug the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assume prior familiarity with computers, no programming knowledge is required.</description>
+      <description>This guide will walk you through the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assumes prior familiarity with computers, no programming knowledge is required.</description>
     </item>
     
     <item>
-      <title>How to setup telemetry and dashboatd with reef-pi</title>
-      <link>https://reef-pi.github.io/general-guides/telemetry/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/telemetry/</guid>
-      <description> Signing up for adafruit.io account Configuring reef-pi with adafruit.io key </description>
-    </item>
-    
-    <item>
-      <title>How to troubleshoot and ask for help</title>
-      <link>https://reef-pi.github.io/general-guides/troubleshooting/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/troubleshooting/</guid>
-      <description>Check if reef-pi is running  sudo ystemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
- Check reef-pi version (helps in bug reports)
-  reef-pi -version   Resetting reef-pi &amp;rsquo;s data base  sudo systemctl stop reef-pi.</description>
-    </item>
-    
-    <item>
-      <title>Remote Access</title>
-      <link>https://reef-pi.github.io/general-guides/remote/</link>
-      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/remote/</guid>
-      <description>This guide meant to assist in establishing a remote connection to your reef-pi main control page using one of the two popular options, RealVNC and Tor. reef-pi is normally accessible only within the home wifi network, using any of these two approaches you can access reef-pi from anywhere.
-RealVNC The first option is to use software such as Real VNC. They offer a cloud option that will allow you to access your Raspberry Pi from anywhere.</description>
-    </item>
-    
-    <item>
-      <title>Application Programmers Interface</title>
-      <link>https://reef-pi.github.io/general-guides/api/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/api/</guid>
-      <description>Operating system reef-pi can be developed on linux, OS X and windows. The physical control part can only be run on linux. reef-pi in particular been tested and developed on raspbian running on Raspberry Pi.
-reef-pi software architecture composed of three main components - A physical backend: Part that controls physical devices (pwm, relay, sensor) - A HTTP server: Part that converts the physical control part to reef hobby specific terms.</description>
-    </item>
-    
-    <item>
-      <title>Glossary</title>
-      <link>https://reef-pi.github.io/general-guides/glossary/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/glossary/</guid>
-      <description>0-10v A method of diming leds using voltage.
-3.5mm right angle, female panel mount audio jack A mini audio connector used in the LED controller and possibly other builds.
-3.5mm right angle, bare wire male audio connector A mini right angle audio connector used in the LED controller and possibly other builds.
-5 volt 2.5 amp micro USD power supply A power supply that will provide ample power for a Raspberry Pi.</description>
-    </item>
-    
-    <item>
-      <title>How to setup reef-pi development environment</title>
-      <link>https://reef-pi.github.io/general-guides/development/</link>
-      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/development/</guid>
-      <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
-Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
-    </item>
-    
-    <item>
-      <title>How to build a housing</title>
-      <link>https://reef-pi.github.io/general-guides/housing/</link>
-      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/housing/</guid>
-      <description>Building an appropriate housing is critical part of a controller build. Housing or enclosure secures the elctronics from outside environment, as well as provides mounting place for the different probes, equipments and display panels.
-Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
-    </item>
-    
-    <item>
-      <title>How to setup a touchscreen display</title>
-      <link>https://reef-pi.github.io/general-guides/touchscreen_display/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/touchscreen_display/</guid>
-      <description> reef-pi can be configured to be used with the offical Raspberry Pi Touchscreen display. This can be used to directly siwtch on/off equipments, control light intensity and a general purpose dashboard of controller health.
-Note: The touchscreen display only works with Raspberry Pi 3, it does not work with pi zero.
-Things you need  Raspberry Pi 3 Raspberry Pi Official Touchscreen Camera cable  Configuration  Enabling display in reef-pi configuration Auto-starting dashboard on-boot Adjusting rotation  </description>
-    </item>
-    
-    <item>
-      <title>What tools you need?</title>
-      <link>https://reef-pi.github.io/general-guides/tools/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/tools/</guid>
-      <description> reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron multimeter plier wire stripper  Wood working  Scroll saw Clamps -  </description>
-    </item>
-    
-    <item>
-      <title>An overview of different reef-pi electronics components</title>
+      <title>Wiring and connectors</title>
       <link>https://reef-pi.github.io/general-guides/electronics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/electronics/</guid>
-      <description> Raspberry Pi Raspberrt Pi 7&amp;rdquo; Touchscreen display Relays PCA9685 L293D ULN2803a Connectors  3.5 mm right angle, male audio jacks with bare wire 3.5 mm female panel mount audio jack DC female panel mount barel jack 5 volt 2.5 amp micro USB power supply 12 volt, 1 amp DC barrel jack power supply  Electrical components  Power socket with fuse Universal power cord: NEMA5 110v electrical receptacles  Peristaltic pumps PN2222 transistor 1K and 10K resistors    </description>
+      <description> Connectors  3.5 mm right angle, male audio jacks with bare wire 3.5 mm female panel mount audio jack DC female panel mount barel jack 5 volt 2.5 amp micro USB power supply 12 volt, 1 amp DC barrel jack power supply  Wiring  Breadbord Perf board DIY IC board  </description>
     </item>
     
     <item>
-      <title>Timer specification</title>
-      <link>https://reef-pi.github.io/general-guides/timer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Housing</title>
+      <link>https://reef-pi.github.io/general-guides/housing/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/general-guides/timer/</guid>
-      <description>Each job in reef-pi is executed at a given schedule. A job&amp;rsquo;s schedule specifies day and time related details.
-reef-pi uses cron like specification to define job schedules.
-Following is a summary of the specification
- &amp;ldquo;day of month&amp;rdquo; represent which day of every month the job will be triggered. Values can range from 1 to 31 &amp;ldquo;hour&amp;rdquo; represent which hour of the day job will be triggered. Values can range from 0 to 23 &amp;ldquo;minute&amp;rdquo; represent which minute of the hour job will be triggered.</description>
+      <guid>https://reef-pi.github.io/general-guides/housing/</guid>
+      <description>Building an appropriate housing is a critical part of a controller build. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels.
+Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
     </item>
     
   </channel>
