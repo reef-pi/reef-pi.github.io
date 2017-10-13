@@ -17,7 +17,7 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/troubleshooting/</guid>
-      <description>Check if reef-pi is running  sudo ystemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
+      <description>Check if reef-pi is running  sudo systemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
  Check reef-pi version (helps in bug reports)
   reef-pi -version   Resetting reef-pi &amp;rsquo;s data base  sudo systemctl stop reef-pi.</description>
     </item>
@@ -29,10 +29,8 @@
       
       <guid>https://reef-pi.github.io/additional-documentation/upgrade/</guid>
       <description>Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the release page. Choose latest relase if you are unsure. For this documentation we&amp;rsquo;ll use 1.0 release version on pi zero.
- ssh into raspberry pi, running reef-pi and upgrade using following commands in a terminal
- Download the release package on reef-pi
-wget -c https://github.com/reef-pi/reef-pi/releases/download/0.5/reef-pi-1.0-pi0.deb  Remove the existing reef-pi
-sudo apt-get remove reef-pi -y -f --purge  Install the downloaded reef-pi version</description>
+ Open a terminal window using the ssh software of your choices. SSH into your raspberry pi, then login into reef-pi and upgrade using following commands in a terminal
+ Download the release package on reef-pi (remember to use the correct pi-x.</description>
     </item>
     
     <item>
