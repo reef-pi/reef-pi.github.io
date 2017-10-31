@@ -23,13 +23,22 @@
     </item>
     
     <item>
+      <title>Headless</title>
+      <link>https://reef-pi.github.io/additional-documentation/headless/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/headless/</guid>
+      <description>There are times when you want to get your Raspberry Pi up and running completely headlessly. Maybe you typically use a laptop and don&amp;rsquo;t have an extra keyboard. Maybe you don&amp;rsquo;t have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot.</description>
+    </item>
+    
+    <item>
       <title>Upgrade</title>
       <link>https://reef-pi.github.io/additional-documentation/upgrade/</link>
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/upgrade/</guid>
       <description>Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the release page. Choose latest relase if you are unsure. For this documentation we&amp;rsquo;ll use 1.0 release version on pi zero.
- Open a terminal window using the ssh software of your choices. SSH into your raspberry pi, then login into reef-pi and upgrade using following commands in a terminal
+ Open a terminal window using the ssh software of your choices. SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window
  Download the release package on reef-pi (remember to use the correct pi-x.</description>
     </item>
     
