@@ -17,7 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/power/</guid>
-      <description>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-demand controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</description>
+      <description>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example, a power controller can turn on/off light or skimmer daily as well as allow on-demand controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</description>
     </item>
     
     <item>

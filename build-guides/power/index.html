@@ -79,115 +79,113 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<p>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example: a power controller can turn on/off light or skimmer daily as well as allow on-demand controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</p>
+<p>Automated power strips allow on-demand and timer based control of AC outlets (110v or 220v). They are one of the easiest to build yet most useful controllers using reef-pi. For example, a power controller can turn on/off light or skimmer daily as well as allow on-demand controls like switching off ATO and return pump during water changes. This guide will go through step by step process of building a four outlet power controller.</p>
 
-<h3 id="how-this-work">How this work</h3>
+<h3 id="how-this-works">How this works</h3>
 
-<p>reef-pi software uses Raspberry Pi&rsquo;s GPIO pins to control digital relays, which in turn controls  high voltage, high current AC or DC equipments. This mechanism is used across timer or sensor based (like temperature or ato controllers) equipment controls.</p>
+<p>The reef-pi software uses the Raspberry Pi’s GPIO pins to control digital relays, which in turn controls high voltage, high current AC or DC equipment. This mechanism is used across timer or sensor based (like temperature or ATO controllers) equipment controls.</p>
 
 <h3 id="things-to-consider">Things to consider</h3>
 
 <ul>
 <li><p>Choice of relay: Controlling high AC voltages via Raspberry Pi involves relays. Relays can be optocouplers, mechanical or solid state. Mechanical relays are cheapest, optocouplers are safest and expensive. Solid state relays are somewhere in the middle, safer, more expensive and last longer than mechanical relays but cheaper more readily available that optocoupler. We recommend optocoupler based relays where price is not a factor, solid state relays where current requirements are low (less than 2 amp) and mechanical relays for beginners or anything else.</p></li>
 
-<li><p>Relay capacity: Almost all relays are rated to work with a voltage and current range. Most mechanical relays are rated for 10 amp, 240volt ac, while solid state relays are generally rated for 240volt ac, 2 amp. Depending upon what type of equipment you will be powering, choose appropriate relays. Equipments are generally rated with watts, and watt = volt x ampere. i.e. a 100 watt heater will require at least 1 amp relay to be powered safely by 110volt ac.</p></li>
+<li><p>Relay capacity: Almost all relays are rated to work with a voltage and current range. Most mechanical relays are rated for 10 amp, 240volt AC, while solid state relays are generally rated for 240volt AC, 2 amp. Depending upon what type of equipment you will be powering, choose appropriate relays. Equipment is generally rated in watts, and watt = volt x ampere. For example, a 100-watt heater will require at least 1 amp relay to be powered safely by 110volt AC.</p></li>
 
-<li><p>Number of relay channels: The number of channels in a relay board determines how many AC connections can be controller. Since we are building a 4 outlet powerstrip, we&rsquo;ll go with a 4 channel ssd relay. We&rsquo;ll need one GPIO pin of Raspberry Pi for each channel on the relay. It is possible to control around 18 channel relays using raspberry pi alone (it can be extend to thousands using an IO expander).</p></li>
+<li><p>Number of relay channels: The number of channels in a relay board determines how many AC connections can be controlled. Since we are building a 4 outlet power strip, we’ll go with a 4 channel SSD relay. We’ll need one GPIO pin of Raspberry Pi for each channel on the relay. It is possible to control around 18 channel relays using the Raspberry Pi alone (it can be extended to thousands using an IO expander).</p></li>
 </ul>
 
 <h3 id="bill-of-materials">Bill of Materials</h3>
 
 <ul>
-<li><a href="https://www.adafruit.com/product/3400">Pi zero</a></li>
-<li><a href="https://www.adafruit.com/product/2693">micro sd card</a></li>
-<li>5v 2.4 amp <a href="https://www.adafruit.com/product/1995">adapter</a> for Raspberry Pi</li>
-<li>4 Channel SSD relay. <a href="https://www.amazon.com/gp/product/B00ZZVQR5Q/">example</a></li>
-<li>AC Power adapter with fuse. <a href="https://www.amazon.com/gp/product/B00ME5YAPK">example</a></li>
-<li>AC Power cord. <a href="https://www.amazon.com/gp/product/B00005113L/">example</a></li>
-<li>AC receptacles <a href="https://www.amazon.com/gp/product/B002DQT5UK/">example</a></li>
-<li>Female-female jumper wires. <a href="https://www.amazon.com/gp/product/B00DJY4RS0">example</a></li>
+<li><a href="https://www.adafruit.com/product/3400">Raspberry Pi Zero</a> or Raspberry Pi 3(<a href="https://www.adafruit.com/product/3055">https://www.adafruit.com/product/3055</a>)</li>
+<li><a href="https://www.adafruit.com/product/2693">microSD card</a></li>
+<li><a href="https://www.adafruit.com/product/1995">5v 2.4 amp AC adapter</a> for Raspberry Pi</li>
+<li><a href="https://www.amazon.com/gp/product/B00ZZVQR5Q/">4 Channel SSD relay</a></li>
+<li><a href="https://www.amazon.com/gp/product/B00ME5YAPK">AC Power adapter with fuse</a></li>
+<li><a href="https://www.amazon.com/gp/product/B00005113L/">AC Power cord</a></li>
+<li><a href="https://www.amazon.com/gp/product/B002DQT5UK/">AC receptacles</a></li>
+<li><a href="https://www.amazon.com/gp/product/B00DJY4RS0">Female-female jumper wires</a></li>
 </ul>
 
 <h3 id="wiring">Wiring</h3>
 
-<p><img src="/img/power/breadboard.png" alt="breadboard" /></p>
+<p><img src="https://reef-pi.github.io/img/power/breadboard.png" alt="breadboard" /></p>
 
 <h3 id="install-configure-reef-pi">Install &amp; Configure reef-pi</h3>
 
 <ul>
-<li><p>Follow reef-pi installation <a href="/general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</p></li>
+<li><p>Follow the reef-pi installation <a href="/general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</p></li>
 
 <li><p>Enable equipment capability and turn off dev mode under setting section on system tab</p></li>
 </ul>
 
-<p><img src="/img/power/capability.png" alt="capability" /></p>
+<p><img src="https://reef-pi.github.io/img/power/capability.png" alt="capability" /></p>
 
 <ul>
-<li><p>Click on the <em>update</em> button to save settings followed by <em>reload</em> button to ensure the changes are loaded immediately. Refresh your browser (since reef-pi is reloading, it may take few seconds). You should see equipments tab now.</p></li>
+<li><p>Click on the <em>Update</em> button to save settings followed by <em>Reload</em> button to ensure the changes are loaded immediately. Refresh your browser (since reef-pi is reloading, it may take few seconds). You should see the Equipments tab now.</p></li>
 
-<li><p>Navigate to system tab again and declare outlets. Use the GPIO pin numbers (<em>not serial number</em>) to define one outlet per relay channels. You can use the recommend pinout scheme to decide which GPIOs to use. They should mimic the exact wiring.</p></li>
+<li><p>Navigate to System tab again and declare outlets. Use the GPIO pin numbers (<em>not serial number</em>) to define one outlet per relay channels. You can use the recommend pinout scheme to decide which GPIOs to use. They should mimic the exact wiring.</p></li>
 </ul>
 
-<p><img src="/img/power/outlet_add.png" alt="add outlet" /></p>
+<p><img src="https://reef-pi.github.io/img/power/outlet_add.png" alt="add outlet" /></p>
 
 <ul>
-<li>Since this guide follows a four channel relay, we are declaring 4 outlets.</li>
+<li>Since this guide uses a four channel relay, we are declaring 4 outlets.</li>
 </ul>
 
-<p><img src="/img/power/outlet_all.png" alt="add outlets" /></p>
+<p><img src="https://reef-pi.github.io/img/power/outlet_all.png" alt="add outlets" /></p>
 
 <p>Note: the pin number represents the GPIO Pin number, not their position on the Raspberry Pi. Refer Raspberry Pi pinout <a href="http://www.jameco.com/Jameco/workshop/circuitnotes/raspberry_pi_circuit_note_fig2.jpg">diagram</a> for GPIO numbers.</p>
 
 <ul>
-<li><p>The outlet declaration is one-time work; it will not change unless electronics are updated.</p></li>
+<li><p>The outlet declaration is one-time procedure; it will not change unless electronics are updated.</p></li>
 
-<li><p>Next declare equipments under the equipment tab. Each equipment should have an assigned outlet.</p></li>
+<li><p>Next declare equipments under the Equipment tab. Each equipment should have an assigned outlet.</p></li>
 </ul>
 
-<p><img src="/img/power/add_equipment.png" alt="add equipment" /></p>
+<p><img src="https://reef-pi.github.io/img/power/add_equipment.png" alt="add equipment" /></p>
 
 <ul>
 <li>Since we have four outlets in this build, we are declaring four essential equipments for a pico reef tank.
-<img src="/img/power/all_equipment.png" alt="all equipment" /></li>
+<img src="https://reef-pi.github.io/img/power/all_equipment.png" alt="all equipment" /></li>
 </ul>
 
 <p>That&rsquo;s it, you should be able to use reef-pi to control all four equipments.</p>
 
 <h3 id="usage">Usage</h3>
 
-<h4 id="controlling-equipments-on-demand">Controlling equipments on-demand</h4>
+<h4 id="controlling-equipment-on-demand">Controlling equipment on-demand</h4>
 
-<p>Any equipment specified in the configuration file can be switched on or off any time using reef-pi web interface. Use the equipment tab to navigate to the list of equipments and click on the on/off button to switch the equipment on/off. Every equipment should have a dedicated button indicating the equipment&rsquo;s real-time state.</p>
+<p>Any equipment specified in the configuration file can be switched on or off any time using reef-pi web interface. Use the equipment tab to navigate to the list of equipment and click on the on/off button to switch the equipment on/off. Every equipment should have a dedicated button indicating the equipment&rsquo;s real-time state.</p>
 
-<p><img src="/img/power/on-demand.png" alt="on-demand ui" /></p>
+<p><img src="https://reef-pi.github.io/img/power/on-demand.png" alt="on-demand ui" /></p>
 
 <h4 id="controlling-equipments-using-timers">Controlling equipments using timers</h4>
 
-<p>Timers in reef-pi allows automation of an action on a equipemnt at a given schedule.</p>
+<p>Timers in reef-pi allows automation of an action on a piece of equipment on a defined schedule.</p>
 
-<p>In the following example we are setting up heater to start at night 10:00 PM and stop at morning 6:00 AM. Use the &ldquo;timers&rdquo; tab to define two timers. Each timer represents a period action reef-pi takes.</p>
+<p>In the following example, we are setting up the heater to start at night 10:00 PM and stop at morning 6:00 AM. Use the &ldquo;Timers&rdquo; tab to define two timers. Each timer represents an action reef-pi takes.</p>
 
 <p>The first job starts the heater at night. reef-pi allows us to specify which equipment to take action against, time details (day of the month, hour, minute, second etc) and the action (on or off). Notice &ldquo;*&rdquo; is used to denote every day of the month.</p>
 
-<p><img src="/img/power/timer_start.png" alt="timer start" /></p>
+<p><img src="https://reef-pi.github.io/img/power/timer_start.png" alt="timer start" /></p>
 
 <p>And another job to stop the heater every morning 6 AM.</p>
 
-<p><img src="/img/power/timer_stop.png" alt="timer start" /></p>
+<p><img src="https://reef-pi.github.io/img/power/timer_stop.png" alt="timer start" /></p>
 
-<p>reef-pi uses cron style specification for denoting time schedule, this allows much more elaborate way of specifying schedules.</p>
+<p>reef-pi uses <a href="https://en.wikipedia.org/wiki/Cron">cron</a> style specification for denoting time schedule, this allows much more elaborate way of specifying schedules.</p>
 
 <p>A typical schedule specifies day and time related details for the timer.</p>
-
-<p>reef-pi uses <a href="https://en.wikipedia.org/wiki/Cron">cron</a> like specification to define timer schedules.</p>
 
 <p>Following is a summary of the specification</p>
 
 <ul>
-<li>&ldquo;day of month&rdquo; represent which day of every month the job will be triggered. Values can range from 1 to 31</li>
-<li>&ldquo;hour&rdquo; represent which hour of the day job will be triggered. Values can range from 0 to 23</li>
-<li>&ldquo;minute&rdquo; represent which minute of the hour job will be triggered. Value can range from 0 to 59</li>
-<li>&ldquo;second&rdquo; represent which second of the minute job will be triggered. Values can range from 0 to 59</li>
+<li>&ldquo;day of month&rdquo; represents which day of every month the job will be triggered. Values can range from 1 to 31</li>
+<li>&ldquo;hour&rdquo; represents which hour of the day the job will be triggered. Values can range from 0 to 23</li>
+<li>&ldquo;minute&rdquo; represents which minute of the hour the job will be triggered. Value can range from 0 to 59</li>
+<li>&ldquo;second&rdquo; represents which second of the minute the job will be triggered. Values can range from 0 to 59</li>
 </ul>
 
 <p>Other than their mentioned ranges, each of this field can also take few special entries.</p>
@@ -195,14 +193,14 @@ ga('send', 'pageview');
 <p>They are:</p>
 
 <ul>
-<li>&ldquo;*&rdquo; represents <strong>every</strong> . Like every hour, every day etc</li>
-<li>&rdquo;-&rdquo; to represent <strong>ranges</strong>. Example: hour can be &ldquo;2-6&rdquo; to trigger a job every hour from 2 to 6</li>
-<li>&rdquo;/&rdquo; to represent <strong>after every</strong>. Example: Hour value &ldquo;*/3&rdquo; represents after every 3 hours</li>
+<li>&ldquo;*&rdquo; represents <strong>every</strong> possible value. If a * is specified for a value, it will be triggered in every value for that specification. For example, a * entered into the &ldquo;hour&rdquo; field will trigger the job every hour.</li>
+<li>&rdquo;-&rdquo; to represent <strong>ranges</strong>. For example, &ldquo;hour&rdquo; can be specified as &ldquo;2-6&rdquo; to trigger a job every hour from 2 to 6</li>
+<li>&rdquo;/&rdquo; to represent a <strong>repeating period</strong>. For example: an &ldquo;hour&rdquo; value of &ldquo;*/3&rdquo; will cause the job to be triggered once every 3 hours.</li>
 </ul>
 
 <p>More details can be found in  the underlying library&rsquo;s <a href="https://godoc.org/github.com/robfig/cron#hdr-CRON_Expression_Format">documentation</a></p>
 
-<p>Timers can be used to automate use cass like two part dosing, refugium light etc.</p>
+<p>Timers can be used to automate use cases like two part dosing, refugium light etc.</p>
 
 <h3 id="resources">Resources</h3>
 
