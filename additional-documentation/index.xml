@@ -89,8 +89,7 @@ Setup go reef-pi is built and tested with latest go. At the time of writing the 
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/api/</guid>
-      <description>Operating system reef-pi can be developed on linux, OS X and windows. The physical control part can only be run on linux. reef-pi in particular been tested and developed on raspbian running on Raspberry Pi.
-reef-pi software architecture composed of three main components - A physical backend: Part that controls physical devices (pwm, relay, sensor) - A HTTP server: Part that converts the physical control part to reef hobby specific terms.</description>
+      <description>reef-pi porvides a simple HTTP JSON based Application Programming Interface. reef-pi web user interface itself is built using this API. API can be used to control reef-pi from an external system as well. Following is the reef-pi 1.0 API which will not have any breaking changes till the next major release (2.0). reef-pi 1.x series release may receive new features and corresponding API endpoints but all of the 1.0 API endpoints will be intact and not have any breaking changes.</description>
     </item>
     
   </channel>
