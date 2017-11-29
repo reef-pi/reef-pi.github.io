@@ -17,7 +17,9 @@
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/install/</guid>
-      <description>This guide will walk you through the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assumes prior familiarity with computers, no programming knowledge is required.</description>
+      <description>This guide will walk you through the process of installing and configuring reef-pi on a Raspberry Pi. The entire installation process involves three main stages.
+ Creating a MicroSD card for Raspberry Pi Starting Raspberry Pi and configuring it to be used with reef-pi Install and configuration of reef-pi on the Raspberry Pi  This guide assumes prior familiarity with computers, no programming knowledge is required.
+Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8Gb capacity for reef-pi.</description>
     </item>
     
     <item>
@@ -26,7 +28,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/electronics/</guid>
-      <description> Connectors  3.5 mm right angle, male audio jacks with bare wire 3.5 mm female panel mount audio jack DC female panel mount barel jack 5 volt 2.5 amp micro USB power supply 12 volt, 1 amp DC barrel jack power supply  Wiring  Breadbord Perf board DIY IC board  </description>
+      <description> Connectors  3.5 mm right angle, male audio jacks with bare wire 3.5 mm female panel mount audio jack DC female panel mount barel jack 5 volt 2.5 amp micro USB power supply 12 volt, 1 amp DC barrel jack power supply  Wiring  Breadbord Perf board Perma proto board  Configuring reef-pi Pin number in outlets represent GPIO number.
+References  Sparkfun article on connectors  </description>
+    </item>
+    
+    <item>
+      <title>Bill of Materials</title>
+      <link>https://reef-pi.github.io/general-guides/bom/</link>
+      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/bom/</guid>
+      <description> Raspberry Pi 3 MicroSD card 5 volt 2.5 A power supply Female jumper wires PCA9685 breakout board DS18B20 temperature probe Photo electric water level sensor 2N3904 Transistor 4.7k resistor Two 10k resistors Two 1K resistors Standoffs 12v power adapter lm2596 voltage regulators  </description>
     </item>
     
     <item>

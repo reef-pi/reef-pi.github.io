@@ -79,7 +79,15 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<p>This guide will walk you through the process of installing and configuring reef-pi in a new Raspberry Pi with a new microSD card. The process involves three main part, first we have to prepare the micorsd card for Raspberry Pi, then start Raspberry Pi with the microSD card and configure it for reef-pi usage, and then finally install and configuration of reef-pi on the freshly prepared Raspberry Pi. This guide assumes prior familiarity with computers, no programming knowledge is required.</p>
+<p>This guide will walk you through the process of installing and configuring reef-pi on a Raspberry Pi. The entire installation process involves three main stages.</p>
+
+<ul>
+<li>Creating a MicroSD card for Raspberry Pi</li>
+<li>Starting Raspberry Pi and configuring it to be used with  reef-pi</li>
+<li>Install and configuration of reef-pi on the Raspberry Pi</li>
+</ul>
+
+<p>This guide assumes prior familiarity with computers, no programming knowledge is required.</p>
 
 <h3 id="prepare-raspberry-pi-image">Prepare Raspberry Pi image</h3>
 
@@ -144,9 +152,9 @@ sudo systemctl enable ssh.service
 <li>Set time and date: Configure raspbian to use network time to synchronize its date &amp; time information. Also set specific locale, to reflect the local time instead of UTC</li>
 </ul>
 
-<pre><code>sudo systemctl start ntp.service
-sudo systemctl enable ntp.service
-sudo dpkg-reconfigure locales
+<pre><code>sudo systemctl start systemd-timesyncd.service
+sudo systemctl enable systemd-timesyncd.service
+sudo dpkg-reconfigure tzdata
 </code></pre>
 
 <p>Finally, reboot Raspberry Pi to apply all the kernel configuration changes</p>
@@ -157,12 +165,13 @@ sudo dpkg-reconfigure locales
 <h3 id="install-reef-pi">Install reef-pi</h3>
 
 <ul>
-<li>On the raspberry pi, navigate to and download the latest <a href="https://github.com/reef-pi/reef-pi/releases">release</a></li>
-<li>Copy the .deb out of the downloads folder to your desired location (generally in Documents folder).</li>
-<li>Open Terminal and type following commands to install reef-pi</li>
+<li>On the raspberry pi, navigate to the release page and copy link for the latest <a href="https://github.com/reef-pi/reef-pi/releases">release</a></li>
+<li>Make sure you choose the right release package for pi 3 or pi zero.</li>
+<li>Open Terminal and type following commands to download and  install reef-pi, assuming you are installing 1.0 release</li>
 </ul>
 
-<pre><code>sudo dpkg -i reef-pi-&lt;version&gt;.deb
+<pre><code>wget -c https://github.com/reef-pi/reef-pi/releases/download/1.0/reef-pi-1.0-pi3.deb
+sudo dpkg -i reef-pi-1.0-pi3.deb
 </code></pre>
 
 <ul>
@@ -173,6 +182,8 @@ sudo dpkg-reconfigure locales
 </code></pre>
 
 <p>After this, you should be able to access reef-pi from the browser</p>
+
+<p>Default reef-pi login username and password both is set as <strong>reef-pi</strong>. Update these from the settings section under conifiguration tab</p>
 
             </div>
           </div>
