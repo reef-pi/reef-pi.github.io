@@ -18,7 +18,7 @@
       
       <guid>https://reef-pi.github.io/general-guides/install/</guid>
       <description>This guide will walk you through the process of installing and configuring reef-pi on a Raspberry Pi. The entire installation process involves three main stages.
- Creating a MicroSD card for Raspberry Pi Starting Raspberry Pi and configuring it to be used with reef-pi Install and configuration of reef-pi on the Raspberry Pi  This guide assumes prior familiarity with computers, no programming knowledge is required.
+ Creating a MicroSD card for Raspberry Pi Starting Raspberry Pi and configuring it to be used with reef-pi Install and configuration of reef-pi on the Raspberry Pi  This guide assume some prior familiarity with computers, but no programming knowledge is required.
 Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8Gb capacity for reef-pi.</description>
     </item>
     
@@ -43,15 +43,6 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
     </item>
     
     <item>
-      <title>Headless</title>
-      <link>https://reef-pi.github.io/additional-documentation/headless/</link>
-      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/additional-documentation/headless/</guid>
-      <description>There are times when you want to get your Raspberry Pi up and running completely headlessly. Maybe you typically use a laptop and don&amp;rsquo;t have an extra keyboard. Maybe you don&amp;rsquo;t have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot.</description>
-    </item>
-    
-    <item>
       <title>Lighting controller</title>
       <link>https://reef-pi.github.io/build-guides/lighting/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
@@ -66,9 +57,8 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/upgrade/</guid>
-      <description>Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the release page. Choose latest relase if you are unsure. For this documentation we&amp;rsquo;ll use 1.0 release version on pi zero.
- Open a terminal window using the ssh software of your choices. SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window
- Download the release package on reef-pi (remember to use the correct pi-x.</description>
+      <description>A running reef-pi controller version is always visible from the dashaboard footer.   Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the release page. Choose latest relase if you are unsure. For this documentation we&amp;rsquo;ll use 1.0 release version on pi zero.
+ Open a terminal window using the ssh software of your choices. SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window</description>
     </item>
     
     <item>
@@ -87,17 +77,16 @@ References  Sparkfun article on connectors  </description>
       <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/bom/</guid>
-      <description> Raspberry Pi 3 MicroSD card 5 volt 2.5 A power supply Female jumper wires PCA9685 breakout board DS18B20 temperature probe Photo electric water level sensor 2N3904 Transistor 4.7k resistor Two 10k resistors Two 1K resistors Standoffs 12v power adapter lm2596 voltage regulators  </description>
+      <description>Raspberry Pi 3 MicroSD card 5 volt 2.5 A power supply Female jumper wires PCA9685 breakout board DS18B20 temperature probe Photo electric water level sensor 2N3904 Transistor 4.7k resistor Two 10k resistors Two 1K resistors Standoffs 12v power adapter lm2596 voltage regulators  Amazon shopping list</description>
     </item>
     
     <item>
-      <title>Remote Access</title>
-      <link>https://reef-pi.github.io/additional-documentation/remote/</link>
-      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      <title>API</title>
+      <link>https://reef-pi.github.io/additional-documentation/api/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/additional-documentation/remote/</guid>
-      <description>This guide meant to assist in establishing a remote connection to your reef-pi main control page using one of the two popular options, RealVNC and Tor. reef-pi is normally accessible only within the home wifi network, using any of these two approaches you can access reef-pi from anywhere.
-RealVNC The first option is to use software such as Real VNC. They offer a cloud option that will allow you to access your Raspberry Pi from anywhere.</description>
+      <guid>https://reef-pi.github.io/additional-documentation/api/</guid>
+      <description>reef-pi porvides a simple HTTP JSON based Application Programming Interface. reef-pi web user interface itself is built using this API. API can be used to control reef-pi from an external system as well. Following is the reef-pi 1.0 API which will not have any breaking changes till the next major release (2.0). reef-pi 1.x series release may receive new features and corresponding API endpoints but all of the 1.0 API endpoints will be intact and not have any breaking changes.</description>
     </item>
     
     <item>
@@ -119,25 +108,6 @@ RealVNC The first option is to use software such as Real VNC. They offer a cloud
     </item>
     
     <item>
-      <title>Housing</title>
-      <link>https://reef-pi.github.io/general-guides/housing/</link>
-      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/housing/</guid>
-      <description>Building an appropriate housing is a critical part of a controller build. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels.
-Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://reef-pi.github.io/additional-documentation/tools/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/additional-documentation/tools/</guid>
-      <description> reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron, solder, faux etc. plier wire stripper Screw driver (philips, m8 etc) multimeter  Wood working  Dremel or some other rotary tools Scroll saw Clamps  </description>
-    </item>
-    
-    <item>
       <title>Glossary</title>
       <link>https://reef-pi.github.io/additional-documentation/glossary/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
@@ -150,6 +120,26 @@ Housing material Depending upon where and what type of controller you are buildi
     </item>
     
     <item>
+      <title>Housing</title>
+      <link>https://reef-pi.github.io/general-guides/housing/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/housing/</guid>
+      <description>Building an appropriate housing is a critical part of a controller build. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels.
+Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
+    </item>
+    
+    <item>
+      <title>Remote Access</title>
+      <link>https://reef-pi.github.io/additional-documentation/remote/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/remote/</guid>
+      <description>This guide meant to assist in establishing a remote connection to your reef-pi main control page using one of the two popular options, RealVNC and Tor. reef-pi is normally accessible only within the home wifi network, using any of these two approaches you can access reef-pi from anywhere.
+RealVNC The first option is to use software such as Real VNC. They offer a cloud option that will allow you to access your Raspberry Pi from anywhere.</description>
+    </item>
+    
+    <item>
       <title>Telemetry</title>
       <link>https://reef-pi.github.io/build-guides/telemetry/</link>
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
@@ -159,12 +149,30 @@ Housing material Depending upon where and what type of controller you are buildi
     </item>
     
     <item>
+      <title>Headless</title>
+      <link>https://reef-pi.github.io/additional-documentation/headless/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/headless/</guid>
+      <description>There are times when you want to get your Raspberry Pi up and running completely headlessly. Maybe you typically use a laptop and don&amp;rsquo;t have an extra keyboard. Maybe you don&amp;rsquo;t have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot.</description>
+    </item>
+    
+    <item>
       <title>Camera controller</title>
       <link>https://reef-pi.github.io/build-guides/camera/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/camera/</guid>
       <description>The camera controller provides easy and convenient way to take reef tank photos on demand and at periodic intervals. reef-pi can also be configured to upload the images taken to google drive. This is useful when users are far from the tank for longer periods (like in vacation), the uploaded images can provide an easy way to stay up to date with current state of the tank. The camera controller does not involve any other electronics other than the official camera module.</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://reef-pi.github.io/additional-documentation/tools/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/tools/</guid>
+      <description> reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron, solder, faux etc. plier wire stripper Screw driver (philips, m8 etc) multimeter  Wood working  Dremel or some other rotary tools Scroll saw Clamps  </description>
     </item>
     
     <item>
@@ -184,15 +192,6 @@ Housing material Depending upon where and what type of controller you are buildi
       <guid>https://reef-pi.github.io/additional-documentation/development/</guid>
       <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
 Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
-    </item>
-    
-    <item>
-      <title>API</title>
-      <link>https://reef-pi.github.io/additional-documentation/api/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/additional-documentation/api/</guid>
-      <description>reef-pi porvides a simple HTTP JSON based Application Programming Interface. reef-pi web user interface itself is built using this API. API can be used to control reef-pi from an external system as well. Following is the reef-pi 1.0 API which will not have any breaking changes till the next major release (2.0). reef-pi 1.x series release may receive new features and corresponding API endpoints but all of the 1.0 API endpoints will be intact and not have any breaking changes.</description>
     </item>
     
     <item>

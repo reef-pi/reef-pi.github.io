@@ -87,7 +87,7 @@ ga('send', 'pageview');
 <li>Install and configuration of reef-pi on the Raspberry Pi</li>
 </ul>
 
-<p>This guide assumes prior familiarity with computers, no programming knowledge is required.</p>
+<p>This guide assume some prior familiarity with computers, but no programming knowledge is required.</p>
 
 <h3 id="prepare-raspberry-pi-image">Prepare Raspberry Pi image</h3>
 
@@ -96,7 +96,7 @@ ga('send', 'pageview');
 
 <h3 id="connecting-to-raspberry-pi">Connecting to Raspberry Pi</h3>
 
-<p>You can either use console cable of and HDMI based display (monitor or TV) to access raspberry pi.</p>
+<p>You can either use console cable or an HDMI based display (monitor or TV) to access raspberry pi.</p>
 
 <p>For console access setup follow <a href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable?view=all">this adafruit tutorial</a>. HDMI based access is fairly easy, just hook up any HDMI enabled display (monitor or TV) to raspberry pi using an HDMI cable.</p>
 
@@ -105,11 +105,10 @@ ga('send', 'pageview');
 <p>Once raspbian image is written on microSD card, plug it in Raspberry Pi and power it. Once Raspbian OS is started, configure following things internet, date and ssh access.</p>
 
 <ul>
-<li>Configure wifi: Enabling wifi or ethernet based internet connection allows reef-pi to be accessible from any web browser (mobile, tablet or computers). Note, this is not a mandatory requirement for running wifi. It is just a convenience.</li>
-</ul>
+<li><p>Configure wifi: Enabling wifi or ethernet based internet connection allows reef-pi to be accessible from any web browser (mobile, tablet or computers). Note, this is not a mandatory requirement, reef-pi can run without any internet connectivity. This is for convenience, to allow accessing reef-pi web interface from any other devices, such as laptop, tablets or mobile phones. Detailed steps for wifi configuration is available <a href="https://www.raspberrypi.org/documentation/configuration/wireless/">here</a></p></li>
 
-<p>Next set of steps assume you are working on terminal:
-- Update system: Perform a system update with the following command. Note: if internet is not enabled, this will not work, and should be skipped.</p>
+<li><p>Use the terminal window to perform a system update with the following command. Note: Skip this step if internet is not enabled.</p></li>
+</ul>
 
 <pre><code>sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -134,14 +133,7 @@ dtoverlay=w1-gpio
 </code></pre>
 
 <ul>
-<li>Click the Raspberry Pi icon in the upper left.</li>
-<li>Go to Preferences&gt;Raspberry Pi Configuration</li>
-
-<li><p>On the Interfaces tab enable the necessary items (time, localization etc)</p></li>
-
-<li><p>Configure and enable ssh: ssh is used to remotely control and troubleshoot the Raspberry Pi directly.</p></li>
-
-<li><p>The same can be done from the terminal as well, using following commands:</p></li>
+<li>Configure ssh: ssh is used to remotely control and troubleshoot the Raspberry Pi.</li>
 </ul>
 
 <pre><code>sudo systemctl start ssh.service
@@ -162,11 +154,19 @@ sudo dpkg-reconfigure tzdata
 <pre><code>sudo reboot
 </code></pre>
 
+<p>Most of these steps can  be done using graphical interface as well,</p>
+
+<ul>
+<li>Click the Raspberry Pi icon in the upper left.</li>
+<li>Go to Preferences -&gt; Raspberry Pi Configuration</li>
+<li>On the Interfaces tab enable the necessary items (time, localization etc)</li>
+</ul>
+
 <h3 id="install-reef-pi">Install reef-pi</h3>
 
 <ul>
-<li>On the raspberry pi, navigate to the release page and copy link for the latest <a href="https://github.com/reef-pi/reef-pi/releases">release</a></li>
-<li>Make sure you choose the right release package for pi 3 or pi zero.</li>
+<li>Once  Raspberry Pi is up and running,  navigate to the reef-pi release page and copy link for the latest <a href="https://github.com/reef-pi/reef-pi/releases">release</a></li>
+<li>Make sure you choose the right release package for Raspberry Pi 3 or pi zero.</li>
 <li>Open Terminal and type following commands to download and  install reef-pi, assuming you are installing 1.0 release</li>
 </ul>
 
@@ -181,9 +181,9 @@ sudo dpkg -i reef-pi-1.0-pi3.deb
 <pre><code>sudo systemctl status reef-pi.service
 </code></pre>
 
-<p>After this, you should be able to access reef-pi from the browser</p>
+<p>Thats it, after this, you should be able to access reef-pi from the browser</p>
 
-<p>Default reef-pi login username and password both is set as <strong>reef-pi</strong>. Update these from the settings section under conifiguration tab</p>
+<p>Default reef-pi login username and password both is set as <strong>reef-pi</strong>. Update these from the settings section under conifiguration tab. You can play areound with the UI to get familiar with it. Next, use the <a href="/general-guides/electronics">electronics &amp; wiring guide</a> to setup all the electronics components.</p>
 
             </div>
           </div>

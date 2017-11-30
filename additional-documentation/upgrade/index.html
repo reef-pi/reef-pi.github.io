@@ -78,6 +78,12 @@ ga('send', 'pageview');
           <div class="panel-body">
             <div class="blogpost">
               <ul>
+<li>A running reef-pi controller version is always visible from the dashaboard footer.</li>
+</ul>
+
+<p><img src="/img/upgrade/version.png" alt="reef-pi version" /></p>
+
+<ul>
 <li><p>Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the <a href="https://github.com/reef-pi/reef-pi/releases/">release</a> page. Choose latest relase if you are unsure. For this documentation we&rsquo;ll use 1.0 release version on pi zero.</p></li>
 
 <li><p>Open a terminal window using the ssh software of your choices.  SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window</p></li>
@@ -108,11 +114,11 @@ ga('send', 'pageview');
 <pre><code>sudo systemctl status reef-pi.service
 </code></pre></li>
 
-<li><p>reef-pi new version should be visible from the UI as well (under system tab)</p></li>
-
 <li><p>NOTE: If using wifi change go to the configuration tab and change interface setting to wlan0</p></li>
 
 <li><p>Or you can use the procedure listed here: <a href="http://reef-pi.github.io/additional-documentation/development">http://reef-pi.github.io/additional-documentation/development</a></p></li>
+
+<li><p>Clear browser cache to reload the new UI</p></li>
 </ul>
 
             </div>
