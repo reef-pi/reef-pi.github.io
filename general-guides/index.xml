@@ -23,13 +23,12 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
     </item>
     
     <item>
-      <title>Wiring and connectors</title>
+      <title>Wiring</title>
       <link>https://reef-pi.github.io/general-guides/electronics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/electronics/</guid>
-      <description> Connectors  3.5 mm right angle, male audio jacks with bare wire 3.5 mm female panel mount audio jack DC female panel mount barel jack 5 volt 2.5 amp micro USB power supply 12 volt, 1 amp DC barrel jack power supply  Wiring  Breadbord Perf board Perma proto board  Configuring reef-pi Pin number in outlets represent GPIO number.
-References  Sparkfun article on connectors  </description>
+      <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&amp;rsquo;ll need additional electronic component other than just Raspberry Pi. This is why electronics and wiring is the second most important reef-pi controller documentation. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this.</description>
     </item>
     
     <item>
