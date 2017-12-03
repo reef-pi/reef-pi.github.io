@@ -62,21 +62,12 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
     </item>
     
     <item>
-      <title>Wiring</title>
+      <title>Electronics &amp; wiring</title>
       <link>https://reef-pi.github.io/general-guides/electronics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/electronics/</guid>
       <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&amp;rsquo;ll need additional electronic component other than just Raspberry Pi. This is why electronics and wiring is the second most important reef-pi controller documentation. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this.</description>
-    </item>
-    
-    <item>
-      <title>Bill of Materials</title>
-      <link>https://reef-pi.github.io/general-guides/bom/</link>
-      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/bom/</guid>
-      <description>Raspberry Pi 3 MicroSD card 5 volt 2.5 A power supply Female jumper wires PCA9685 breakout board DS18B20 temperature probe Photo electric water level sensor 2N3904 Transistor 4.7k resistor Two 10k resistors Two 1K resistors Standoffs 12v power adapter lm2596 voltage regulators  Amazon shopping list</description>
     </item>
     
     <item>
@@ -89,12 +80,31 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
     </item>
     
     <item>
+      <title>Housing</title>
+      <link>https://reef-pi.github.io/general-guides/housing/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/housing/</guid>
+      <description>Building an appropriate housing is a critical part of a controller build. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels.
+Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
+    </item>
+    
+    <item>
       <title>Auto Top Off</title>
       <link>https://reef-pi.github.io/build-guides/ato/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/ato/</guid>
       <description>Automatic top off units are systems that maintain a constant water volume inside a reef tank. Reef tanks undergoe water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect to corals. Auto top off units monitors water level periodically and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume.</description>
+    </item>
+    
+    <item>
+      <title>Bill of Materials</title>
+      <link>https://reef-pi.github.io/general-guides/bom/</link>
+      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/general-guides/bom/</guid>
+      <description>Due to the modular &amp;amp; DIY nature of reef-pi, different builds may require different parts. This Bill of Materials provides an exhaustive list of parts used in all the build guides and is enough to make an all in one reef-pi build. Use this as a reference. This list contains some options to pick and choose between components where applicable. We always recommend sourcing components locally but from reputed vendors. Pay extra attention to UL listed or similar quality mark for power supplies, user and livestock safety is of paramount importance.</description>
     </item>
     
     <item>
@@ -116,16 +126,6 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
 3.5mm right angle, female panel mount audio jack A mini audio connector used in the LED controller and possibly other builds.
 3.5mm right angle, bare wire male audio connector A mini right angle audio connector used in the LED controller and possibly other builds.
 5 volt 2.5 amp micro USD power supply A power supply that will provide ample power for a Raspberry Pi.</description>
-    </item>
-    
-    <item>
-      <title>Housing</title>
-      <link>https://reef-pi.github.io/general-guides/housing/</link>
-      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/housing/</guid>
-      <description>Building an appropriate housing is a critical part of a controller build. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels.
-Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
     </item>
     
     <item>
