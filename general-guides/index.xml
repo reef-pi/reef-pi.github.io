@@ -37,8 +37,8 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/housing/</guid>
-      <description>Building an appropriate housing is a critical part of a controller build. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels.
-Housing material Depending upon where and what type of controller you are building you can use 3d-printed or wooden or out of the shelf plastic of metal enclosures. I personally use plywood since its easy to cut in pieces and all the material required are readily available.</description>
+      <description>Housing or fixture or enclosure provides physical safety to reef-pi electronics and is a must-have for any permanent installation. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels. There are many ways one can build housing for reef-pi. Couple of things to consider:
+Size Depending on what all features you want to use in reef-pi, ensure the housing can accommodate all parts.</description>
     </item>
     
     <item>
