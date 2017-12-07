@@ -79,18 +79,20 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<p>Automatic top off units are systems that maintain a constant water volume inside a reef tank. Reef tanks undergoe water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect to corals. Auto top off units monitors water level periodically and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume. The degree of water evaporation is dependent on several factors like ambient temperature,  whether the tank has open top or  closed lid, if a fan is used to cool down tanks etc. The effect of water loss due to evaporation is dependant on tank size. Our communal understanding is smaller tanks such as nano and pico reefs,  require ATO more than bigger tanks. A stable water height is also important for optimal skimmers performance.</p>
+<p>Automatic top off units are systems that maintain a constant water volume inside a reef tank. Reef tanks goes through water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect on corals. Auto top off units monitors water level periodically, and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume. The degree of water evaporation is dependent on several factors like ambient temperature,  whether the tank has an open top or closed lid, if a fan is used to cool down tanks etc. The effect of water loss due to evaporation is dependant on tank size. Our understanding is smaller tanks such as nano and pico reefs in temperate regions,  require ATO more than bigger tanks. A stable water level is also important for optimal skimmers performance.</p>
 
 <p>This build guide will cover how to build an inexpensive yet effective auto top off unit using reef-pi.</p>
 
 <h3 id="how-this-work">How this work</h3>
 
+<p>Water level sensors such as photoelectric sensors or float switches act as electrical switches, they are turned off normally and then turn on when submerged in water. One of the Raspberry Pi&rsquo;s GPIO is wired to a water level sensor, and reef-pi is configured to check this GPIO state periodically. When reef-pi detects the GPIO pin is in <strong>off</strong> state it turns on the specified equipment (ATO pump) which pours fresh RO/DI water into the tank. When water level reach, the GPIO returns <strong>on</strong> state again, and reef-pi turns off the ATO pump. reef-pi check frequency (normally set to 1 minute) determines the minimum amount of time the ATO pump will be run.</p>
+
 <h3 id="things-to-consider">Things to consider</h3>
 
 <ul>
-<li><p>photo electric sensor or float switch</p></li>
+<li><p>Photoelectric sensor or float switch: Both of these sensors act as a switch and returns <strong>off</strong> when in air  and <strong>on</strong> when submerged in water. Hence reef-pi does not need any special configuration for them and they can be used in place of the other. But they work very differently. Photoelectric sensors are costlier than float switches, require additional electronics to work, and are not prone to salt creep. While float switches are inexpensive, requires no additional circuit, can be easily sourced, but prone to salt creep. We recommend using photoelectric sensor. The recommended <a href="/general-guides/bom">Bill of Materials</a> contains a sample photoelectric sensor.</p></li>
 
-<li><p>ATO pump</p></li>
+<li><p>ATO pump: These are used to pour fresh RO/DI water (without salt) in the tank to bring up the water level. Consider how you want to position the water reservoir, ATO pump has to lift water to the required height. It is also important to consider the volume of water the ATO pump will pour per check interval (set to 1 minute by default), it should not be too much compared to the volume of the tank, else salinity will fall.</p></li>
 </ul>
 
 <h3 id="bill-of-materials">Bill of materials</h3>
@@ -99,7 +101,7 @@ ga('send', 'pageview');
 <li><a href="https://www.adafruit.com/product/3400">Pi zero</a> or <a href="https://www.adafruit.com/product/3055">Pi 3</a></li>
 <li><a href="https://www.adafruit.com/product/2693">micro sd card</a></li>
 <li>5v 2.4 amp <a href="https://www.adafruit.com/product/1995">power adapter</a> for Raspberry Pi</li>
-<li>Relay, with at least 1 channel <a href="https://www.amazon.com/dp/B00E0NTPP4">example</a></li>
+<li>Relay, with at least one channel <a href="https://www.amazon.com/dp/B00E0NTPP4">example</a></li>
 <li><a href="https://www.amazon.com/dp/B074T9WHGF/">Photo electric liquid level sensor</a></li>
 <li><a href="https://www.amazon.com/dp/B073VSZH2P/">Submersible water pump</a></li>
 <li><a href="https://www.amazon.com/dp/B01ICSD93Q/">12v DC power adapter</a> for ATO pump</li>
@@ -116,7 +118,14 @@ ga('send', 'pageview');
 <h3 id="installation-configuration">Installation &amp; Configuration</h3>
 
 <ul>
-<li>Follow reef-pi installation <a href="../../general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</li>
+<li>Follow reef-pi installation <a href="/general-guides/install">guide</a> to setup reef-pi on Raspberry Pi zero.</li>
+<li>Enable ATO capability from <strong>Configuration</strong> tab, reload reef-pi.
+<img src="/img/ato/ato-enable.png" alt="breadboard" /></li>
+<li>Refresh your browser after reload. This will bring up the ATO tab. At this point, ATO feature is enabled, but ATO sensor is not monitored periodically.</li>
+<li>Click on the <strong>Enable</strong> checkbox under ATO tab. This will instruct reef-pi to start monitoring ATO sensor via GPIO pin number 12. If you have wired ATO sensor (or corresponding connector) to a different GPIO pin, then update the <strong>Sensor Pin</strong> pin to reflect correct value.</li>
+<li>Click on the <strong>control</strong> checkbox to instruct reef-pi switch on ATO pump when Select the ATO pump from the equipment drop down. Without this, the ATO sub-system will only monitor the sensor but will not turn on/off the pump.
+<img src="/img/ato/ato-configure.png" alt="breadboard" /></li>
+<li>You can also turn on the notification on pump usage. Pump usage is a numeric value that represents the  number of seconds pump was on every hour. For, example, if ATO is configured with a check interval of 2 minutes, ATO pump usage will be in multiple of 120 (2 * 60 seconds)</li>
 </ul>
 
 <h3 id="resources">Resources</h3>
