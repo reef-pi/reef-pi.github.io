@@ -79,20 +79,20 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<p>Maintain stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller. Heaters are also most frequently failed equipments in reef tank, leading to tank crash. Temperature controllers are helps in avoiding such catastrophic situation as well.</p>
+<p>Maintaining a stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller. Heaters are also most frequently failed equipments in reef tank, leading to tank crash. Temperature controllers are helps in avoiding such catastrophic situation as well.</p>
 
 <p>In this guide we&rsquo;ll be using reef-pi to build a temperature controller that will monitor the temperature of reef tank and turn on heater or cooler when the temperature goes above or below a specified range.</p>
 
 <h3 id="how-it-works">How it works</h3>
 
+<p>reef-pi can monitor reef tank temperature using a DS18B20 temperature probe. The temperature controller inside reef-pi can be configured to check this sensor value periodically and if its goes above or below a certain range, reef-pi can switch on or off a specified heating or cooling equipment. Generally a heater is used as a heating equipment and fan or chiller is used as a cooling equipment.</p>
+
 <h3 id="things-to-consider">Things to consider</h3>
 
 <ul>
-<li><p>Temperature probe and rust protection. <a href="https://www.adafruit.com/product/1020">heat shrink tube</a>, <a href="https://www.amazon.com/dp/B00I9SK8XY/">plasti dip</a> or silicone dip</p></li>
+<li><p>Temperature probe: There are many types of DS18B20 probes available. Go for the ones that are made for sub-merged usage. Also pay attention to the outer coating material. Most submercible ds18b20 probes are made of steel but often time they show rust within first couple of months of usage. There are way to rust proof them without significantly altering the probing capability, like using a <a href="https://www.adafruit.com/product/1020">heat shrink tube</a> or <a href="https://www.amazon.com/dp/B00I9SK8XY/">plasti dip</a> or silicone dip. But there are also other submercible probes (like the ones from canakit and sparkfun) which had black coating around them, they last longer but costlier compared to the bare steel probes.</p></li>
 
-<li><p>Heater and cooler choice</p></li>
-
-<li><p>Relay</p></li>
+<li><p>Heater and cooler choice: reef-pi internally only control relays which in turn control the cooling or heating equipment. In most cases heaters are used as heating equipment. Generally, it is recommendedto have two to five watts per gallon worth heating capacity, i.e. a 30 gallong tank should use at least an 100 watt heater. Multiple heaters can be used to for a single tank. For cooling, if the ambient temperature is not more than 3 to four degrees higher, fans work. Otherwise, a chiller is a best option.</p></li>
 </ul>
 
 <h3 id="bill-of-materials">Bill of materials</h3>

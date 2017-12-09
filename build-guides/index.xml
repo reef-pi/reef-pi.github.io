@@ -44,7 +44,7 @@
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/temperature/</guid>
-      <description>Maintain stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller.</description>
+      <description>Maintaining a stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller.</description>
     </item>
     
     <item>
@@ -53,45 +53,7 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/build-guides/telemetry/</guid>
-      <description> Signing up for adafruit.io account Configuring reef-pi with adafruit.io key </description>
-    </item>
-    
-    <item>
-      <title>Camera controller</title>
-      <link>https://reef-pi.github.io/build-guides/camera/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/build-guides/camera/</guid>
-      <description>The camera controller provides easy and convenient way to take reef tank photos on demand and at periodic intervals. reef-pi can also be configured to upload the images taken to google drive. This is useful when users are far from the tank for longer periods (like in vacation), the uploaded images can provide an easy way to stay up to date with current state of the tank. The camera controller does not involve any other electronics other than the official camera module.</description>
-    </item>
-    
-    <item>
-      <title>Touchscreen display</title>
-      <link>https://reef-pi.github.io/build-guides/display/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/build-guides/display/</guid>
-      <description>reef-pi can be configured to be used with the offical Raspberry Pi Touchscreen display to provide a direct access to reef-pi, without any network dependency. With a touchscreen it is possible to run reef-pi without any internet or even home wifi connection ( albeit modules like telemetry will not work). Activities like equipment on/off during water change, light intensity controls are all possible with touchscreen. Workflows involving editing text (like the one involved in creating new timer or equipment) are harder to setup, but can be done using on screen keyboard software (e.</description>
-    </item>
-    
-    <item>
-      <title>Dosing controller</title>
-      <link>https://reef-pi.github.io/build-guides/doser/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/build-guides/doser/</guid>
-      <description> The guide provides details on how to build a two part dosing system. Though we are covering only two pparts dosing system where each part if controlled by one dosing pump, this guide can be used to build dosing controller to automate as many as 16 dosing pumps.
-How this work Bill of Material  pi zero PCA9685 breakout board L293D motor control IC 2 peristaltic pump 12 volt  Electronics Calibration Setup </description>
-    </item>
-    
-    <item>
-      <title>All-in-one controller</title>
-      <link>https://reef-pi.github.io/build-guides/aio/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/build-guides/aio/</guid>
-      <description> Each reef tank is different in their setup, and might use different number of equipments. To keep things simple, instead of covering all possible reef-pi functionalities in one controller that fits a variety of reef tank, this guide will focus on building an all in one controller for a pico reef tank.
-Features  4 outlet power Kessil A80 sunrise to sunset effect Temperature monitoring Auto top off  Bill of Material Build Configuring the new All in One controller </description>
+      <description>Telemetry features in reef-pi allow users to capture, visualize and alert on sensor or controller health data. Telemetry functionality help in avoiding tank accidents due to equipment failure (such as a bad heater cooking up a reef tank) or to understand long-term trends in tank parameters. This guide will walk through the basic telemetry features and how to configure them. This guide assumes you have a running reef-pi controller already.</description>
     </item>
     
   </channel>
