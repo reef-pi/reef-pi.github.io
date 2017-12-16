@@ -123,7 +123,7 @@ ga('send', 'pageview');
 
 <h3 id="wiring">Wiring</h3>
 
-<p><img src="https://reef-pi.github.io/img/light/breadboard.png" alt="breadboard" /></p>
+<p><img src="/img/light/breadboard.png" alt="breadboard" /></p>
 
 <h3 id="installation-configuration">Installation &amp; Configuration</h3>
 
@@ -133,13 +133,13 @@ ga('send', 'pageview');
 <li><p>Once reef-pi is installed and running go to systems page, enable lighting capability and reload reef-pi</p></li>
 </ul>
 
-<p><img src="https://reef-pi.github.io/img/light/setup_1.png" alt="systems" /></p>
+<p><img src="/img/light/setup_1.png" alt="systems" /></p>
 
 <ul>
 <li>PWM outputs such as the ones that used for light controls are called <em>jacks</em> in reef-pi. A jack can have multiple channels. Each channel is represented by the controlling pin number of the PCA9685 board. For a Kessil controller, we will be declaring a jack named <em>J1</em> with two pins, each pin number separated by a comma, under the system tab.</li>
 </ul>
 
-<p><img src="https://reef-pi.github.io/img/light/setup_2.png" alt="jacks" /></p>
+<p><img src="/img/light/setup_2.png" alt="jacks" /></p>
 
 <ul>
 <li><p>Once the jack is declared we can head to lighting tab and declare lighting equipment. We’ll use an example <a href="http://www.kessil.com/aquarium/Saltwater_A80_Tuna_Blue.php">A80</a> Kessil light and assign the J1 jack created above to it.</p></li>
@@ -147,7 +147,7 @@ ga('send', 'pageview');
 <li><p>reef-pi will now show corresponding control settings under the A80 light. Select the inverse checkbox to indicate that our actual generated control signal should be inverse of our specified values, this is a side effect of using an NPN transistor which operates in <a href="https://electronics.stackexchange.com/questions/74636/sinking-and-sourcing-current">sinking current</a> mode.</p></li>
 </ul>
 
-<p><img src="https://reef-pi.github.io/img/light/setup_3.png" alt="light" /></p>
+<p><img src="/img/light/setup_3.png" alt="light" /></p>
 
 <h3 id="usage">Usage</h3>
 
@@ -155,19 +155,20 @@ ga('send', 'pageview');
 
 <p>reef-pi will show a single slider for each channel defined in a light. This can be used to control the signal of that channel. Users can use the slider to set a specific value and then hit the update button to see the effect. In this mode user directly control the value of the output signal.</p>
 
-<p><img src="https://reef-pi.github.io/img/light/setup_4.png" alt="manual" /></p>
+<p><img src="/img/light/setup_4.png" alt="manual" /></p>
 
 <h4 id="setting-up-24-hour-light-cycle">Setting up 24 hour light cycle</h4>
 
 <p>Alternatively, users can also choose the automatic mode, by selecting the <em>auto</em> checkbox, which will render 12 vertical sliders each representing expected control signal values at 2-hour intervals, thus providing the user with 24-hour automatic controls. Specify the desired diurnal cycle values and click on the <em>update</em> button. reef-pi will automatically compute the right values for current time and apply it.</p>
 
-<p><img src="https://reef-pi.github.io/img/light/setup_5.png" alt="auto" /></p>
+<p><img src="/img/light/setup_5.png" alt="auto" /></p>
 
 <h3 id="resources">Resources</h3>
 
 <ul>
 <li>Adafruit <a href="https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi?view=all">tutorial</a> on PCA9685 board and Raspberry Pi.</li>
 <li><a href="https://github.com/reef-pi/DesignFiles/raw/master/PowerStrip.fzz">Fritzing project file</a></li>
+<li><a href="https://www.reef2reef.com/threads/reef-pi-1-0-release-building-a-kessil-controller.343672/#post-4281610">reef2reef build post</a></li>
 </ul>
 
             </div>
