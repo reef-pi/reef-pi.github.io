@@ -166,19 +166,9 @@ Compile all jsx code to javascript
 </code></li>
 </ul>
 
-<p>At this point both reef-pi binary and the javascript components are built to run reef-pi on the development machine. All we need now is a config file, with dev_mode option on (so that all device drivers calls are ignored). To do this, copy the stock configuration file from build directory to project root.</p>
+<p>Next, start reef-pi in dev_mode (so that all device drivers calls are ignored).</p>
 
-<pre><code>cp build/reef-pi.yml .
-</code></pre>
-
-<p>Next edit the config file to enable dev mode</p>
-
-<pre><code class="language-yaml">dev_mode: true
-</code></pre>
-
-<p>Thats it, you should be able to start reef-pi server with this configuration file</p>
-
-<pre><code>./bin/reef-pi.yml -config reef-pi.yml
+<pre><code>DEV_MODE=1 ./bin/reef-pi
 </code></pre>
 
 <p>Head over to your browser <a href="http://localhost:8080">http://localhost:8080/</a> to see the reef-pi in action.</p>
@@ -196,23 +186,19 @@ has predefined target for this. To create raspberry pi 3 or 2 specific binary, r
 <pre><code>make pi-zero
 </code></pre>
 
-<p>This executable file can be copied over to a Raspberry Pi computer and run there.</p>
-
-<pre><code>scp bin/reef-pi pi@&lt;IP&gt;:.
-</code></pre>
-
-<p>You will need a configuration file, similar to development environment except you can remove the dev_mode line and enable the components you want to test. You can use the <a href="https://github.com/ranjib/reef-pi/doc/configuration.md">configuration file</a> guide for details on all possible configuration options.</p>
-
-<h3 id="creating-and-installing-reef-pi-as-debain-package">Creating and installing reef-pi as debain package</h3>
-
-<p>reef-pi&rsquo;s Makefile also defines a target for creating debian packages, which combines the binary, all static files (configuration, html, css &amp; javascript files) into a single file. This makes it easy to installation straight forward. To create a debian package from the current bianry, run</p>
+<p>Next generate a debian package for the pi zero. This will package the javascript front end, along side systemd unit files and a stock configuration file.</p>
 
 <pre><code>make deb
 </code></pre>
 
-<p>This will generate a file named <code>reef-pi-&lt;version&gt;.deb</code>, where version will be the current tag and commit sha. You can copy to a physical raspberry pi using scp  and install it using</p>
+<p>This debian package can be copied over to a Raspberry Pi computer and run there.</p>
 
-<pre><code>sudo dpkg -i reef-pi-&lt;version&gt;.deb
+<pre><code>scp reef-pi-x.x.x.deb pi@&lt;IP&gt;:.
+</code></pre>
+
+<p>To install the new package on pi zero, run</p>
+
+<pre><code>sudo dpkg -i reef-pi-x.x.x.deb
 </code></pre>
 
 <p>This will install reef-pi binary, create the necessary directory structure, install and start reef-pi systemd service. You can check status of reef-pi service with</p>
