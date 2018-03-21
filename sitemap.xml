@@ -31,17 +31,17 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/additional-documentation/api/</loc>
-    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://reef-pi.github.io/general-guides/housing/</loc>
     <lastmod>2017-07-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://reef-pi.github.io/build-guides/ato/</loc>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/additional-documentation/safety/</loc>
+    <lastmod>2018-03-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -55,13 +55,18 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/additional-documentation/glossary/</loc>
+    <loc>https://reef-pi.github.io/additional-documentation/api/</loc>
     <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://reef-pi.github.io/additional-documentation/remote/</loc>
     <lastmod>2017-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/additional-documentation/glossary/</loc>
+    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>

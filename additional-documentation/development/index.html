@@ -79,16 +79,13 @@ ga('send', 'pageview');
             <div class="blogpost">
               
 
-<p>reef-pi is written in <a href="https://golang.org/">go</a> and <a href="https://facebook.github.io/react/">react</a>. This guide will walk through the steps involved in
-setting up go and nodejs (required for react) development environment, alongside
-reef-pi. This guide assume OSX or Linux as the development platform.</p>
+<p>reef-pi is written in <a href="https://golang.org/">go</a> and <a href="https://facebook.github.io/react/">react</a>. This guide will walk through the steps involved in setting up go, nodejs and finally reef-pi development environment. This guide assume OSX or Linux as the development platform, but should be useful for other platforms as well.</p>
 
 <h3 id="setup-go">Setup go</h3>
 
-<p>reef-pi is built and tested with latest go. At the time of writing the guide, the latest
-version of go is 1.8.1. reef-pi should work with any version of go above 1.5.</p>
+<p>reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.10. reef-pi should work with any version of go above 1.8.</p>
 
-<p>Use any one of the three ways to install go:</p>
+<p>Use any one of these three ways to install go:</p>
 
 <ol>
 <li><p>I recommend using the official <a href="https://golang.org/doc/install">go installation guide</a> to install go in your development machine.</p></li>
@@ -103,10 +100,10 @@ latest go. Ubuntu linux specific go installation instruction can be found <a hre
 </code></pre>
 
 <p>Irrespective of how you install go, make sure you set GOPATH environment variable. I recommend setting GOPATH environment variable inside your home
-directory, in a dedicated sub directory: <code>/home/ranjib/gospace</code>. Declare GOPATH in your .bashrc or .bash_profile so that it persist
+directory, in a dedicated sub directory: <code>/Users/&lt;name&gt;/gospace</code>. Declare GOPATH in your .bashrc or .bash_profile so that it persist
 between sessions.</p>
 
-<pre><code class="language-sh">export GOPATH=/home/user/gospace
+<pre><code class="language-sh">export GOPATH=/Users/&lt;name&gt;/gospace
 </code></pre>
 
 <h3 id="setup-nodejs">Setup nodejs</h3>
@@ -130,43 +127,39 @@ reef-pi requires nodejs version 7.0 or above.</p>
 <li>Copy reef-pi code from github to your $GOPATH</li>
 </ul>
 
-<pre><code>git clone https://github.com/ranjin/reef-pi.git $GOPATH/src/github.com/ranjib/reef-pi
+<pre><code>git clone https://github.com/reef-pi/reef-pi.git $GOPATH/src/github.com/reef-pi/reef-pi
 </code></pre>
 
-<p>To keep reef-pi simple and reliable, I have not yet integrated any go package manager. Hence the example shows cloning reef-pi repository
-inside the $GOPATH, without this go-get command will fail. All following commands &amp; instructions assume you are working from the reef-pi
-repository itself, i.e.</p>
+<p>reef-pi project does not use any go package manager yet. A make target is used to get bare minimal dependencies from github.</p>
 
-<pre><code>cd $GOPATH/src/github.com/ranjib/reef-pi
+<p>All following commands &amp; instructions assume you are working from the reef-pi repository itself, i.e.</p>
+
+<pre><code>cd $GOPATH/src/github.com/reef-pi/reef-pi
 </code></pre>
 
 <ul>
-<li>Downnloading dependencies: Now that reef-pi code base is cloned, you can start downloading all the dependencies. To install all go libraries use</li>
+<li>Download go and react dependencies</li>
 </ul>
 
 <pre><code>make go-get
+npm install
 </code></pre>
 
-<p>Install all reef-pi UI or reactjs dependencies</p>
-
-<pre><code>npm install
-</code></pre>
-
-<p>This will install reactjs, webpack and ancillary package used by reef-ui</p>
+<p>This will install reactjs, webpack and ancillary package used by reef-pi user interface (front end) code.</p>
 
 <ul>
-<li>Build reef-pi binary
-Make reef-pi binary
-<code>
-make
-</code>
-Compile all jsx code to javascript
-<code>
-./node_modules/.bin/webpack -d
-</code></li>
-</ul>
+<li><p>Build reef-pi binary</p>
 
-<p>Next, start reef-pi in dev_mode (so that all device drivers calls are ignored).</p>
+<pre><code>make
+</code></pre></li>
+
+<li><p>Compile all jsx code to javascript</p>
+
+<pre><code>./node_modules/.bin/webpack -d
+</code></pre></li>
+
+<li><p>Finally, start reef-pi in dev_mode (so that all device drivers calls are ignored).</p></li>
+</ul>
 
 <pre><code>DEV_MODE=1 ./bin/reef-pi
 </code></pre>

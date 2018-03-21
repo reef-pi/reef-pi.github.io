@@ -71,15 +71,6 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
     </item>
     
     <item>
-      <title>API</title>
-      <link>https://reef-pi.github.io/additional-documentation/api/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/additional-documentation/api/</guid>
-      <description>reef-pi porvides a simple HTTP JSON based Application Programming Interface. reef-pi web user interface itself is built using this API. API can be used to control reef-pi from an external system as well. Following is the reef-pi 1.0 API which will not have any breaking changes till the next major release (2.0). reef-pi 1.x series release may receive new features and corresponding API endpoints but all of the 1.0 API endpoints will be intact and not have any breaking changes.</description>
-    </item>
-    
-    <item>
       <title>Housing</title>
       <link>https://reef-pi.github.io/general-guides/housing/</link>
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
@@ -96,6 +87,15 @@ Size Depending on what all features you want to use in reef-pi, ensure the housi
       
       <guid>https://reef-pi.github.io/build-guides/ato/</guid>
       <description>Automatic top off units are systems that maintain a constant water volume inside a reef tank. Reef tanks goes through water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect on corals. Auto top off units monitors water level periodically, and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume.</description>
+    </item>
+    
+    <item>
+      <title>Safety</title>
+      <link>https://reef-pi.github.io/additional-documentation/safety/</link>
+      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/safety/</guid>
+      <description>A typical reef-pi build involves both water and electricity, this can be potentially hazerdous. Please ensure safety consideration for yourself and all the living things in your tank. If you are working with electronics, especially with water and high voltage together, it can be dangerous. This page is intended to inform you about this risk. It is not high voltage but high current that imposes risk. High current here stands for milliamps.</description>
     </item>
     
     <item>
@@ -117,15 +117,12 @@ Size Depending on what all features you want to use in reef-pi, ensure the housi
     </item>
     
     <item>
-      <title>Glossary</title>
-      <link>https://reef-pi.github.io/additional-documentation/glossary/</link>
+      <title>API</title>
+      <link>https://reef-pi.github.io/additional-documentation/api/</link>
       <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/additional-documentation/glossary/</guid>
-      <description>0-10v A method of diming leds using voltage.
-3.5mm right angle, female panel mount audio jack A mini audio connector used in the LED controller and possibly other builds.
-3.5mm right angle, bare wire male audio connector A mini right angle audio connector used in the LED controller and possibly other builds.
-5 volt 2.5 amp micro USD power supply A power supply that will provide ample power for a Raspberry Pi.</description>
+      <guid>https://reef-pi.github.io/additional-documentation/api/</guid>
+      <description>reef-pi porvides a simple HTTP JSON based Application Programming Interface. reef-pi web user interface itself is built using this API. API can be used to control reef-pi from an external system as well. Following is the reef-pi 1.0 API which will not have any breaking changes till the next major release (2.0). reef-pi 1.x series release may receive new features and corresponding API endpoints but all of the 1.0 API endpoints will be intact and not have any breaking changes.</description>
     </item>
     
     <item>
@@ -136,6 +133,18 @@ Size Depending on what all features you want to use in reef-pi, ensure the housi
       <guid>https://reef-pi.github.io/additional-documentation/remote/</guid>
       <description>This guide meant to assist in establishing a remote connection to your reef-pi main control page using one of the two popular options, RealVNC and Tor. reef-pi is normally accessible only within the home wifi network, using any of these two approaches you can access reef-pi from anywhere.
 RealVNC The first option is to use software such as Real VNC. They offer a cloud option that will allow you to access your Raspberry Pi from anywhere.</description>
+    </item>
+    
+    <item>
+      <title>Glossary</title>
+      <link>https://reef-pi.github.io/additional-documentation/glossary/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/glossary/</guid>
+      <description>0-10v A method of diming leds using voltage.
+3.5mm right angle, female panel mount audio jack A mini audio connector used in the LED controller and possibly other builds.
+3.5mm right angle, bare wire male audio connector A mini right angle audio connector used in the LED controller and possibly other builds.
+5 volt 2.5 amp micro USD power supply A power supply that will provide ample power for a Raspberry Pi.</description>
     </item>
     
     <item>
@@ -171,8 +180,8 @@ RealVNC The first option is to use software such as Real VNC. They offer a cloud
       <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/development/</guid>
-      <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
-Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
+      <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go, nodejs and finally reef-pi development environment. This guide assume OSX or Linux as the development platform, but should be useful for other platforms as well.
+Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.10. reef-pi should work with any version of go above 1.</description>
     </item>
     
     <item>
