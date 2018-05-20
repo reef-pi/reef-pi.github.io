@@ -19,7 +19,7 @@
       <guid>https://reef-pi.github.io/additional-documentation/troubleshooting/</guid>
       <description>Check if reef-pi is running  sudo systemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
  Check reef-pi version (helps in bug reports)
-  reef-pi -version   Resetting reef-pi &amp;rsquo;s data base  sudo systemctl stop reef-pi.</description>
+  reef-pi -version   Resetting reef-pi&amp;rsquo;s database  sudo systemctl stop reef-pi.</description>
     </item>
     
     <item>
