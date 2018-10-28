@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="reef-pi, reef tank, controller, raspberry pi, coral" name="keywords">
+    <meta name="author" content="map[]" />
+    <meta name="description" content="reef-pi - An opensource reef tank controller based on Raspberry Pi">
+    <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
+    <title>API (1.0)</title>
+    <meta name="generator" content="Hugo 0.47.1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-102968086-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/img.css" />
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://reef-pi.github.io/"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/general-guides/">GENERAL GUIDES</a></li>
+        
+        <li><a href="/build-guides/">BUILD GUIDES</a></li>
+        
+        <li><a href="/additional-documentation/">ADDITIONAL DOCUMENTATION</a></li>
+        
+        <li><a href="/blogs/">BLOGS</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://reef-pi.github.io/additional-documentation/api_1.0/">API (1.0)</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<p>reef-pi 1.0 provides a simple HTTP JSON based <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface. reef-pi web user interface itself is built using this API. API can be used to control reef-pi from an external system as well. Following is the reef-pi 1.0 API which will not have any breaking changes till the next major release (2.0). reef-pi 1.x series release may receive new features and corresponding API endpoints but all of the 1.0 API endpoints will be intact and not have any breaking changes. Breaking changes will require next major release.</p>
+
+<h3 id="1-0-api">1.0 API</h3>
+
+<p>reef-pi API uses basic authentication. HTTP requests must have associated headers to make successful API calls. Examples in this document assumes reef-pi is running on the same computer (127.0.0.1) with username and passowrd both set to &lsquo;reef-pi&rsquo;.</p>
+
+<p>API is categorized under a main controller specific group and several sub-system specific groups, where each sub-system represents a key responsibility such as lighting control or auto top off or temeperature control using sensors and equipents. reef-pi is modular and can be run with only a single or any combination of these modules enabled. Hence, module specific APIs are only available when these sub system is enabled. reef-pi UI reflects the same and shows only the module specific UI components.</p>
+
+<h4 id="controller-specific-endpoints">Controller specific endpoints</h4>
+
+<h5 id="get-api-capabilities">GET /api/capabilities</h5>
+
+<p>Returns the currently enabled capabilities</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/capabilities
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;dev_mode&quot;: true,
+  &quot;dashboard&quot;: true,
+  &quot;health_check&quot;: true,
+  &quot;equipments&quot;: true,
+  &quot;timers&quot;: true,
+  &quot;lighting&quot;: true,
+  &quot;temperature&quot;: true,
+  &quot;ato&quot;: true,
+  &quot;camera&quot;: true,
+  &quot;doser&quot;: true,
+  &quot;configuration&quot;: true
+}
+</code></pre>
+
+<h5 id="get-api-settings">GET /api/settings</h5>
+
+<p>Returns current settings for the controller</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/settings
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;reef-pi&quot;,
+  &quot;interface&quot;: &quot;wlan0&quot;,
+  &quot;address&quot;: &quot;127.0.0.1:8080&quot;,
+  &quot;display&quot;: false,
+  &quot;notification&quot;: false,
+  &quot;capabilities&quot;: {
+    &quot;dev_mode&quot;: true,
+    &quot;dashboard&quot;: true,
+    &quot;health_check&quot;: true,
+    &quot;equipments&quot;: true,
+    &quot;timers&quot;: true,
+    &quot;lighting&quot;: true,
+    &quot;temperature&quot;: true,
+    &quot;ato&quot;: true,
+    &quot;camera&quot;: true,
+    &quot;doser&quot;: true,
+    &quot;configuration&quot;: true
+  },
+  &quot;health_check&quot;: {
+    &quot;enable&quot;: false,
+    &quot;max_memory&quot;: 500,
+    &quot;max_cpu&quot;: 2
+  }
+}
+</code></pre>
+
+<h5 id="post-api-settings">POST /api/settings</h5>
+
+<p>Updates controller settings</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/settings
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;reef-pi&quot;,
+  &quot;interface&quot;: &quot;eth0&quot;,
+  &quot;address&quot;: &quot;0.0.0.0:8080&quot;,
+  &quot;display&quot;: false,
+  &quot;notification&quot;: false,
+  &quot;capabilities&quot;: {
+    &quot;dev_mode&quot;: true,
+    &quot;dashboard&quot;: true,
+    &quot;health_check&quot;: true,
+    &quot;equipments&quot;: true,
+    &quot;timers&quot;: true,
+    &quot;lighting&quot;: true,
+    &quot;temperature&quot;: true,
+    &quot;ato&quot;: true,
+    &quot;camera&quot;: true,
+    &quot;doser&quot;: true,
+    &quot;configuration&quot;: true
+  },
+  &quot;health_check&quot;: {
+    &quot;enable&quot;: false,
+    &quot;max_memory&quot;: 500,
+    &quot;max_cpu&quot;: 2
+  }
+}
+</code></pre>
+
+<h5 id="post-api-credentials">POST /api/credentials</h5>
+
+<p>Updates username and password used to authenticate reef-pi API</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/credentials
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;user&quot;: &quot;foo&quot;,
+  &quot;password&quot;: &quot;bar&quot;
+}
+</code></pre>
+
+<h5 id="get-api-telemetry">GET /api/telemetry</h5>
+
+<p>Returns telemetry configuration, which includes adafruit.io and email account details. Passwords are always set to empty string.</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/telemetry
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;adafruitio&quot;: {
+    &quot;enable&quot;: false,
+    &quot;token&quot;: &quot;&quot;,
+    &quot;user&quot;: &quot;&quot;,
+    &quot;prefix&quot;: &quot;&quot;
+  },
+  &quot;mailer&quot;: {
+    &quot;server&quot;: &quot;&quot;,
+    &quot;port&quot;: 0,
+    &quot;from&quot;: &quot;&quot;,
+    &quot;password&quot;: &quot;&quot;,
+    &quot;to&quot;: &quot;&quot;
+  },
+  &quot;notify&quot;: false,
+  &quot;throttle&quot;: 0
+}
+</code></pre>
+
+<h5 id="post-api-telemetry">POST /api/telemetry</h5>
+
+<p>Update telemetry configuration</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/telemetry
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;adafruitio&quot;: {
+    &quot;enable&quot;: false,
+    &quot;token&quot;: &quot;&quot;,
+    &quot;user&quot;: &quot;&quot;,
+    &quot;prefix&quot;: &quot;&quot;
+  },
+  &quot;mailer&quot;: {
+    &quot;server&quot;: &quot;&quot;,
+    &quot;port&quot;: 0,
+    &quot;from&quot;: &quot;&quot;,
+    &quot;password&quot;: &quot;&quot;,
+    &quot;to&quot;: &quot;&quot;
+  },
+  &quot;notify&quot;: false,
+  &quot;throttle&quot;: 0
+}
+</code></pre>
+
+<h5 id="get-api-health-stats-hour">GET /api/health_stats/hour</h5>
+
+<p>Returns controller health stats (cpu and memory) every minute, for past three hours</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/health_stats/hour
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;cpu&quot;: 1.89,
+    &quot;memory&quot;: 51.37,
+    &quot;time&quot;: &quot;Nov-22-09:31&quot;
+  },
+  {
+    &quot;cpu&quot;: 1.94,
+    &quot;memory&quot;: 51.2,
+    &quot;time&quot;: &quot;Nov-22-09:32&quot;
+  },
+  {
+    &quot;cpu&quot;: 1.97,
+    &quot;memory&quot;: 51.53,
+    &quot;time&quot;: &quot;Nov-22-09:33&quot;
+  },
+  {
+    &quot;cpu&quot;: 1.96,
+    &quot;memory&quot;: 51.7,
+    &quot;time&quot;: &quot;Nov-22-09:34&quot;
+  },
+  {
+    &quot;cpu&quot;: 2.1,
+    &quot;memory&quot;: 52.03,
+    &quot;time&quot;: &quot;Nov-22-09:35&quot;
+  }
+]
+</code></pre>
+
+<h5 id="post-api-display-on">POST /api/display/on</h5>
+
+<p>Turns on touchscreen display</p>
+
+<pre><code>curl -X POST -u reef-pi:reef-pi http://127.0.0.1:8080/api/display/on
+</code></pre>
+
+<h5 id="post-api-display-off">POST /api/display/off</h5>
+
+<p>Turns off display.</p>
+
+<pre><code>curl -x POST -u reef-pi:reef-pi http://127.0.0.1:8080/api/display/off
+</code></pre>
+
+<h5 id="get-api-display">GET /api/display</h5>
+
+<p>Returns the current bringness value of display</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/display
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+ &quot;on&quot; : true,
+ &quot;brightness&quot;: 39
+}
+</code></pre>
+
+<h5 id="post-api-display">POST /api/display</h5>
+
+<p>Set brightness of display</p>
+
+<pre><code>curl -X POST -d@payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/display
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+ &quot;on&quot; : true,
+ &quot;brightness&quot;: 80
+}
+</code></pre>
+
+<h5 id="post-api-admin-poweroff">POST /api/admin/poweroff</h5>
+
+<p>Turn off reef-pi controller and the raspberry pi running it.</p>
+
+<pre><code>curl -X POST -u reef-pi:reef-pi http://127.0.0.1:8080/api/admin/poweroff
+</code></pre>
+
+<h5 id="post-api-admin-reboot">POST /api/admin/reboot</h5>
+
+<p>Reboot raspberry pi running reef-pi controller</p>
+
+<pre><code>curl -X POST -u reef-pi:reef-pi http://127.0.0.1:8080/api/admin/reboot
+</code></pre>
+
+<h5 id="post-api-admin-reload">POST /api/admin/reload</h5>
+
+<p>Reload reef-pi controller, without rebooting the Raspberry Pi (recommended after settings is updated)</p>
+
+<pre><code>curl -X POST -u reef-pi:reef-pi http://127.0.0.1:8080/api/admin/reload
+</code></pre>
+
+<h5 id="get-api-admin-info">GET /api/admin/info</h5>
+
+<p>Returns summary information about the controller such as IP and reef-pi version.</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/info
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;reef-pi&quot;,
+  &quot;ip&quot;: &quot;10.0.0.10&quot;,
+  &quot;current_time&quot;: &quot;Wed Nov 22 09:34:04&quot;,
+  &quot;uptime&quot;: &quot;3 minutes ago&quot;,
+  &quot;cpu_temperature&quot;: &quot;36.9C&quot;,
+  &quot;version&quot;: &quot;1.0&quot;
+}
+</code></pre>
+
+<h4 id="connectors">Connectors</h4>
+
+<p>Connectors represet all AC and DC output present in reef-pi. reef-pi 1.0 has two types of connectors; outlets for
+AC equipment like heater, chiller, return pump etc, and jacks for dimmable DC equipment like LED lights, dosing pumps etc.</p>
+
+<h5 id="get-api-outlets">GET /api/outlets</h5>
+
+<p>Returns the list of outlets (AC socket)</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/outlets
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;name&quot;: &quot;O1&quot;,
+    &quot;pin&quot;: 6,
+    &quot;equipment&quot;: &quot;1&quot;,
+    &quot;reverse&quot;: false
+  },
+  {
+    &quot;id&quot;: &quot;2&quot;,
+    &quot;name&quot;: &quot;O2&quot;,
+    &quot;pin&quot;: 12,
+    &quot;equipment&quot;: &quot;2&quot;,
+    &quot;reverse&quot;: false
+  },
+  {
+    &quot;id&quot;: &quot;3&quot;,
+    &quot;name&quot;: &quot;O3&quot;,
+    &quot;pin&quot;: 13,
+    &quot;equipment&quot;: &quot;3&quot;,
+    &quot;reverse&quot;: false
+  }
+]
+</code></pre>
+
+<h5 id="get-api-outlets-id">GET /api/outlets/<em>ID</em></h5>
+
+<p>Returns details about a specific outlet</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/outlets/1
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;name&quot;: &quot;O1&quot;,
+  &quot;pin&quot;: 6,
+  &quot;equipment&quot;: &quot;1&quot;,
+  &quot;reverse&quot;: false
+}
+</code></pre>
+
+<h5 id="put-api-outlets">PUT /api/outlets</h5>
+
+<p>Create an outlet</p>
+
+<pre><code>curl -X PUT -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/outlets
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;O9&quot;,
+  &quot;pin&quot;: 12,
+  &quot;reverse&quot;: false
+}
+</code></pre>
+
+<h5 id="post-api-outlets-id">POST /api/outlets/<em>ID</em></h5>
+
+<p>Update an existing outlet</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/outlets/1
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;O9&quot;,
+  &quot;pin&quot;: 12,
+  &quot;reverse&quot;: true
+}
+</code></pre>
+
+<h5 id="delete-api-outlets-id">DELETE /api/outlets/<em>ID</em></h5>
+
+<p>Delete an existing outlet</p>
+
+<pre><code>curl -X DELETE -u reef-pi:reef-pi http://127.0.0.1:8080/api/1
+</code></pre>
+
+<h5 id="get-api-jacks">GET /api/jacks</h5>
+
+<p>Returns list of jacks (DC PWM socket)</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/jacks
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;name&quot;: &quot;J0&quot;,
+    &quot;pins&quot;: [ 0 ]
+  },
+  {
+    &quot;id&quot;: &quot;2&quot;,
+    &quot;name&quot;: &quot;J1&quot;,
+    &quot;pins&quot;: [ 1, 2 ]
+  }
+]
+</code></pre>
+
+<h5 id="get-api-jacks-id">GET /api/jacks/<em>ID</em></h5>
+
+<p>Returns details of an individual jack</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/jacks/1
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;name&quot;: &quot;J0&quot;,
+  &quot;pins&quot;: [ 0 ]
+}
+</code></pre>
+
+<h5 id="put-api-jacks">PUT /api/jacks</h5>
+
+<p>Create a new jack</p>
+
+<pre><code>curl -X PUT -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/jacks
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;J2&quot;,
+  &quot;pins&quot;: [ 1,2 ]
+</code></pre>
+
+<h5 id="post-api-jacks-id">POST /api/jacks/<em>ID</em></h5>
+
+<p>Update an existing jack</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/jacks
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;J3&quot;,
+  &quot;pins&quot;: [ 1,2 ]
+}
+</code></pre>
+
+<h5 id="delete-api-jacks-id">DELETE /api/jacks/<em>ID</em></h5>
+
+<p>Deletes an existing jack</p>
+
+<pre><code>curl -X DELETE -u reef-pi:reef-pi http://127.0.0.1:8080/api/jacks/1
+</code></pre>
+
+<h4 id="equipments">equipments</h4>
+
+<h5 id="get-api-equipments">GET /api/equipments</h5>
+
+<p>Returns list of equipment</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/equipments
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;name&quot;: &quot;Return&quot;,
+    &quot;outlet&quot;: &quot;1&quot;,
+    &quot;on&quot;: false
+  },
+  {
+    &quot;id&quot;: &quot;2&quot;,
+    &quot;name&quot;: &quot;Light&quot;,
+    &quot;outlet&quot;: &quot;2&quot;,
+    &quot;on&quot;: false
+  },
+]
+</code></pre>
+
+<h5 id="get-api-equipments-id">GET /api/equipments/<em>ID</em></h5>
+
+<p>Returns details of an individual equipment</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/equipments/1
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;2&quot;,
+  &quot;name&quot;: &quot;Light&quot;,
+  &quot;outlet&quot;: &quot;2&quot;,
+  &quot;on&quot;: false
+}
+</code></pre>
+
+<h5 id="put-api-equipments">PUT /api/equipments</h5>
+
+<p>Create a new equipment</p>
+
+<pre><code>curl -X PUT -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/equipments
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;TestEquipment&quot;,
+  &quot;outlet&quot;: &quot;2&quot;,
+  &quot;on&quot;: false
+}
+</code></pre>
+
+<h5 id="post-api-equipments-id">POST /api/equipments/<em>ID</em></h5>
+
+<p>Update an existing equipment</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/equipments/1
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;TestEquipment&quot;,
+  &quot;outlet&quot;: &quot;2&quot;,
+  &quot;on&quot;: true
+}
+</code></pre>
+
+<h5 id="delee-api-equipments-id">DELEE /api/equipments/<em>ID</em></h5>
+
+<p>Delete an existing equipment</p>
+
+<pre><code>curl -X DELETE -u reef-pi:reef-pi http://127.0.0.1:8080/api/equipments/1
+</code></pre>
+
+<h4 id="timers">timers</h4>
+
+<h5 id="get-api-timers">GET /api/timers</h5>
+
+<p>Returns list of all timers</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/timers
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;minute&quot;: &quot;0&quot;,
+    &quot;day&quot;: &quot;*&quot;,
+    &quot;hour&quot;: &quot;20&quot;,
+    &quot;second&quot;: &quot;0&quot;,
+    &quot;equipment&quot;: &quot;3&quot;,
+    &quot;on&quot;: true,
+    &quot;name&quot;: &quot;HeaterOn&quot;
+  }
+]
+</code></pre>
+
+<h5 id="get-api-timers-id">GET /api/timers/<em>ID</em></h5>
+
+<p>Returns details of an existing timer</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/timers/1
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;minute&quot;: &quot;0&quot;,
+  &quot;day&quot;: &quot;*&quot;,
+  &quot;hour&quot;: &quot;20&quot;,
+  &quot;second&quot;: &quot;0&quot;,
+  &quot;equipment&quot;: &quot;3&quot;,
+  &quot;on&quot;: true,
+  &quot;name&quot;: &quot;HeaterOn&quot;
+}
+</code></pre>
+
+<h5 id="put-api-timers">PUT /api/timers</h5>
+
+<p>Create a new timer</p>
+
+<pre><code>curl -X PUT -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/timers
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;HeaterOn&quot;,
+  &quot;day&quot;: &quot;*&quot;,
+  &quot;hour&quot;: &quot;20&quot;,
+  &quot;minute&quot;: &quot;0&quot;,
+  &quot;second&quot;: &quot;0&quot;,
+  &quot;on&quot;: true,
+  &quot;equipment&quot;: &quot;3&quot;
+}
+</code></pre>
+
+<h5 id="post-api-timers-id">POST /api/timers/<em>ID</em></h5>
+
+<p>Update an existing timer</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/timers/1
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;HeaterOn&quot;,
+  &quot;day&quot;: &quot;*&quot;,
+  &quot;hour&quot;: &quot;20&quot;,
+  &quot;minute&quot;: &quot;0&quot;,
+  &quot;second&quot;: &quot;0&quot;,
+  &quot;on&quot;: true,
+  &quot;equipment&quot;: &quot;4&quot;
+}
+</code></pre>
+
+<h5 id="delee-api-timers-id">DELEE /api/timers/<em>ID</em></h5>
+
+<p>Deletes an existing timer</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/
+</code></pre>
+
+<h3 id="ato">ato</h3>
+
+<p><strong>A</strong>uto <strong>T</strong>op <strong>O</strong>ff specific API, only available when ato capability is enabled</p>
+
+<h5 id="get-api-ato">GET /api/ato</h5>
+
+<p>Returns ato configuration</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/ato
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;sensor&quot;: 12,
+  &quot;pump&quot;: &quot;6&quot;,
+  &quot;check_interval&quot;: 60,
+  &quot;control&quot;: true,
+  &quot;enable&quot;: true,
+  &quot;notify&quot;: {
+    &quot;enable&quot;: false,
+    &quot;max&quot;: 0
+  }
+}
+</code></pre>
+
+<h5 id="post-api-ato">POST /api/ato</h5>
+
+<p>Updates ato configuration</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;sensor&quot;: 12,
+  &quot;pump&quot;: &quot;6&quot;,
+  &quot;check_interval&quot;: 15,
+  &quot;control&quot;: true,
+  &quot;enable&quot;: true,
+  &quot;notify&quot;: {
+    &quot;enable&quot;: true,
+    &quot;max&quot;: 90
+  }
+}
+</code></pre>
+
+<h5 id="get-api-ato-usage">GET /api/ato/usage</h5>
+
+<p>Returns hourly ato pump usage for last seven days. Pump value denotes number of seconds ATO pump was on during that hour</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/ato/usage
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;pump&quot;: 360,
+    &quot;time&quot;: &quot;Nov-22-09:31&quot;
+  },
+  {
+    &quot;pump&quot;: 240,
+    &quot;time&quot;: &quot;Nov-22-10:13&quot;
+  }
+]
+</code></pre>
+
+<h4 id="lights">lights</h4>
+
+<p>Light related API allows controlling dimmable LED lights using variable DC output(PWM). This API endpoints are only available if
+lighting capability is enabled</p>
+
+<h5 id="get-api-lights">GET /api/lights</h5>
+
+<p>Returns the list of lights</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/lights
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;name&quot;: &quot;A360&quot;,
+    &quot;channels&quot;: {
+      &quot;1&quot;: {
+        &quot;name&quot;: &quot;channel-1&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: 100,
+        &quot;ticks&quot;: 12,
+        &quot;values&quot;: [ 0, 0, 0, 0, 29, 61, 38, 32, 20, 0, 0, 0 ],
+        &quot;fixed&quot;: 0,
+        &quot;auto&quot;: true,
+        &quot;reverse&quot;: false,
+        &quot;pin&quot;: 1
+      },
+    &quot;jack&quot;: &quot;1&quot;
+  }
+]
+
+</code></pre>
+
+<h5 id="get-api-lights-id">GET /api/lights/<em>ID</em></h5>
+
+<p>Returns details of an individual light.</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/lights/1
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;name&quot;: &quot;A360&quot;,
+  &quot;channels&quot;: {
+    &quot;1&quot;: {
+      &quot;name&quot;: &quot;channel-1&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: 100,
+      &quot;ticks&quot;: 12,
+      &quot;values&quot;: [ 0, 0, 0, 0, 29, 61, 38, 32, 20, 0, 0, 0 ],
+      &quot;fixed&quot;: 0,
+      &quot;auto&quot;: true,
+      &quot;reverse&quot;: false,
+      &quot;pin&quot;: 1
+    },
+  &quot;jack&quot;: &quot;1&quot;
+}
+</code></pre>
+
+<h5 id="put-api-lights">PUT /api/lights</h5>
+
+<p>Creates a new light</p>
+
+<pre><code>curl -X PUT -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/lights
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Kesiil-A80&quot;,
+  &quot;channels&quot;: {
+    &quot;1&quot;: {
+      &quot;name&quot;: &quot;channel-1&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: 100,
+      &quot;ticks&quot;: 12,
+      &quot;values&quot;: [ 0, 0, 0, 0, 29, 61, 38, 32, 20, 0, 0, 0 ],
+      &quot;fixed&quot;: 0,
+      &quot;auto&quot;: true,
+      &quot;reverse&quot;: false,
+      &quot;pin&quot;: 1
+    },
+  &quot;jack&quot;: &quot;1&quot;
+}
+</code></pre>
+
+<h5 id="post-api-lights-id">POST /api/lights/<em>ID</em></h5>
+
+<p>Updates an existing light</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/lights/1
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;A360&quot;,
+  &quot;channels&quot;: {
+    &quot;1&quot;: {
+      &quot;name&quot;: &quot;channel-1&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: 100,
+      &quot;ticks&quot;: 12,
+      &quot;values&quot;: [ 0, 0, 0, 0, 29, 61, 38, 32, 20, 0, 0, 0 ],
+      &quot;fixed&quot;: 20,
+      &quot;auto&quot;: false,
+      &quot;reverse&quot;: false,
+      &quot;pin&quot;: 1
+    },
+  &quot;jack&quot;: &quot;1&quot;
+}
+</code></pre>
+
+<h5 id="delete-api-lights-id">DELETE /api/lights/<em>ID</em></h5>
+
+<p>Deletes an existing light</p>
+
+<pre><code>curl -X DELETE -u reef-pi:reef-pi http://127.0.0.1:8080/api/lights/1
+</code></pre>
+
+<h3 id="temperature-controller">Temperature controller</h3>
+
+<p>Temperature conroller API allows updating temperature controller configuration as well
+as reading latest temperature and trends etc. These endpoints are only available when temeperature sub system is enabled.</p>
+
+<h5 id="get-api-tc-config">GET /api/tc/config</h5>
+
+<p>Returns current temperature controller configuration</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/tc/config
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">{
+  &quot;min&quot;: 78,
+  &quot;max&quot;: 80,
+  &quot;check_interval&quot;: 1,
+  &quot;heater&quot;: &quot;3&quot;,
+  &quot;cooler&quot;: &quot;5&quot;,
+  &quot;control&quot;: true,
+  &quot;enable&quot;: true,
+  &quot;dev_mode&quot;: false,
+  &quot;notify&quot;: {
+    &quot;enable&quot;: false,
+    &quot;min&quot;: 76,
+    &quot;max&quot;: 82
+  }
+}
+</code></pre>
+
+<h5 id="post-api-tc-config">POST /api/tc/config</h5>
+
+<p>Updates current temperature controller configuration</p>
+
+<pre><code>curl -X POST -d @payload -u reef-pi:reef-pi http://127.0.0.1:8080/api/tc/config
+</code></pre>
+
+<p>Payload:</p>
+
+<pre><code class="language-json">{
+  &quot;min&quot;: 78,
+  &quot;max&quot;: 80,
+  &quot;check_interval&quot;: 1,
+  &quot;heater&quot;: &quot;3&quot;,
+  &quot;cooler&quot;: &quot;5&quot;,
+  &quot;control&quot;: true,
+  &quot;enable&quot;: false,
+  &quot;dev_mode&quot;: false,
+  &quot;notify&quot;: {
+    &quot;enable&quot;: false,
+    &quot;min&quot;: 76,
+    &quot;max&quot;: 82
+  }
+}
+</code></pre>
+
+<h5 id="get-api-tc-readings">GET /api/tc/readings</h5>
+
+<p>Returns the last 168 measurements from temperature sensor</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/tc/readings
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;time&quot;: &quot;Nov-22-09:31&quot;,
+    &quot;temperature&quot;: 79.81
+  },
+  {
+    &quot;time&quot;: &quot;Nov-22-09:32&quot;,
+    &quot;temperature&quot;: 79.31
+  },
+  {
+    &quot;time&quot;: &quot;Nov-22-09:33&quot;,
+    &quot;temperature&quot;: 80.06
+  }
+]
+</code></pre>
+
+<h5 id="get-api-tc-usage">GET /api/tc/usage</h5>
+
+<p>Returns hourly usage of heater, cooler and average of temperature readings for last 7 days</p>
+
+<pre><code>curl -u reef-pi:reef-pi http://127.0.0.1:8080/api/tc/usage
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;heater&quot;: 0,
+    &quot;cooler&quot;: 1,
+    &quot;time&quot;: &quot;Nov-22-09:31&quot;,
+    &quot;temperature&quot;: 79.72
+  }
+]
+</code></pre>
+
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">2016-18 &copy; Ranjib Dey, All rights reserved. Site powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://reef-pi.github.io/js/docs.min.js"></script>
+<script src="https://reef-pi.github.io/js/main.js"></script>
+
+<script src="https://reef-pi.github.io/js/ie10-viewport-bug-workaround.js"></script><!-- Syntax highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+</html>

@@ -21,12 +21,12 @@
     </item>
     
     <item>
-      <title>Lighting controller</title>
-      <link>https://reef-pi.github.io/build-guides/lighting/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Temperature controller</title>
+      <link>https://reef-pi.github.io/build-guides/temperature/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/build-guides/lighting/</guid>
-      <description>Lighting is one of the key aspects of a maintaining a thriving reef tank. Most corals in reef tanks are photosynthetic and require lighting from a specific spectrum (400-700 nm). Different corals prefer different intensities of lighting for their optimal growth; these are generally specified in PAR (photosynthetically active radiation) values. For example, acropora species prefer higher PARs (250 and above) while acan and mushroom species prefer lower PARs (less than 150).</description>
+      <guid>https://reef-pi.github.io/build-guides/temperature/</guid>
+      <description>Maintaining a stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree Fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller.</description>
     </item>
     
     <item>
@@ -39,21 +39,22 @@
     </item>
     
     <item>
-      <title>Temperature controller</title>
-      <link>https://reef-pi.github.io/build-guides/temperature/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Lighting controller</title>
+      <link>https://reef-pi.github.io/build-guides/lighting/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/build-guides/temperature/</guid>
-      <description>Maintaining a stable temperature is a key requirement for a thriving reef tank. Most reef tanks maintain a stable temperature within 77 to 80 degree Fahrenheit for optimal coral growth. Depending upon the environment where reef tank is located this might require cooling down the tank using a chiller or heating it up with a heater. Because environmental temperature varies during day and night at most places, reef tank temperature is often monitored and controlled automatically using a controller.</description>
+      <guid>https://reef-pi.github.io/build-guides/lighting/</guid>
+      <description>Lighting is one of the key aspects of a maintaining a thriving reef tank. Most corals in reef tanks are photosynthetic and require lighting from a specific spectrum (400-700 nm). Different corals prefer different intensities of lighting for their optimal growth; these are generally specified in PAR (photosynthetically active radiation) values. For example, acropora species prefer higher PARs (250 and above) while acan and mushroom species prefer lower PARs (less than 150).</description>
     </item>
     
     <item>
-      <title>Telemetry</title>
-      <link>https://reef-pi.github.io/build-guides/telemetry/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      <title>Dosing system</title>
+      <link>https://reef-pi.github.io/build-guides/doser/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/build-guides/telemetry/</guid>
-      <description>Telemetry features in reef-pi allow users to capture, visualize and alert on sensor or controller health data. Telemetry functionality help in avoiding tank accidents due to equipment failure (such as a bad heater cooking up a reef tank) or to understand long-term trends in tank parameters. This guide will walk through the basic telemetry features and how to configure them. This guide assumes you have a running reef-pi controller already.</description>
+      <guid>https://reef-pi.github.io/build-guides/doser/</guid>
+      <description> The guide provides details on how to build a two part dosing system. Though we are covering only two pparts dosing system where each part if controlled by one dosing pump, this guide can be used to build dosing controller to automate as many as 16 dosing pumps.
+How this work Bill of Material  pi zero PCA9685 breakout board L293D motor control IC 2 peristaltic pump 12 volt  Electronics Calibration Setup </description>
     </item>
     
   </channel>

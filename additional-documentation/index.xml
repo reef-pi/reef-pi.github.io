@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>additional guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
+    <title>additional documentation on reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
     <link>https://reef-pi.github.io/additional-documentation/</link>
-    <description>Recent content in additional guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
+    <description>Recent content in additional documentation on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
@@ -42,15 +42,6 @@
     </item>
     
     <item>
-      <title>API</title>
-      <link>https://reef-pi.github.io/additional-documentation/api/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/additional-documentation/api/</guid>
-      <description>reef-pi porvides a simple HTTP JSON based Application Programming Interface. reef-pi web user interface itself is built using this API. API can be used to control reef-pi from an external system as well. Following is the reef-pi 1.0 API which will not have any breaking changes till the next major release (2.0). reef-pi 1.x series release may receive new features and corresponding API endpoints but all of the 1.0 API endpoints will be intact and not have any breaking changes.</description>
-    </item>
-    
-    <item>
       <title>Remote Access</title>
       <link>https://reef-pi.github.io/additional-documentation/remote/</link>
       <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
@@ -70,6 +61,25 @@ RealVNC The first option is to use software such as Real VNC. They offer a cloud
 3.5mm right angle, female panel mount audio jack A mini audio connector used in the LED controller and possibly other builds.
 3.5mm right angle, bare wire male audio connector A mini right angle audio connector used in the LED controller and possibly other builds.
 5 volt 2.5 amp micro USD power supply A power supply that will provide ample power for a Raspberry Pi.</description>
+    </item>
+    
+    <item>
+      <title>Telemetry</title>
+      <link>https://reef-pi.github.io/additional-documentation/telemetry/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/telemetry/</guid>
+      <description>Telemetry features in reef-pi allow users to capture, visualize and alert on sensor or controller health data. Telemetry functionality help in avoiding tank accidents due to equipment failure (such as a bad heater cooking up a reef tank) or to understand long-term trends in tank parameters. This guide will walk through the basic telemetry features and how to configure them. This guide assumes you have a running reef-pi controller already.</description>
+    </item>
+    
+    <item>
+      <title>Values</title>
+      <link>https://reef-pi.github.io/additional-documentation/values/</link>
+      <pubDate>Fri, 24 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/values/</guid>
+      <description>reef-pi project has three core values: affordable, modular and extensible. These are the guiding force behind key decisions and development strategies. This section of the documentation details how reef-pi project interpretes these values
+Affordable  Prefer easy to source parts. Be frugal, encourage salvaging older electronics component. Encourage user specific hacks and workaround that may significantly lower the build cost or time. Safety and reliability of the controller is not a yes or no question, its a compromise and we only encourage the current best practices.</description>
     </item>
     
     <item>
@@ -96,8 +106,17 @@ RealVNC The first option is to use software such as Real VNC. They offer a cloud
       <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/development/</guid>
-      <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go, nodejs and finally reef-pi development environment. This guide assume OSX or Linux as the development platform, but should be useful for other platforms as well.
-Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.10. reef-pi should work with any version of go above 1.</description>
+      <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go, nodejs, and finally reef-pi development environment. This guide assume OSX or Linux as the development platform. a
+Windows is supported for client side development only. Many reef-pi features depend on specific architecture and hardware features that are not available on Windows. Mock implementations of certain hardware drivers are provided for Windows in order to facilitate UI development.</description>
+    </item>
+    
+    <item>
+      <title>API (1.0)</title>
+      <link>https://reef-pi.github.io/additional-documentation/api_1.0/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/api_1.0/</guid>
+      <description>reef-pi 1.0 provides a simple HTTP JSON based Application Programming Interface. reef-pi web user interface itself is built using this API. API can be used to control reef-pi from an external system as well. Following is the reef-pi 1.0 API which will not have any breaking changes till the next major release (2.0). reef-pi 1.x series release may receive new features and corresponding API endpoints but all of the 1.</description>
     </item>
     
     <item>

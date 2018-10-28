@@ -17,8 +17,8 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/build-guides/lighting/</loc>
-    <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+    <loc>https://reef-pi.github.io/build-guides/temperature/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -50,13 +50,8 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/build-guides/temperature/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/additional-documentation/api/</loc>
-    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+    <loc>https://reef-pi.github.io/build-guides/lighting/</loc>
+    <lastmod>2017-09-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -70,8 +65,17 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/build-guides/telemetry/</loc>
+    <loc>https://reef-pi.github.io/additional-documentation/telemetry/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/build-guides/doser/</loc>
+  </url>
+  
+  <url>
+    <loc>https://reef-pi.github.io/additional-documentation/values/</loc>
+    <lastmod>2018-08-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -90,6 +94,11 @@
   </url>
   
   <url>
+    <loc>https://reef-pi.github.io/additional-documentation/api_1.0/</loc>
+    <lastmod>2017-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://reef-pi.github.io/additional-documentation/healdsburg/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
   </url>
@@ -105,12 +114,12 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/general-guides/</loc>
+    <loc>https://reef-pi.github.io/additional-documentation/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/additional-documentation/</loc>
+    <loc>https://reef-pi.github.io/general-guides/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
   </url>
   
