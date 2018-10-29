@@ -45,7 +45,7 @@ if (!doNotTrack) {
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="https://reef-pi.github.io/"><i class="fa fa-home"></i></a>
+      <a class="navbar-brand" href="https://reef-pi.github.io/"><span class='h3'>reef-pi</span></a>
     </div>
     <div id="navbar">
       <ul class="nav navbar-nav navbar-right">
@@ -213,10 +213,18 @@ if (!doNotTrack) {
 
 <p>If all GPIO pins are used up for relays, then none can will be left to be used for ATO or any other modules that require inlets (where GPIOs are used to read data). While planning, consider how many inlets (ATO, leak detector) or any other use (like mechanical push buttons, buzzers etc), total number of outlets and inlets has to be less or equal to total available GPIO pins. For example, a build for 2 ATO, 1 leak detector, 1 buzzer, 1 push button can support 17 outlet relays at max (2+1+1+1 + 17 == 22), while allowing temperature and ph probes.</p>
 
+<h3 id="notes-for-builds-from-scratch">Notes for builds from scratch</h3>
+
+<ul>
+<li>Always switch using the Hot wire, not with the neutral wire</li>
+<li>Stick to country specific color coding scheme. For US</li>
+</ul>
+
 <h3 id="resources">Resources</h3>
 
 <ul>
 <li><a href="https://github.com/reef-pi/DesignFiles/raw/master/PowerStrip.fzz">Fritzing project file</a></li>
+<li><a href="https://healthchecks.io/docs/cron/">Cron syntax cheatsheet</a></li>
 </ul>
 
             </div>
@@ -231,7 +239,7 @@ if (!doNotTrack) {
     <footer>
   <div id="footer">
     <div class="container">
-      <p class="text-muted">2016-18 &copy; Ranjib Dey, All rights reserved. Site powered by <a href="https://gohugo.io/">Hugo</a> and
+      <p class="text-muted">2016-19 &copy; Ranjib Dey, All rights reserved. Site powered by <a href="https://gohugo.io/">Hugo</a> and
       <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
     </div>
   </div>

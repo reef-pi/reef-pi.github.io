@@ -8,7 +8,7 @@
     <meta name="author" content="map[]" />
     <meta name="description" content="reef-pi - An opensource reef tank controller based on Raspberry Pi">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
-    <title>Upgrade</title>
+    <title>Bill of Materials</title>
     <meta name="generator" content="Hugo 0.47.1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -69,7 +69,7 @@ if (!doNotTrack) {
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="https://reef-pi.github.io/additional-documentation/upgrade/">Upgrade</a></strong>
+            <strong><a href="https://reef-pi.github.io/additional-documentation/bom/">Bill of Materials</a></strong>
           </h3>
         </div>
         <div class="blog-title">
@@ -80,38 +80,57 @@ if (!doNotTrack) {
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="blogpost">
-              <ul>
-<li>A running reef-pi controller version is always visible from the dashaboard footer.</li>
-</ul>
+              <p>Due to the modular &amp; DIY nature of reef-pi, different builds may require different parts. This <strong>Bill of Materials</strong> provides an exhaustive list of parts used in all the build guides and is enough to make an all in one reef-pi build. Use this as a reference. This list contains some options to pick and choose between components where applicable. We always recommend sourcing components locally but from reputed vendors. Pay extra attention to UL listed or similar quality mark for power supplies, user and livestock safety is of paramount importance. Read through the <a href="/general-guides/electronics">electronics &amp; wiring</a> guide to understand how to use this list.</p>
 
-<p><img src="/img/upgrade/version.png" alt="reef-pi version" /></p>
+<ol>
+<li>Raspberry Pi 3 or Pi zero</li>
+<li>MicroSD card</li>
+<li>Power supply
 
 <ul>
-<li><p>Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the <a href="https://github.com/reef-pi/reef-pi/releases/">release</a> page. Choose latest relase if you are unsure. For this documentation we&rsquo;ll use 1.0 release version on pi zero.</p></li>
+<li>5V 2.5 A, DC  power adapter</li>
+<li>12V DC power adapter</li>
+<li>PCB module with 12 v and 5 v dual power output</li>
+<li>LM2596 Voltage regulators</li>
+</ul></li>
+<li>Jumper wires and connectors
 
-<li><p>Open a terminal window using the ssh software of your choices.  SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window</p></li>
+<ul>
+<li>Jumper wires (male-female, female-female)</li>
+<li>Standoffs</li>
+<li>Perma proto board</li>
+<li>Breadboard</li>
+<li>Panel mount female barrel jacks</li>
+<li>Panel mount female audio jacks</li>
+<li>Male electrical power socket</li>
+</ul></li>
+<li>Ancillary boards
 
-<li><p>Download the release package on reef-pi (remember to use the correct pi-x.x package number)</p>
+<ul>
+<li>PCA9685 breakout board</li>
+<li>8 channel relay board</li>
+</ul></li>
+<li>Sensors and probes
 
-<pre><code>wget -c https://github.com/reef-pi/reef-pi/releases/download/0.5/reef-pi-1.0-pi0.deb
-</code></pre></li>
+<ul>
+<li>DS18B20 temperature probe</li>
+<li>Photoelectric water level sensor</li>
+</ul></li>
+<li>Ancillary electronic component
 
-<li><p>Install the downloaded reef-pi version</p>
+<ul>
+<li>2N3904 transistors ( pack of 10)</li>
+<li>Resistor: 1K, 10K, 4.7K (10 of each)</li>
+<li>IRLB8721PBF power MOSFETs</li>
+</ul></li>
+<li>Housing
 
-<pre><code>sudo dpkg -i reef-pi-1.0-pi0.deb
-</code></pre></li>
+<ul>
+<li>Wooden enclosure or plastic project box</li>
+</ul></li>
+</ol>
 
-<li><p>Check reef-pi is running suscessfully using</p>
-
-<pre><code>sudo systemctl status reef-pi.service
-</code></pre></li>
-
-<li><p>NOTE: If using wifi change go to the configuration tab and change interface setting to wlan0</p></li>
-
-<li><p>Or you can use the procedure listed here: <a href="http://reef-pi.github.io/additional-documentation/development">http://reef-pi.github.io/additional-documentation/development</a></p></li>
-
-<li><p>Clear browser cache to reload the new UI</p></li>
-</ul>
+<p>If you shop from Amazon, you can use <a href="http://a.co/dJL2FRt">this list</a> to purchase. Make sure you remove the parts that are redundant or not necessary for your build.</p>
 
             </div>
           </div>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Build guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
+    <title>reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
     <link>https://reef-pi.github.io/build-guides/</link>
-    <description>Recent content in Build guides on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
+    <description>Recent content on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>

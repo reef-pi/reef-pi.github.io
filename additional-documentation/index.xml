@@ -42,6 +42,15 @@
     </item>
     
     <item>
+      <title>Bill of Materials</title>
+      <link>https://reef-pi.github.io/additional-documentation/bom/</link>
+      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://reef-pi.github.io/additional-documentation/bom/</guid>
+      <description>Due to the modular &amp;amp; DIY nature of reef-pi, different builds may require different parts. This Bill of Materials provides an exhaustive list of parts used in all the build guides and is enough to make an all in one reef-pi build. Use this as a reference. This list contains some options to pick and choose between components where applicable. We always recommend sourcing components locally but from reputed vendors. Pay extra attention to UL listed or similar quality mark for power supplies, user and livestock safety is of paramount importance.</description>
+    </item>
+    
+    <item>
       <title>Remote Access</title>
       <link>https://reef-pi.github.io/additional-documentation/remote/</link>
       <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>

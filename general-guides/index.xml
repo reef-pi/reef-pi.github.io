@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Build process on reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
+    <title>reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
     <link>https://reef-pi.github.io/general-guides/</link>
-    <description>Recent content in Build process on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
+    <description>Recent content on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
@@ -39,15 +39,6 @@ Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8
       <guid>https://reef-pi.github.io/general-guides/housing/</guid>
       <description>Housing or fixture or enclosure provides physical safety to reef-pi electronics and is a must-have for any permanent installation. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels. There are many ways one can build housing for reef-pi. Couple of things to consider:
 Size Depending on what all features you want to use in reef-pi, ensure the housing can accommodate all parts.</description>
-    </item>
-    
-    <item>
-      <title>Bill of Materials</title>
-      <link>https://reef-pi.github.io/general-guides/bom/</link>
-      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/general-guides/bom/</guid>
-      <description>Due to the modular &amp;amp; DIY nature of reef-pi, different builds may require different parts. This Bill of Materials provides an exhaustive list of parts used in all the build guides and is enough to make an all in one reef-pi build. Use this as a reference. This list contains some options to pick and choose between components where applicable. We always recommend sourcing components locally but from reputed vendors. Pay extra attention to UL listed or similar quality mark for power supplies, user and livestock safety is of paramount importance.</description>
     </item>
     
   </channel>
