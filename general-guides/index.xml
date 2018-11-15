@@ -18,8 +18,8 @@
       
       <guid>https://reef-pi.github.io/general-guides/install/</guid>
       <description>This guide will walk you through the process of installing and configuring reef-pi on a Raspberry Pi. The entire installation process involves three main stages.
- Creating a MicroSD card for Raspberry Pi Starting Raspberry Pi and configuring it to be used with reef-pi Install and configuration of reef-pi on the Raspberry Pi  This guide assume some prior familiarity with computers, but no programming knowledge is required.
-Prepare Raspberry Pi image We recommend a microSD card of Class10 and at least 8Gb capacity for reef-pi.</description>
+ Creating a MicroSD card for Raspberry Pi Starting Raspberry Pi and configuring it to be used with reef-pi Install and configuration of reef-pi on the Raspberry Pi  A beginner friendly installation guide is also available on adafruit.com.
+This guide assume some prior familiarity with computers, but no programming knowledge is required.</description>
     </item>
     
     <item>
