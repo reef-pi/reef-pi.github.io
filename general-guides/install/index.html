@@ -82,7 +82,9 @@ if (!doNotTrack) {
             <div class="blogpost">
               
 
-<p>This guide will walk you through the process of installing and configuring reef-pi on a Raspberry Pi. The entire installation process involves three main stages.</p>
+<p>This guide will walk you through the process of installing and configuring reef-pi on a Raspberry Pi. A beginner friendly <a href="https://learn.adafruit.com/reef-pi-installation-and-configuration">installation guide</a> is also available on adafruit.com.</p>
+
+<p>The entire installation process involves three main stages.</p>
 
 <ul>
 <li>Creating a MicroSD card for Raspberry Pi</li>
@@ -90,14 +92,14 @@ if (!doNotTrack) {
 <li>Install and configuration of reef-pi on the Raspberry Pi</li>
 </ul>
 
-<p>A beginner friendly <a href="https://learn.adafruit.com/reef-pi-installation-and-configuration">installation guide</a> is also available on adafruit.com.</p>
-
 <p>This guide assume some prior familiarity with computers, but no programming knowledge is required.</p>
 
 <h3 id="prepare-raspberry-pi-image">Prepare Raspberry Pi image</h3>
 
 <p>We recommend a microSD card of Class10 and at least 8Gb capacity for reef-pi. reef-pi is tested on raspbian, but it should work on most other linux OS, on Raspberry Pi. Follow the official raspberry pi guide for details instructions:
 - <a href="https://www.raspberrypi.org/documentation/installation/installing-images/">Download and write raspbian image to micro SD card</a></p>
+
+<p>If you are using Pi zero for your build, we strongly recommend not using graphical user interface and install Raspbian lite. If you are not comfortable with headless or termnial based Raspbian, then consider going with Pi 3 instead.</p>
 
 <h3 id="connecting-to-raspberry-pi">Connecting to Raspberry Pi</h3>
 
@@ -112,11 +114,12 @@ if (!doNotTrack) {
 <ul>
 <li><p>Configure wifi: Enabling wifi or ethernet based internet connection allows reef-pi to be accessible from any web browser (mobile, tablet or computers). Note, this is not a mandatory requirement, reef-pi can run without any internet connectivity. This is for convenience, to allow accessing reef-pi web interface from any other devices, such as laptop, tablets or mobile phones. Detailed steps for wifi configuration is available <a href="https://www.raspberrypi.org/documentation/configuration/wireless/">here</a></p></li>
 
-<li><p>Use the terminal window to perform a system update with the following command. Note: Skip this step if internet is not enabled.</p></li>
+<li><p>Use the terminal window to perform a system update with the following command. Note: Skip this step if internet is not enabled. Also install i2c-tools which helps in diagnosing i2c based electronics components (such as pH sensor)</p></li>
 </ul>
 
 <pre><code>sudo apt-get update -y
 sudo apt-get upgrade -y
+sudo apt-get install i2c-tools
 </code></pre>
 
 <ul>
@@ -131,10 +134,8 @@ sudo apt-get upgrade -y
 </ul>
 
 <pre><code>dtparam=i2c_arm=on
-dtparam=spi=on
-dtparam=audio=on
-enable_uart=1
 dtoverlay=w1-gpio
+dtoverlay=pwm-2chan
 </code></pre>
 
 <ul>
@@ -154,6 +155,10 @@ sudo systemctl enable systemd-timesyncd.service
 sudo dpkg-reconfigure tzdata
 </code></pre>
 
+<ul>
+<li>Change Raspberry Pi hostname using raspi-config utility to reflect your reef-pi build. This allows access reef-pi web UI via its name instead of IP. For example, I renamed one of my Raspberry Pi as biocube29 to reflect the fact that its controlling my Biocube29 nano reef tank. This allows me to access that reef-pi web UI as <a href="http://biocube29.local">http://biocube29.local</a>. Adafruit has an excellent <a href="https://learn.adafruit.com/digital-free-library/change-hostname">guide</a> on how to do this as well.</li>
+</ul>
+
 <p>Finally, reboot Raspberry Pi to apply all the kernel configuration changes</p>
 
 <pre><code>sudo reboot
@@ -172,12 +177,14 @@ sudo dpkg-reconfigure tzdata
 <ul>
 <li>Once  Raspberry Pi is up and running,  navigate to the reef-pi release page and copy link for the latest <a href="https://github.com/reef-pi/reef-pi/releases">release</a></li>
 <li>Make sure you choose the right release package for Raspberry Pi 3 or pi zero.</li>
-<li>Open Terminal and type following commands to download and  install reef-pi, assuming you are installing 1.0 release</li>
+<li>Open Terminal and type following commands to download and  install reef-pi, assuming you are installing 2.0 release</li>
 </ul>
 
-<pre><code>wget -c https://github.com/reef-pi/reef-pi/releases/download/1.0/reef-pi-1.0-pi3.deb
+<pre><code>wget -c https://github.com/reef-pi/reef-pi/releases/download/2.0/reef-pi-2.0-pi3.deb
 sudo dpkg -i reef-pi-1.0-pi3.deb
 </code></pre>
+
+<p><em>Use reef-pi-2.0-pi0.deb</em> package for Raspberry Pi Zero or Model B,</p>
 
 <ul>
 <li>Check reef-pi is running</li>

@@ -17,9 +17,9 @@
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/install/</guid>
-      <description>This guide will walk you through the process of installing and configuring reef-pi on a Raspberry Pi. The entire installation process involves three main stages.
- Creating a MicroSD card for Raspberry Pi Starting Raspberry Pi and configuring it to be used with reef-pi Install and configuration of reef-pi on the Raspberry Pi  A beginner friendly installation guide is also available on adafruit.com.
-This guide assume some prior familiarity with computers, but no programming knowledge is required.</description>
+      <description>This guide will walk you through the process of installing and configuring reef-pi on a Raspberry Pi. A beginner friendly installation guide is also available on adafruit.com.
+The entire installation process involves three main stages.
+ Creating a MicroSD card for Raspberry Pi Starting Raspberry Pi and configuring it to be used with reef-pi Install and configuration of reef-pi on the Raspberry Pi  This guide assume some prior familiarity with computers, but no programming knowledge is required.</description>
     </item>
     
     <item>
@@ -28,7 +28,8 @@ This guide assume some prior familiarity with computers, but no programming know
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/general-guides/electronics/</guid>
-      <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&amp;rsquo;ll need additional electronic component other than just Raspberry Pi. This is why electronics and wiring is the second most important reef-pi controller documentation. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this.</description>
+      <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&amp;rsquo;ll need additional electronic component other than just Raspberry Pi. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this
+Factors that influence circuit work Controller features reef-pi can automate a host of different reef keeping chores, and each of them may require one or more electronic component just for that feature.</description>
     </item>
     
     <item>
