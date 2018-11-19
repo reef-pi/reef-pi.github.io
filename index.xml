@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Install &amp; configuration</title>
+      <title>Software installation</title>
       <link>https://reef-pi.github.io/general-guides/install/</link>
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
@@ -62,7 +62,7 @@ The entire installation process involves three main stages.
     </item>
     
     <item>
-      <title>Electronics &amp; wiring</title>
+      <title>Circuit construction</title>
       <link>https://reef-pi.github.io/general-guides/electronics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -72,7 +72,7 @@ Factors that influence circuit work Controller features reef-pi can automate a h
     </item>
     
     <item>
-      <title>Housing</title>
+      <title>Enclosure construction</title>
       <link>https://reef-pi.github.io/general-guides/housing/</link>
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
