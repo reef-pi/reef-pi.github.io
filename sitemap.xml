@@ -3,22 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://reef-pi.github.io/general-guides/install/</loc>
-    <lastmod>2017-07-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/additional-documentation/troubleshooting/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/build-guides/power/</loc>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/build-guides/temperature/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <loc>https://reef-pi.github.io/guides/intro/</loc>
+    <lastmod>2018-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -27,31 +13,17 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/general-guides/electronics/</loc>
+    <loc>https://reef-pi.github.io/guides/electronics/</loc>
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/general-guides/housing/</loc>
+    <loc>https://reef-pi.github.io/guides/housing/</loc>
     <lastmod>2017-07-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/build-guides/ato/</loc>
   </url>
   
   <url>
     <loc>https://reef-pi.github.io/additional-documentation/safety/</loc>
     <lastmod>2018-03-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/additional-documentation/bom/</loc>
-    <lastmod>2017-11-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/build-guides/lighting/</loc>
-    <lastmod>2017-09-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -67,10 +39,6 @@
   <url>
     <loc>https://reef-pi.github.io/additional-documentation/telemetry/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://reef-pi.github.io/build-guides/doser/</loc>
   </url>
   
   <url>
@@ -109,13 +77,13 @@
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/build-guides/</loc>
+    <loc>https://reef-pi.github.io/guides/troubleshooting/</loc>
     <lastmod>2017-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://reef-pi.github.io/general-guides/</loc>
-    <lastmod>2017-07-21T00:00:00+00:00</lastmod>
+    <loc>https://reef-pi.github.io/guides/</loc>
+    <lastmod>2018-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -151,7 +119,7 @@
   
   <url>
     <loc>https://reef-pi.github.io/</loc>
-    <lastmod>2017-07-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>Troubleshooting</title>
-      <link>https://reef-pi.github.io/additional-documentation/troubleshooting/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/additional-documentation/troubleshooting/</guid>
-      <description>Check if reef-pi is running  sudo systemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
- Check reef-pi version (helps in bug reports)
-  reef-pi -version   Resetting reef-pi&amp;rsquo;s database  sudo systemctl stop reef-pi.</description>
-    </item>
-    
-    <item>
       <title>Upgrade</title>
       <link>https://reef-pi.github.io/additional-documentation/upgrade/</link>
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
@@ -39,15 +28,6 @@
       
       <guid>https://reef-pi.github.io/additional-documentation/safety/</guid>
       <description>A typical reef-pi build involves both water and electricity, this can be potentially hazerdous. Please ensure safety consideration for yourself and all the living things in your tank. If you are working with electronics, especially with water and high voltage together, it can be dangerous. This page is intended to inform you about this risk. It is not high voltage but high current that imposes risk. High current here stands for milliamps.</description>
-    </item>
-    
-    <item>
-      <title>Bill of Materials</title>
-      <link>https://reef-pi.github.io/additional-documentation/bom/</link>
-      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/additional-documentation/bom/</guid>
-      <description>Due to the modular &amp;amp; DIY nature of reef-pi, different builds may require different parts. This Bill of Materials provides an exhaustive list of parts used in all the build guides and is enough to make an all in one reef-pi build. Use this as a reference. This list contains some options to pick and choose between components where applicable. We always recommend sourcing components locally but from reputed vendors. Pay extra attention to UL listed or similar quality mark for power supplies, user and livestock safety is of paramount importance.</description>
     </item>
     
     <item>

@@ -1,86 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Guides on reef-pi - A Rasoberry Pi based opensource reef tank controller</title>
+    <title>reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
     <link>https://reef-pi.github.io/guides/</link>
-    <description>Recent content in Guides on reef-pi - A Rasoberry Pi based opensource reef tank controller</description>
+    <description>Recent content on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://reef-pi.github.io/guides/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Building a kessil controller with reef-pi</title>
-      <link>https://reef-pi.github.io/guides/kessil_build/</link>
-      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      <title>The build process</title>
+      <link>https://reef-pi.github.io/guides/intro/</link>
+      <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/guides/kessil_build/</guid>
-      <description></description>
+      <guid>https://reef-pi.github.io/guides/intro/</guid>
+      <description>This section provides a high-level overview of build and maintenance process of a reef-pi controller and some tips and tricks around common build aspects such as circuit or enclosure construction and individual modules. Please read through this documentation before starting with an actual build.
+Plan reef-pi is a versatile and modular controller that allows users to customize their controller for their specific needs, tuned to their particular hardware and aquarium setup.</description>
     </item>
     
     <item>
-      <title>Building an all in one controller with reef-pi</title>
-      <link>https://reef-pi.github.io/guides/aio_build/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/guides/aio_build/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Building an Auto Top Off system with reef-pi</title>
-      <link>https://reef-pi.github.io/guides/ato_build/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/guides/ato_build/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Adding a touchscreen display to a reef-pi controller</title>
-      <link>https://reef-pi.github.io/guides/touchscreen_display/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/guides/touchscreen_display/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Electronics</title>
+      <title>Circuit construction</title>
       <link>https://reef-pi.github.io/guides/electronics/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/guides/electronics/</guid>
-      <description></description>
+      <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&amp;rsquo;ll need additional electronic component other than just Raspberry Pi. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this
+Factors that influence circuit work Controller features reef-pi can automate a host of different reef keeping chores, and each of them may require one or more electronic component just for that feature.</description>
     </item>
     
     <item>
-      <title>Building a power controller with reef-pi</title>
-      <link>https://reef-pi.github.io/guides/power_controller/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      <title>Enclosure construction</title>
+      <link>https://reef-pi.github.io/guides/housing/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://reef-pi.github.io/guides/power_controller/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Building a temperature controller with reef-pi</title>
-      <link>https://reef-pi.github.io/guides/temperature_controller/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/guides/temperature_controller/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://reef-pi.github.io/guides/tools/</link>
-      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/guides/tools/</guid>
-      <description></description>
+      <guid>https://reef-pi.github.io/guides/housing/</guid>
+      <description>Housing or fixture or enclosure provides physical safety to reef-pi electronics and is a must-have for any permanent installation. Housing or enclosure secures the electronics from outside environment, as well as provides a mounting place for the different probes, equipment and display panels. There are many ways one can build housing for reef-pi. Couple of things to consider:
+Size Depending on what all features you want to use in reef-pi, ensure the housing can accommodate all parts.</description>
     </item>
     
     <item>
@@ -89,19 +47,9 @@
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/guides/troubleshooting/</guid>
-      <description>Check if reef-pi is running
-sudo ystemctl status reef-pi.service  Check for errors in logA
-sudo journalctl -fu reef-pi.service  Connecting reef-pi using a TTL cable</description>
-    </item>
-    
-    <item>
-      <title>Developer environment setup</title>
-      <link>https://reef-pi.github.io/guides/development/</link>
-      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://reef-pi.github.io/guides/development/</guid>
-      <description>reef-pi is written in go and react. This guide will walk through the steps involved in setting up go and nodejs (required for react) development environment, alongside reef-pi. This guide assume OSX or Linux as the development platform.
-Setup go reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.8.1. reef-pi should work with any version of go above 1.</description>
+      <description>Check if reef-pi is running  sudo systemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
+ Check reef-pi version (helps in bug reports)
+  reef-pi -version   Resetting reef-pi&amp;rsquo;s database  sudo systemctl stop reef-pi.</description>
     </item>
     
   </channel>
