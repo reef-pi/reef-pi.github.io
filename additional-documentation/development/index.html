@@ -164,6 +164,12 @@ git clone https://github.com/reef-pi/reef-pi.git $GOPATH/src/github.com/reef-pi/
 
 <pre><code>make start-dev
 </code></pre></li>
+
+<li><p>You can try out the API with curl. Save the auth cookie by signing in, before making any subsequent API calls.</p>
+
+<pre><code>curl -X POST -c cookie.txt -d '{&quot;user&quot;:&quot;reef-pi&quot;, &quot;password&quot;:&quot;reef-pi&quot;}' http://localhost:8080/auth/signin
+curl -b cookie.txt http://localhost:8080/api/drivers
+</code></pre></li>
 </ul>
 
 <p>Head over to your browser <a href="http://localhost:8080">http://localhost:8080/</a> to see the reef-pi in action.</p>
