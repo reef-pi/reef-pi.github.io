@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>reef-pi - An opensource reef tank controller based on Raspberry Pi</title>
@@ -6,7 +6,7 @@
     <description>Recent content on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://reef-pi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,8 +27,8 @@ Plan reef-pi is a versatile and modular controller that allows users to customiz
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/upgrade/</guid>
-      <description>A running reef-pi controller version is always visible from the dashaboard footer.   Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the release page. Choose latest relase if you are unsure. For this documentation we&amp;rsquo;ll use 1.0 release version on pi zero.
- Open a terminal window using the ssh software of your choices. SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window</description>
+      <description>A running reef-pi controller version is always visible from the dashaboard footer.    Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the release page. Choose latest relase if you are unsure. For this documentation we&#39;ll use 1.0 release version on pi zero.
+  Open a terminal window using the ssh software of your choices. SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ Plan reef-pi is a versatile and modular controller that allows users to customiz
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/guides/electronics/</guid>
-      <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&amp;rsquo;ll need additional electronic component other than just Raspberry Pi. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this
+      <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&#39;ll need additional electronic component other than just Raspberry Pi. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this
 Factors that influence circuit work Controller features reef-pi can automate a host of different reef keeping chores, and each of them may require one or more electronic component just for that feature.</description>
     </item>
     
@@ -88,7 +88,7 @@ RealVNC The first option is to use software such as Real VNC. They offer a cloud
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/telemetry/</guid>
-      <description>Telemetry features in reef-pi allow users to capture, visualize and alert on sensor or controller health data. Telemetry functionality help in avoiding tank accidents due to equipment failure (such as a bad heater cooking up a reef tank) or to understand long-term trends in tank parameters. This guide will walk through the basic telemetry features and how to configure them. This guide assumes you have a running reef-pi controller already.</description>
+      <description>Telemetry features in reef-pi allow users to capture, visualize and alert on sensor or controller health data. Telemetry functionality help in avoiding tank accidents due to equipment failure (such as a bad heater cooking up a reef tank) or to understand long-term trends in tank parameters. This guide will walk through the basic telemetry features and how to configure them. This guide assumes you have a running reef-pi controller already. Follow the general guides first if you do not have a working reef-pi installation.</description>
     </item>
     
     <item>
@@ -107,7 +107,7 @@ Affordable  Prefer easy to source parts. Be frugal, encourage salvaging older el
       <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/headless/</guid>
-      <description>There are times when you want to get your Raspberry Pi up and running completely headlessly. Maybe you typically use a laptop and don&amp;rsquo;t have an extra keyboard. Maybe you don&amp;rsquo;t have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot.</description>
+      <description>There are times when you want to get your Raspberry Pi up and running completely headlessly. Maybe you typically use a laptop and don&#39;t have an extra keyboard. Maybe you don&#39;t have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot.</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@ Affordable  Prefer easy to source parts. Be frugal, encourage salvaging older el
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/tools/</guid>
-      <description> reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron, solder, faux etc. plier wire stripper Screw driver (philips, m8 etc) multimeter  Wood working  Dremel or some other rotary tools Scroll saw Clamps  </description>
+      <description>reef-pi installation and configuration  HDMI cable and monitor or TV USB based keyboard and mouse USB TTL Cable A computer with SD card reader  Wiring and testing electronics  soldering iron, solder, faux etc. plier wire stripper Screw driver (philips, m8 etc) multimeter  Wood working  Dremel or some other rotary tools Scroll saw Clamps  </description>
     </item>
     
     <item>
@@ -136,7 +136,7 @@ Windows is supported for client side development only. Many reef-pi features dep
       
       <guid>https://reef-pi.github.io/additional-documentation/resources/</guid>
       <description>Following is assorted list of online resources related to reef-pi that you may find useful in addition to the adafruit guides and this website.
-Press releases  Make magazine article on reef-pi Adafruit article on reef-pi Raspberry Pi article on reef-pi  Open hardware/PCB for reef-pi  pH board by Roberto Buti pico base board by Yann Ranin, pre-orders Wykat&amp;rsquo;s reef-pi HAT Michael Lane&amp;rsquo;s reef-pi HAT, tindie store Thingiverse reef-pi group where community members share their 3d printed accessories  Build threads  Scottbrew&amp;rsquo;s build thread Macca’s build thread with 3d printed enclosure Fishyj’s build thread Michael Lane&amp;rsquo;s build thread Buddy&amp;rsquo;s build thread Cocobbal&amp;rsquo;s build thread B4tn build thread JonathonTroutt&amp;rsquo;s build thread Diamond1&amp;rsquo;s build thread Bigtrout&amp;rsquo;s build thread Mikeneedsahobby&amp;rsquo;s build thread AquaRaider44&amp;rsquo;s build thread  Extending reef-pi with other system  Home assitant integration Float switch wiring details reef brite control details American DJ SR P8 power strip &amp;rsquo;s DB9 pinout details  reef-pi vidoes on youtube  Pater Wasden&amp;rsquo;s video tutorials  Using reef-pi API  Auto feeder using reef-pi API (in python)  If you are aware of any other useful reef-pi online resources that you think should be part of this list, please contact us at info@reef-pi.</description>
+Press releases  Make magazine article on reef-pi Adafruit article on reef-pi Raspberry Pi article on reef-pi  Open hardware/PCB for reef-pi  pH board by Roberto Buti pico base board by Yann Ranin, pre-orders Wykat&#39;s reef-pi HAT Michael Lane&#39;s reef-pi HAT, tindie store Thingiverse reef-pi group where community members share their 3d printed accessories  Build threads  Scottbrew&#39;s build thread Macca’s build thread with 3d printed enclosure Fishyj’s build thread Michael Lane&#39;s build thread Buddy&#39;s build thread Cocobbal&#39;s build thread B4tn build thread JonathonTroutt&#39;s build thread Diamond1&#39;s build thread Bigtrout&#39;s build thread Mikeneedsahobby&#39;s build thread AquaRaider44&#39;s build thread  Extending reef-pi with other system  Home assitant integration Float switch wiring details reef brite control details American DJ SR P8 power strip &amp;lsquo;s DB9 pinout details  reef-pi vidoes on youtube  Pater Wasden&#39;s video tutorials  Using reef-pi API  Auto feeder using reef-pi API (in python)  If you are aware of any other useful reef-pi online resources that you think should be part of this list, please contact us at info@reef-pi.</description>
     </item>
     
     <item>
@@ -145,9 +145,9 @@ Press releases  Make magazine article on reef-pi Adafruit article on reef-pi Ras
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/guides/troubleshooting/</guid>
-      <description>Check if reef-pi is running  sudo systemctl status reef-pi.service   Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
- Check reef-pi version (helps in bug reports)
-  reef-pi -version   Resetting reef-pi&amp;rsquo;s database  sudo systemctl stop reef-pi.</description>
+      <description>Check if reef-pi is running  sudo systemctl status reef-pi.service  Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
+  Check reef-pi version (helps in bug reports)
+  reef-pi -version  Resetting reef-pi&#39;s database  sudo systemctl stop reef-pi.</description>
     </item>
     
     <item>
@@ -156,9 +156,9 @@ Press releases  Make magazine article on reef-pi Adafruit article on reef-pi Ras
       <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/api/</guid>
-      <description> API V3 reef-pi provides http json API. Entire UI is powered by the API. API requests needs to be authenticated using session (cookie). He is an example of gettong the list of equipment
-curl -X POST -c cookie.txt -d &#39;{&amp;quot;user&amp;quot;:&amp;quot;reef-pi&amp;quot;, &amp;quot;password&amp;quot;:&amp;quot;reef-pi&amp;quot;}&#39; http://reef-pi.local/auth/signin curl -b cookie.txt http://reef-pi.local/api/equipment  Following is the exhaustinve list of API endpoints.
-Authentication  POST /auth/signin GET /auth/signout POST /api/credentials GET /api/me  Configuration  GET /api/info GET /api/capabilities GET /api/settings POST /api/settings GET /api/telemetry POST /api/telemetry POST /api/telemetry/test_message GET /api/dashboard POST /api/dashboard DELETE /api/errors/clear DELETE /api/errors/ID GET /api/errors/ID GET /api/errors GET /api/health_stats GET /api/pwm_profiles/ID GET /api/pwm_profiles PUT /api/pwm_profiles DELETE /api/pwm_profiles/ID POST /api/pwm_profiles/ID  Raspberry Pi management Power cycle  POST /api/admin/poweroff POST /api/admin/reboot POST /api/admin/reload   Display control  POST /api/display/on POST /api/display/off POST /api/display GET /api/display  Camera  GET /api/camera/config POST /api/camera/config POST /api/camera/shoot GET /api/camera/latest GET /api/camera/list  Electronics Drivers  GET /api/drivers GET /api/drivers/ID PUT /api/drivers DELETE /api/drivers/ID POST /api/drivers/ID  Connectors  GET /api/outlets/ID GET /api/outlets PUT /api/outlets DELETE /api/outlets/ID POST /api/outlets/ID GET /api/inlets/ID GET /api/inlets PUT /api/inlets DELETE /api/inlets/ID POST /api/inlets/ID POST /api/inlets/ID/read GET /api/jacks GET /api/jacks/ID PUT /api/jacks POST /api/jacks/ID DELETE /api/jacks/ID POST /api/jacks/ID/control GET /api/analog_inputs GET /api/analog_inputs/ID PUT /api/analog_inputs POST /api/analog_inputs/ID DELETE /api/analog_inputs/ID POST /api/analog_inputs/ID/read  Equipment  GET /api/equipment/ID GET /api/equipment PUT /api/equipment POST /api/equipment/ID DELETE /api/equipment/ID POST /api/equipment/ID/control  ATO  GET /api/atos/ID GET /api/atos PUT /api/atos POST /api/atos/ID DELETE /api/atos/ID GET /api/atos/ID/usage  Lights  GET /api/lights PUT /api/lights GET /api/lights/ID POST /api/lights/ID DELETE /api/lights/ID  Temperature controllers  GET /api/tcs GET /api/tcs/sensors PUT /api/tcs GET /api/tcs/ID POST /api/tcs/ID DELETE /api/tcs/ID GET /api/tcs/ID/usage  pH Probes  GET /api/phprobes/ID GET /api/phprobes PUT /api/phprobes POST /api/phprobes/ID DELETE /api/phprobes/ID GET /api/phprobes/ID/readings POST /api/phprobes/ID/calibrate GET /api/phprobes/ID/read POST /api/phprobes/ID/calibratepoint  Dosing pumps`  GET /api/doser/pumps GET /api/doser/pumps/ID PUT /api/doser/pumps POST /api/doser/pumps/ID DELETE /api/doser/pumps/ID GET /api/doser/pumps/ID/usage POST /api/doser/pumps/ID/calibrate POST /api/doser/pumps/ID/schedule  Timers  GET /api/timers/ID GET /api/timers PUT /api/timers POST /api/timers/ID DELETE /api/timers/ID  Macros  GET /api/macros PUT /api/macros GET /api/macros/ID POST /api/macros/ID DELETE /api/macros/ID POST /api/macros/ID/run  </description>
+      <description>API V3 reef-pi provides http json API. Entire UI is powered by the API. API requests needs to be authenticated using session (cookie). He is an example of gettong the list of equipment
+curl -X POST -c cookie.txt -d &#39;{&amp;quot;user&amp;quot;:&amp;quot;reef-pi&amp;quot;, &amp;quot;password&amp;quot;:&amp;quot;reef-pi&amp;quot;}&#39; http://reef-pi.local/auth/signin curl -b cookie.txt http://reef-pi.local/api/equipment Following is the exhaustinve list of API endpoints.
+Authentication  POST	/auth/signin GET	/auth/signout POST	/api/credentials GET	/api/me  Configuration  GET	/api/info GET	/api/capabilities GET	/api/settings POST	/api/settings GET	/api/telemetry POST	/api/telemetry POST	/api/telemetry/test_message GET	/api/dashboard POST	/api/dashboard DELETE	/api/errors/clear DELETE	/api/errors/ID GET	/api/errors/ID GET	/api/errors GET	/api/health_stats GET	/api/pwm_profiles/ID GET	/api/pwm_profiles PUT	/api/pwm_profiles DELETE	/api/pwm_profiles/ID POST	/api/pwm_profiles/ID  Raspberry Pi management Power cycle  POST	/api/admin/poweroff POST	/api/admin/reboot POST	/api/admin/reload  Display control  POST	/api/display/on POST	/api/display/off POST	/api/display GET	/api/display  Camera  GET	/api/camera/config POST	/api/camera/config POST	/api/camera/shoot GET	/api/camera/latest GET	/api/camera/list  Electronics Drivers  GET	/api/drivers GET	/api/drivers/ID PUT	/api/drivers DELETE	/api/drivers/ID POST	/api/drivers/ID  Connectors  GET	/api/outlets/ID GET	/api/outlets PUT	/api/outlets DELETE	/api/outlets/ID POST	/api/outlets/ID GET	/api/inlets/ID GET	/api/inlets PUT	/api/inlets DELETE	/api/inlets/ID POST	/api/inlets/ID POST	/api/inlets/ID/read GET	/api/jacks GET	/api/jacks/ID PUT	/api/jacks POST	/api/jacks/ID DELETE	/api/jacks/ID POST	/api/jacks/ID/control GET	/api/analog_inputs GET	/api/analog_inputs/ID PUT	/api/analog_inputs POST	/api/analog_inputs/ID DELETE	/api/analog_inputs/ID POST	/api/analog_inputs/ID/read  Equipment  GET	/api/equipment/ID GET	/api/equipment PUT	/api/equipment POST	/api/equipment/ID DELETE	/api/equipment/ID POST	/api/equipment/ID/control  ATO  GET	/api/atos/ID GET	/api/atos PUT	/api/atos POST	/api/atos/ID DELETE	/api/atos/ID GET	/api/atos/ID/usage  Lights  GET	/api/lights PUT	/api/lights GET	/api/lights/ID POST	/api/lights/ID DELETE	/api/lights/ID  Temperature controllers  GET	/api/tcs GET	/api/tcs/sensors PUT	/api/tcs GET	/api/tcs/ID POST	/api/tcs/ID DELETE	/api/tcs/ID GET	/api/tcs/ID/usage  pH Probes  GET	/api/phprobes/ID GET	/api/phprobes PUT	/api/phprobes POST	/api/phprobes/ID DELETE	/api/phprobes/ID GET	/api/phprobes/ID/readings POST	/api/phprobes/ID/calibrate GET	/api/phprobes/ID/read POST	/api/phprobes/ID/calibratepoint  Dosing pumps`  GET	/api/doser/pumps GET	/api/doser/pumps/ID PUT	/api/doser/pumps POST	/api/doser/pumps/ID DELETE	/api/doser/pumps/ID GET	/api/doser/pumps/ID/usage POST	/api/doser/pumps/ID/calibrate POST	/api/doser/pumps/ID/schedule  Timers  GET	/api/timers/ID GET	/api/timers PUT	/api/timers POST	/api/timers/ID DELETE	/api/timers/ID  Macros  GET	/api/macros PUT	/api/macros GET	/api/macros/ID POST	/api/macros/ID DELETE	/api/macros/ID POST	/api/macros/ID/run  </description>
     </item>
     
   </channel>

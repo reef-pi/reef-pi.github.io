@@ -9,7 +9,7 @@
     <meta name="description" content="reef-pi - An opensource reef tank controller based on Raspberry Pi">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
     <title>API</title>
-    <meta name="generator" content="Hugo 0.47.1" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
     
@@ -76,212 +76,173 @@ if (!doNotTrack) {
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="blogpost">
-              
-
-<h2 id="api-v3">API V3</h2>
-
+              <h2 id="api-v3">API V3</h2>
 <p>reef-pi provides http json API. Entire UI is powered by the API. API requests needs to be authenticated
 using session (cookie). He is an example of gettong the list of equipment</p>
-
 <pre><code>curl -X POST -c cookie.txt -d '{&quot;user&quot;:&quot;reef-pi&quot;, &quot;password&quot;:&quot;reef-pi&quot;}' http://reef-pi.local/auth/signin
 curl -b cookie.txt http://reef-pi.local/api/equipment
-</code></pre>
-
-<p>Following is the exhaustinve list of API endpoints.</p>
-
+</code></pre><p>Following is the exhaustinve list of API endpoints.</p>
 <h3 id="authentication">Authentication</h3>
-
 <ul>
-<li>POST /auth/signin</li>
-<li>GET /auth/signout</li>
-<li>POST /api/credentials</li>
-<li>GET /api/me</li>
+<li>POST	/auth/signin</li>
+<li>GET	/auth/signout</li>
+<li>POST	/api/credentials</li>
+<li>GET	/api/me</li>
 </ul>
-
 <h3 id="configuration">Configuration</h3>
-
 <ul>
-<li>GET /api/info</li>
-<li>GET /api/capabilities</li>
-<li>GET /api/settings</li>
-<li>POST /api/settings</li>
-<li>GET /api/telemetry</li>
-<li>POST /api/telemetry</li>
-<li>POST /api/telemetry/test_message</li>
-<li>GET /api/dashboard</li>
-<li>POST /api/dashboard</li>
-<li>DELETE    /api/errors/clear</li>
-<li>DELETE    /api/errors/ID</li>
-<li>GET /api/errors/ID</li>
-<li>GET /api/errors</li>
-<li>GET /api/health_stats</li>
-<li>GET /api/pwm_profiles/ID</li>
-<li>GET /api/pwm_profiles</li>
-<li>PUT /api/pwm_profiles</li>
-<li>DELETE    /api/pwm_profiles/ID</li>
-<li>POST /api/pwm_profiles/ID</li>
+<li>GET	/api/info</li>
+<li>GET	/api/capabilities</li>
+<li>GET	/api/settings</li>
+<li>POST	/api/settings</li>
+<li>GET	/api/telemetry</li>
+<li>POST	/api/telemetry</li>
+<li>POST	/api/telemetry/test_message</li>
+<li>GET	/api/dashboard</li>
+<li>POST	/api/dashboard</li>
+<li>DELETE	/api/errors/clear</li>
+<li>DELETE	/api/errors/ID</li>
+<li>GET	/api/errors/ID</li>
+<li>GET	/api/errors</li>
+<li>GET	/api/health_stats</li>
+<li>GET	/api/pwm_profiles/ID</li>
+<li>GET	/api/pwm_profiles</li>
+<li>PUT	/api/pwm_profiles</li>
+<li>DELETE	/api/pwm_profiles/ID</li>
+<li>POST	/api/pwm_profiles/ID</li>
 </ul>
-
 <h3 id="raspberry-pi-management">Raspberry Pi management</h3>
-
 <h4 id="power-cycle">Power cycle</h4>
-
 <ul>
-<li>POST /api/admin/poweroff</li>
-<li>POST /api/admin/reboot</li>
-<li>POST /api/admin/reload
-<br /></li>
+<li>POST	/api/admin/poweroff</li>
+<li>POST	/api/admin/reboot</li>
+<li>POST	/api/admin/reload</li>
 </ul>
-
 <h4 id="display-control">Display control</h4>
-
 <ul>
-<li>POST /api/display/on</li>
-<li>POST /api/display/off</li>
-<li>POST /api/display</li>
-<li>GET /api/display</li>
+<li>POST	/api/display/on</li>
+<li>POST	/api/display/off</li>
+<li>POST	/api/display</li>
+<li>GET	/api/display</li>
 </ul>
-
 <h4 id="camera">Camera</h4>
-
 <ul>
-<li>GET /api/camera/config</li>
-<li>POST /api/camera/config</li>
-<li>POST /api/camera/shoot</li>
-<li>GET /api/camera/latest</li>
-<li>GET /api/camera/list</li>
+<li>GET	/api/camera/config</li>
+<li>POST	/api/camera/config</li>
+<li>POST	/api/camera/shoot</li>
+<li>GET	/api/camera/latest</li>
+<li>GET	/api/camera/list</li>
 </ul>
-
 <h3 id="electronics">Electronics</h3>
-
 <h4 id="drivers">Drivers</h4>
-
 <ul>
-<li>GET /api/drivers</li>
-<li>GET /api/drivers/ID</li>
-<li>PUT /api/drivers</li>
-<li>DELETE    /api/drivers/ID</li>
-<li>POST /api/drivers/ID</li>
+<li>GET	/api/drivers</li>
+<li>GET	/api/drivers/ID</li>
+<li>PUT	/api/drivers</li>
+<li>DELETE	/api/drivers/ID</li>
+<li>POST	/api/drivers/ID</li>
 </ul>
-
 <h4 id="connectors">Connectors</h4>
-
 <ul>
-<li>GET /api/outlets/ID</li>
-<li>GET /api/outlets</li>
-<li>PUT /api/outlets</li>
-<li>DELETE    /api/outlets/ID</li>
-<li>POST /api/outlets/ID</li>
-<li>GET /api/inlets/ID</li>
-<li>GET /api/inlets</li>
-<li>PUT /api/inlets</li>
-<li>DELETE    /api/inlets/ID</li>
-<li>POST /api/inlets/ID</li>
-<li>POST /api/inlets/ID/read</li>
-<li>GET /api/jacks</li>
-<li>GET /api/jacks/ID</li>
-<li>PUT /api/jacks</li>
-<li>POST /api/jacks/ID</li>
-<li>DELETE    /api/jacks/ID</li>
-<li>POST /api/jacks/ID/control</li>
-<li>GET /api/analog_inputs</li>
-<li>GET /api/analog_inputs/ID</li>
-<li>PUT /api/analog_inputs</li>
-<li>POST /api/analog_inputs/ID</li>
-<li>DELETE    /api/analog_inputs/ID</li>
-<li>POST /api/analog_inputs/ID/read</li>
+<li>GET	/api/outlets/ID</li>
+<li>GET	/api/outlets</li>
+<li>PUT	/api/outlets</li>
+<li>DELETE	/api/outlets/ID</li>
+<li>POST	/api/outlets/ID</li>
+<li>GET	/api/inlets/ID</li>
+<li>GET	/api/inlets</li>
+<li>PUT	/api/inlets</li>
+<li>DELETE	/api/inlets/ID</li>
+<li>POST	/api/inlets/ID</li>
+<li>POST	/api/inlets/ID/read</li>
+<li>GET	/api/jacks</li>
+<li>GET	/api/jacks/ID</li>
+<li>PUT	/api/jacks</li>
+<li>POST	/api/jacks/ID</li>
+<li>DELETE	/api/jacks/ID</li>
+<li>POST	/api/jacks/ID/control</li>
+<li>GET	/api/analog_inputs</li>
+<li>GET	/api/analog_inputs/ID</li>
+<li>PUT	/api/analog_inputs</li>
+<li>POST	/api/analog_inputs/ID</li>
+<li>DELETE	/api/analog_inputs/ID</li>
+<li>POST	/api/analog_inputs/ID/read</li>
 </ul>
-
 <h3 id="equipment">Equipment</h3>
-
 <ul>
-<li>GET /api/equipment/ID</li>
-<li>GET /api/equipment</li>
-<li>PUT /api/equipment</li>
-<li>POST /api/equipment/ID</li>
-<li>DELETE    /api/equipment/ID</li>
-<li>POST /api/equipment/ID/control</li>
+<li>GET	/api/equipment/ID</li>
+<li>GET	/api/equipment</li>
+<li>PUT	/api/equipment</li>
+<li>POST	/api/equipment/ID</li>
+<li>DELETE	/api/equipment/ID</li>
+<li>POST	/api/equipment/ID/control</li>
 </ul>
-
 <h3 id="ato">ATO</h3>
-
 <ul>
-<li>GET /api/atos/ID</li>
-<li>GET /api/atos</li>
-<li>PUT /api/atos</li>
-<li>POST /api/atos/ID</li>
-<li>DELETE    /api/atos/ID</li>
-<li>GET /api/atos/ID/usage</li>
+<li>GET	/api/atos/ID</li>
+<li>GET	/api/atos</li>
+<li>PUT	/api/atos</li>
+<li>POST	/api/atos/ID</li>
+<li>DELETE	/api/atos/ID</li>
+<li>GET	/api/atos/ID/usage</li>
 </ul>
-
 <h4 id="lights">Lights</h4>
-
 <ul>
-<li>GET /api/lights</li>
-<li>PUT /api/lights</li>
-<li>GET /api/lights/ID</li>
-<li>POST /api/lights/ID</li>
-<li>DELETE    /api/lights/ID</li>
+<li>GET	/api/lights</li>
+<li>PUT	/api/lights</li>
+<li>GET	/api/lights/ID</li>
+<li>POST	/api/lights/ID</li>
+<li>DELETE	/api/lights/ID</li>
 </ul>
-
 <h4 id="temperature-controllers">Temperature controllers</h4>
-
 <ul>
-<li>GET /api/tcs</li>
-<li>GET /api/tcs/sensors</li>
-<li>PUT /api/tcs</li>
-<li>GET /api/tcs/ID</li>
-<li>POST /api/tcs/ID</li>
-<li>DELETE    /api/tcs/ID</li>
-<li>GET /api/tcs/ID/usage</li>
+<li>GET	/api/tcs</li>
+<li>GET	/api/tcs/sensors</li>
+<li>PUT	/api/tcs</li>
+<li>GET	/api/tcs/ID</li>
+<li>POST	/api/tcs/ID</li>
+<li>DELETE	/api/tcs/ID</li>
+<li>GET	/api/tcs/ID/usage</li>
 </ul>
-
 <h4 id="ph-probes">pH Probes</h4>
-
 <ul>
-<li>GET /api/phprobes/ID</li>
-<li>GET /api/phprobes</li>
-<li>PUT /api/phprobes</li>
-<li>POST /api/phprobes/ID</li>
-<li>DELETE    /api/phprobes/ID</li>
-<li>GET /api/phprobes/ID/readings</li>
-<li>POST /api/phprobes/ID/calibrate</li>
-<li>GET /api/phprobes/ID/read</li>
-<li>POST /api/phprobes/ID/calibratepoint</li>
+<li>GET	/api/phprobes/ID</li>
+<li>GET	/api/phprobes</li>
+<li>PUT	/api/phprobes</li>
+<li>POST	/api/phprobes/ID</li>
+<li>DELETE	/api/phprobes/ID</li>
+<li>GET	/api/phprobes/ID/readings</li>
+<li>POST	/api/phprobes/ID/calibrate</li>
+<li>GET	/api/phprobes/ID/read</li>
+<li>POST	/api/phprobes/ID/calibratepoint</li>
 </ul>
-
 <h4 id="dosing-pumps">Dosing pumps`</h4>
-
 <ul>
-<li>GET /api/doser/pumps</li>
-<li>GET /api/doser/pumps/ID</li>
-<li>PUT /api/doser/pumps</li>
-<li>POST /api/doser/pumps/ID</li>
-<li>DELETE    /api/doser/pumps/ID</li>
-<li>GET /api/doser/pumps/ID/usage</li>
-<li>POST /api/doser/pumps/ID/calibrate</li>
-<li>POST /api/doser/pumps/ID/schedule</li>
+<li>GET	/api/doser/pumps</li>
+<li>GET	/api/doser/pumps/ID</li>
+<li>PUT	/api/doser/pumps</li>
+<li>POST	/api/doser/pumps/ID</li>
+<li>DELETE	/api/doser/pumps/ID</li>
+<li>GET	/api/doser/pumps/ID/usage</li>
+<li>POST	/api/doser/pumps/ID/calibrate</li>
+<li>POST	/api/doser/pumps/ID/schedule</li>
 </ul>
-
 <h4 id="timers">Timers</h4>
-
 <ul>
-<li>GET /api/timers/ID</li>
-<li>GET /api/timers</li>
-<li>PUT /api/timers</li>
-<li>POST /api/timers/ID</li>
-<li>DELETE    /api/timers/ID</li>
+<li>GET	/api/timers/ID</li>
+<li>GET	/api/timers</li>
+<li>PUT	/api/timers</li>
+<li>POST	/api/timers/ID</li>
+<li>DELETE	/api/timers/ID</li>
 </ul>
-
 <h4 id="macros">Macros</h4>
-
 <ul>
-<li>GET /api/macros</li>
-<li>PUT /api/macros</li>
-<li>GET /api/macros/ID</li>
-<li>POST /api/macros/ID</li>
-<li>DELETE    /api/macros/ID</li>
-<li>POST /api/macros/ID/run</li>
+<li>GET	/api/macros</li>
+<li>PUT	/api/macros</li>
+<li>GET	/api/macros/ID</li>
+<li>POST	/api/macros/ID</li>
+<li>DELETE	/api/macros/ID</li>
+<li>POST	/api/macros/ID/run</li>
 </ul>
 
             </div>

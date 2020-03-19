@@ -9,7 +9,7 @@
     <meta name="description" content="reef-pi - An opensource reef tank controller based on Raspberry Pi">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
     <title>Headless</title>
-    <meta name="generator" content="Hugo 0.47.1" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
     
@@ -76,153 +76,114 @@ if (!doNotTrack) {
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="blogpost">
-              <p>There are times when you want to get your Raspberry Pi up and running completely headlessly. Maybe you typically use a laptop and don&rsquo;t have an extra keyboard. Maybe you don&rsquo;t have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot.</p>
-
-<p>Please read all steps before starting the process so that you&rsquo;re familiar with what will be required.</p>
-
+              <p>There are times when you want to get your Raspberry Pi up and running completely headlessly. Maybe you typically use a laptop and don't have an extra keyboard. Maybe you don't have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot.</p>
+<p>Please read all steps before starting the process so that you're familiar with what will be required.</p>
 <p>Before we begin, we need to gather a couple of pieces of information. We will need the following:</p>
-
-<p>a. The SSID and Password for your wireless network.<br />
+<p>a. The SSID and Password for your wireless network.<br>
 b. The IP address of your gateway and DNS server. In a home environment, these addresses will be the same IP. To check this information, you can type <em>ipconfig</em> at the command prompt of a Windows computer on the network, or <em>ifconfig</em> on a Linux/Mac computer.</p>
-
 <ol>
-<li><p>Download and install your Raspbian image. This process is covered in detail on the Raspberry Pi site. Please visit <a href="https://www.raspberrypi.org/documentation/installation/installing-images/">https://www.raspberrypi.org/documentation/installation/installing-images/</a> for more detail on the process. As I will never be connecting to a desktop instance on this Pi, I downloaded the Raspian Stretch Lite image. If you plan on connecting to your Pi in a method other than SSH or reef-pi&rsquo;s web interface, please consider the Raspian Stretch with Desktop image.</p></li>
-
-<li><p>To get your Pi up and running on your wireless network, with SSH enabled, We will need to modify some files on the memory card you just created. This will present a small challenge because, unless you&rsquo;re running Linux, you will not be able to read the Ext4 filesystem that is on the card. In fact, if you attempt to read this partition with a Window computer, it will prompt that you need to format the partition before you can use it. Please do not format it. You will just need to start over at step 1.</p></li>
-</ol>
-
+<li>
+<p>Download and install your Raspbian image. This process is covered in detail on the Raspberry Pi site. Please visit <a href="https://www.raspberrypi.org/documentation/installation/installing-images/">https://www.raspberrypi.org/documentation/installation/installing-images/</a> for more detail on the process. As I will never be connecting to a desktop instance on this Pi, I downloaded the Raspian Stretch Lite image. If you plan on connecting to your Pi in a method other than SSH or reef-pi's web interface, please consider the Raspian Stretch with Desktop image.</p>
+</li>
+<li>
+<p>To get your Pi up and running on your wireless network, with SSH enabled, We will need to modify some files on the memory card you just created. This will present a small challenge because, unless you're running Linux, you will not be able to read the Ext4 filesystem that is on the card. In fact, if you attempt to read this partition with a Window computer, it will prompt that you need to format the partition before you can use it. Please do not format it. You will just need to start over at step 1.</p>
 <p>We have a couple of options to do this:</p>
-
 <p>A. Boot into Linux using a LiveCD or bootable USB stick. Creating a bootable USB stick is probably the easiest method. For instructions on how to create a bootable USB stick, please visit one of the following links:</p>
-
-<p>Windows: <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows">https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows</a><br />
-   macOS: <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos">https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos</a></p>
-
+<p>Windows: <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows">https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows</a><br>
+macOS: <a href="https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos">https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos</a></p>
 <p>B. There are software packages that will allow you to read/write Ext4 filesystems on Windows and Macintosh computers. If you choose this options, please read the instructions and any applicable warnings and caveats for each piece of software.</p>
-
-<p><strong>Windows:</strong> Ext2FSD can be found at <a href="https://sourceforge.net/projects/ext2fsd">https://sourceforge.net/projects/ext2fsd</a><br />
-   <strong>macOS:</strong> Fuse can be found at <a href="https://osxfuse.github.io/">https://osxfuse.github.io/</a></p>
-
+<p><strong>Windows:</strong> Ext2FSD can be found at <a href="https://sourceforge.net/projects/ext2fsd">https://sourceforge.net/projects/ext2fsd</a><br>
+<strong>macOS:</strong> Fuse can be found at <a href="https://osxfuse.github.io/">https://osxfuse.github.io/</a></p>
 <p><strong>NOTE:</strong> I recommend using the bootable USB option over installing the software file system drivers.</p>
-
-<ol>
-<li>We will now create and modify some files to both enable SSH and WiFi. When you plug your cardreader with the card you just created for the Raspberry Pi in it into the computer after booting into Linux (or after installing on of the filesystem drivers) you will see two partitions. We have a task in each partition:</li>
-</ol>
-
+</li>
+<li>
+<p>We will now create and modify some files to both enable SSH and WiFi. When you plug your cardreader with the card you just created for the Raspberry Pi in it into the computer after booting into Linux (or after installing on of the filesystem drivers) you will see two partitions. We have a task in each partition:</p>
 <p>A. In the root of the &ldquo;boot&rdquo; partition, create an empty file with the filename &ldquo;ssh&rdquo;. This will enable SSH on the Pi.</p>
-
 <p>B. In the main Ext4 partition on the card, we will need to modify 2 files:</p>
-
-<pre><code>   /etc/wpa_supplicant/wpa_supplicant.conf
-   /etc/dhcpcd.conf
-</code></pre>
-
-<p><strong>Editing /etc/wpa_supplicant/wpa_supplicant.conf:</strong></p>
-
+<pre><code>/etc/wpa_supplicant/wpa_supplicant.conf
+/etc/dhcpcd.conf
+</code></pre><p><strong>Editing /etc/wpa_supplicant/wpa_supplicant.conf:</strong></p>
 <p>By default, the file will contain the following:</p>
-
-<pre><code>   ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-   update_config=1
-</code></pre>
-
-<p>We will need to add the following lines to the file:</p>
-
-<pre><code>   network={
-   ssid=&quot;SSID&quot;
-   psk=&quot;PASSWORD&quot;
-   }
-</code></pre>
-
-<p>Replace SSID and PASSWORD with the proper SSID and password for your wireless network.</p>
-
+<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+</code></pre><p>We will need to add the following lines to the file:</p>
+<pre><code>network={
+ssid=&quot;SSID&quot;
+psk=&quot;PASSWORD&quot;
+}
+</code></pre><p>Replace SSID and PASSWORD with the proper SSID and password for your wireless network.</p>
 <p><strong>Editing /etc/dhcpcd.conf:</strong></p>
-
 <p>We will need to add the following lines to the bottom the file:</p>
+<pre><code>interface eth0
+static ip_address=192.168.1.100/24
+static routers=192.168.1.1
+static domain_name_servers=192.168.1.1
 
-<pre><code>   interface eth0
-   static ip_address=192.168.1.100/24
-   static routers=192.168.1.1
-   static domain_name_servers=192.168.1.1
-
-   interface wlan0
-   static ip_address=192.168.1.101/24
-   static routers=192.168.1.1
-   static domain_name_servers=192.168.1.1
-</code></pre>
-
-<p>You will need to change the router and domain_name_servers IP addresses to the address(es) you gathered above. You will need to change the ip_address for each interface to a value that will be unique on your network. The first 3 numbers will be the same as your gateway, with the fourth being a number between 1 and 255 that is unused. You should be able to see the addresses in use via the interface of your router.</p>
-
-<p>For example, if your router&rsquo;s IP is 192.168.1.1, then you could use 192.168.1.100 and 192.168.1.101.</p>
-
-<ol>
-<li><p>Once all changes have been saved, you can now insert the memory card into your Raspberry Pi and power it on.</p></li>
-
-<li><p>Using the SSH client of your choice, open an SSH connection to the IP address you entered for the wlan0 interface above. You should now connect to your Raspberry Pi, where you can log in with the default username &ldquo;pi&rdquo; and default password &ldquo;raspberry&rdquo;.</p></li>
-
-<li><p>You should now update your Pi&rsquo;s system with the following commands:</p>
-
+interface wlan0
+static ip_address=192.168.1.101/24
+static routers=192.168.1.1
+static domain_name_servers=192.168.1.1
+</code></pre><p>You will need to change the router and domain_name_servers IP addresses to the address(es) you gathered above. You will need to change the ip_address for each interface to a value that will be unique on your network. The first 3 numbers will be the same as your gateway, with the fourth being a number between 1 and 255 that is unused. You should be able to see the addresses in use via the interface of your router.</p>
+<p>For example, if your router's IP is 192.168.1.1, then you could use 192.168.1.100 and 192.168.1.101.</p>
+</li>
+<li>
+<p>Once all changes have been saved, you can now insert the memory card into your Raspberry Pi and power it on.</p>
+</li>
+<li>
+<p>Using the SSH client of your choice, open an SSH connection to the IP address you entered for the wlan0 interface above. You should now connect to your Raspberry Pi, where you can log in with the default username &ldquo;pi&rdquo; and default password &ldquo;raspberry&rdquo;.</p>
+</li>
+<li>
+<p>You should now update your Pi's system with the following commands:</p>
 <pre><code>sudo apt-get update -y &amp;&amp; sudo apt-get upgrade -y
 </code></pre></li>
-
-<li><p>We will now use Raspberry Pi Software Configuration Tool to modify some options. Enter the following command:</p>
-
+<li>
+<p>We will now use Raspberry Pi Software Configuration Tool to modify some options. Enter the following command:</p>
 <pre><code>sudo rapsi-config
-</code></pre></li>
-</ol>
-
-<p>A. Change your user password using option 1.<br />
-   B. Set the hostname of your Pi to something meaningful on your network with option 2.<br />
-   C. I recommend setting the system to boot to the console, requiring the user to log in with option 3, and then B1.<br />
-   D. Set up your locale, time zone, and WiFi country with option 4.<br />
-   E. Select &ldquo;Finish&rdquo; to save changes and exit the tool.</p>
-
-<ol>
-<li><p>Enable i2c, onewire, spi, and uart by editing the file /boot/config.txt. The following lines will need to be added:</p>
-
+</code></pre><p>A. Change your user password using option 1.<br>
+B. Set the hostname of your Pi to something meaningful on your network with option 2.<br>
+C. I recommend setting the system to boot to the console, requiring the user to log in with option 3, and then B1.<br>
+D. Set up your locale, time zone, and WiFi country with option 4.<br>
+E. Select &ldquo;Finish&rdquo; to save changes and exit the tool.</p>
+</li>
+<li>
+<p>Enable i2c, onewire, spi, and uart by editing the file /boot/config.txt. The following lines will need to be added:</p>
 <pre><code>dtparam=i2c_arm=on
 dtparam=spi=on
 dtparam=audio=on
 enable_uart=1
 dtoverlay=w1-gpio
 </code></pre></li>
-
-<li><p>Enable NTP to synchronize the Pi&rsquo;s date and time. Enter the following commands:</p>
-
+<li>
+<p>Enable NTP to synchronize the Pi's date and time. Enter the following commands:</p>
 <pre><code>sudo systemctl start ntp.service
 sudo systemctl enable ntp.service
 </code></pre></li>
-
-<li><p>System configuration is now complete. It&rsquo;s now time to reboot the Pi with the following command:</p>
-
-<pre><code>sudo reboot
-</code></pre></li>
-
-<li><p>Once the Pi has rebooted, re-establish an SSH connection and log in using the new password you set in step 7A above.</p></li>
-
-<li><p>We can now download and install the reef-pi software. Download the software with the following command:</p>
-
-<pre><code>wget https://github.com/reef-pi/reef-pi/releases/download/0.7/reef-pi-&lt;Version and Platform&gt;.deb
-</code></pre>
-
-<p>Check the following site for the latest version: <a href="https://github.com/reef-pi/reef-pi/releases">https://github.com/reef-pi/reef-pi/releases</a>. &ldquo;Platform&rdquo; refers to the download for the Raspberry Pi 3 or the Raspberry Pi Zero.</p></li>
-
-<li><p>Once downloaded, install the software with the following command:</p>
-
-<pre><code>sudo dpkg -i reef-pi-&lt;Version and Platform&gt;.deb
-</code></pre></li>
-
-<li><p>Check that reef-pi is running with the following command:</p>
-
-<pre><code>sudo systemctl status reef-pi.service
-</code></pre></li>
+<li>
+<p>System configuration is now complete. It's now time to reboot the Pi with the following command:</p>
+</li>
 </ol>
-
-<p>You should now be able to connect to the web interface using a web browser on another computer on your network at the following address:</p>
-
-<pre><code>   http://&lt;ipaddress&gt;:8080
-</code></pre>
-
-<p><ipaddress> will be the IP address for wlan0 set in set 3B and the IP address used to to SSH into the Raspberry Pi.</p>
+<pre><code>sudo reboot
+</code></pre><ol start="11">
+<li>
+<p>Once the Pi has rebooted, re-establish an SSH connection and log in using the new password you set in step 7A above.</p>
+</li>
+<li>
+<p>We can now download and install the reef-pi software. Download the software with the following command:</p>
+</li>
+</ol>
+<pre><code>wget https://github.com/reef-pi/reef-pi/releases/download/0.7/reef-pi-&lt;Version and Platform&gt;.deb
+</code></pre><p>Check the following site for the latest version: <a href="https://github.com/reef-pi/reef-pi/releases">https://github.com/reef-pi/reef-pi/releases</a>. &ldquo;Platform&rdquo; refers to the download for the Raspberry Pi 3 or the Raspberry Pi Zero.</p>
+<ol start="13">
+<li>Once downloaded, install the software with the following command:</li>
+</ol>
+<pre><code>sudo dpkg -i reef-pi-&lt;Version and Platform&gt;.deb
+</code></pre><ol start="14">
+<li>Check that reef-pi is running with the following command:</li>
+</ol>
+<pre><code>sudo systemctl status reef-pi.service
+</code></pre><p>You should now be able to connect to the web interface using a web browser on another computer on your network at the following address:</p>
+<pre><code>http://&lt;ipaddress&gt;:8080
+</code></pre><p><!-- raw HTML omitted --> will be the IP address for wlan0 set in set 3B and the IP address used to to SSH into the Raspberry Pi.</p>
 
             </div>
           </div>

@@ -9,7 +9,7 @@
     <meta name="description" content="reef-pi - An opensource reef tank controller based on Raspberry Pi">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
     <title>Upgrade</title>
-    <meta name="generator" content="Hugo 0.47.1" />
+    <meta name="generator" content="Hugo 0.62.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
     
@@ -79,34 +79,37 @@ if (!doNotTrack) {
               <ul>
 <li>A running reef-pi controller version is always visible from the dashaboard footer.</li>
 </ul>
-
-<p><img src="/img/upgrade/version.png" alt="reef-pi version" /></p>
-
+<p><img src="/img/upgrade/version.png" alt="reef-pi version"></p>
 <ul>
-<li><p>Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the <a href="https://github.com/reef-pi/reef-pi/releases/">release</a> page. Choose latest relase if you are unsure. For this documentation we&rsquo;ll use 1.0 release version on pi zero.</p></li>
-
-<li><p>Open a terminal window using the ssh software of your choices.  SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window</p></li>
-
-<li><p>Download the release package on reef-pi (remember to use the correct pi-x.x package number)</p>
-
+<li>
+<p>Determine appropriate reef-pi version based on raspberry pi (3 or zero) from the <a href="https://github.com/reef-pi/reef-pi/releases/">release</a> page. Choose latest relase if you are unsure. For this documentation we'll use 1.0 release version on pi zero.</p>
+</li>
+<li>
+<p>Open a terminal window using the ssh software of your choices.  SSH into your raspberry pi, then login into reef-pi and upgrade by entering the following commands in the terminal window</p>
+</li>
+<li>
+<p>Download the release package on reef-pi (remember to use the correct pi-x.x package number)</p>
+</li>
+</ul>
 <pre><code>wget -c https://github.com/reef-pi/reef-pi/releases/download/0.5/reef-pi-1.0-pi0.deb
-</code></pre></li>
-
-<li><p>Install the downloaded reef-pi version</p>
-
+</code></pre><ul>
+<li>Install the downloaded reef-pi version</li>
+</ul>
 <pre><code>sudo dpkg -i reef-pi-1.0-pi0.deb
-</code></pre></li>
-
-<li><p>Check reef-pi is running suscessfully using</p>
-
+</code></pre><ul>
+<li>Check reef-pi is running suscessfully using</li>
+</ul>
 <pre><code>sudo systemctl status reef-pi.service
-</code></pre></li>
-
-<li><p>NOTE: If using wifi change go to the configuration tab and change interface setting to wlan0</p></li>
-
-<li><p>Or you can use the procedure listed here: <a href="http://reef-pi.github.io/additional-documentation/development">http://reef-pi.github.io/additional-documentation/development</a></p></li>
-
-<li><p>Clear browser cache to reload the new UI</p></li>
+</code></pre><ul>
+<li>
+<p>NOTE: If using wifi change go to the configuration tab and change interface setting to wlan0</p>
+</li>
+<li>
+<p>Or you can use the procedure listed here: <a href="http://reef-pi.github.io/additional-documentation/development">http://reef-pi.github.io/additional-documentation/development</a></p>
+</li>
+<li>
+<p>Clear browser cache to reload the new UI</p>
+</li>
 </ul>
 
             </div>
