@@ -134,6 +134,11 @@ reef-pi requires nodejs version 7.0 or above.</p>
 </ul>
 <pre><code>curl -X POST -c cookie.txt -d '{&quot;user&quot;:&quot;reef-pi&quot;, &quot;password&quot;:&quot;reef-pi&quot;}' http://localhost:8080/auth/signin
 curl -b cookie.txt http://localhost:8080/api/drivers
+</code></pre><ul>
+<li>If you are doing UI development you can run <code>make ui-dev</code> to run webpack in development mode and regeneate assets
+upon any ui file save</li>
+</ul>
+<pre><code>make ui-dev
 </code></pre><p>Head over to your browser <a href="http://localhost:8080">http://localhost:8080/</a> to see the reef-pi in action.</p>
 <h3 id="running-automated-tests">Running Automated Tests</h3>
 <p>reef-pi has the following automation tools to promote code quality:</p>
@@ -150,10 +155,16 @@ curl -b cookie.txt http://localhost:8080/api/drivers
 </ul>
 <pre><code>npm test
 </code></pre><ul>
-<li>Automated smoke test</li>
+<li>To clean up everything(test databases, pre-built static assets of go binary) and start from scratch, run</li>
+</ul>
+<pre><code>make clean
+</code></pre><ul>
+<li>Automated smoke test: reef-pi has a comprehensive ui based end to end smoke test, that you can use to
+verify your development setup. Run these make targets in separate terminals</li>
 </ul>
 <pre><code>make start-dev
-node ./test/smoke.js
+make ui-dev
+make smoke
 </code></pre><h3 id="running-reef-pi-on-a-raspberry-pi">Running reef-pi on a raspberry pi</h3>
 <p>It is likely you would want to test out a new feature on a physical raspberry pi once you have writtend the code for a new feature. The default make target will create development machine specific binary. For Raspberry Pi, reef-pi needs to be compiled for ARM 6 (raspberry pi zero) or ARM7 architecture. reef-pi's <a href="https://github.com/reef-pi/reef-pi/blob/master/Makefile">Makefile</a>
 has predefined target for this. To create raspberry pi 3 or 2 specific binary, run</p>
