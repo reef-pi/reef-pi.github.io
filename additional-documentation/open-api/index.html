@@ -7,7 +7,7 @@
     <meta name="author" content="Ranjib Dey" />
     <meta name="description" content="reef-pi - An opensource reef tank controller based on Raspberry Pi">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
-    <title>Open API</title>
+    <title>API</title>
     <meta name="generator" content="Hugo 0.79.0-DEV" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -64,7 +64,7 @@ if (!doNotTrack) {
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="https://reef-pi.github.io/additional-documentation/open-api/">Open API</a></strong>
+            <strong><a href="https://reef-pi.github.io/additional-documentation/open-api/">API</a></strong>
           </h3>
         </div>
         <div class="blog-title">
@@ -77,7 +77,7 @@ if (!doNotTrack) {
             <div class="blogpost">
               <h2 id="api-v3">API V3</h2>
 <p>reef-pi provides http json API. Entire UI is powered by the API. API requests needs to be authenticated
-using session (cookie). He is an example of gettong the list of equipment</p>
+using session (cookie). He is an example of getting the list of equipment</p>
 <pre><code>curl -X POST -c cookie.txt -d '{&quot;user&quot;:&quot;reef-pi&quot;, &quot;password&quot;:&quot;reef-pi&quot;}' http://reef-pi.local/auth/signin
 curl -b cookie.txt http://reef-pi.local/api/equipment
 </code></pre><p>Every reef-pi installation ships with its API doc, linked directly from the footer section of the app.

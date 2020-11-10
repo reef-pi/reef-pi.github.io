@@ -147,12 +147,12 @@ Press releases  Make magazine article on reef-pi Adafruit article on reef-pi Ras
     </item>
     
     <item>
-      <title>Open API</title>
+      <title>API</title>
       <link>https://reef-pi.github.io/additional-documentation/open-api/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/additional-documentation/open-api/</guid>
-      <description>API V3 reef-pi provides http json API. Entire UI is powered by the API. API requests needs to be authenticated using session (cookie). He is an example of gettong the list of equipment
+      <description>API V3 reef-pi provides http json API. Entire UI is powered by the API. API requests needs to be authenticated using session (cookie). He is an example of getting the list of equipment
 curl -X POST -c cookie.txt -d &#39;{&amp;quot;user&amp;quot;:&amp;quot;reef-pi&amp;quot;, &amp;quot;password&amp;quot;:&amp;quot;reef-pi&amp;quot;}&#39; http://reef-pi.local/auth/signin curl -b cookie.txt http://reef-pi.local/api/equipment Every reef-pi installation ships with its API doc, linked directly from the footer section of the app. A copy of verion 3.x API is accessible from here</description>
     </item>
     
