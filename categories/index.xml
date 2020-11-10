@@ -5,10 +5,6 @@
     <link>https://reef-pi.github.io/categories/</link>
     <description>Recent content in Categories on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://reef-pi.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://reef-pi.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

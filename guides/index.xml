@@ -6,11 +6,7 @@
     <description>Recent content on reef-pi - An opensource reef tank controller based on Raspberry Pi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://reef-pi.github.io/guides/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://reef-pi.github.io/guides/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Overview</title>
       <link>https://reef-pi.github.io/guides/intro/</link>
@@ -27,7 +23,7 @@ Plan reef-pi is a versatile and modular controller that allows users to customiz
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://reef-pi.github.io/guides/electronics/</guid>
-      <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&#39;ll need additional electronic component other than just Raspberry Pi. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this
+      <description>For almost all features of reef-pi that can be used to do anything on a reef tank, we&amp;rsquo;ll need additional electronic component other than just Raspberry Pi. This guide will walk through some key aspects and recommendations of wiring different electronic component together to build a functional reef-pi controller. Users who are well versed in electronics can skip this
 Factors that influence circuit work Controller features reef-pi can automate a host of different reef keeping chores, and each of them may require one or more electronic component just for that feature.</description>
     </item>
     
@@ -49,7 +45,7 @@ Size Depending on what all features you want to use in reef-pi, ensure the housi
       <guid>https://reef-pi.github.io/guides/troubleshooting/</guid>
       <description>Check if reef-pi is running  sudo systemctl status reef-pi.service  Check for errors in log  sudo journalctl -fu reef-pi.service   Connecting reef-pi using a TTL cable. Adafruit has an excellent tutorial on how to use USB TTL cable to configure raspberry pi, in cases where display and keyboard is not available.
   Check reef-pi version (helps in bug reports)
-  reef-pi -version  Resetting reef-pi&#39;s database  sudo systemctl stop reef-pi.</description>
+  reef-pi -version  Resetting reef-pi&amp;rsquo;s database  sudo systemctl stop reef-pi.</description>
     </item>
     
   </channel>

@@ -4,16 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="" name="keywords">
-    <meta name="author" content="map[]" />
+    <meta name="author" content="Ranjib Dey" />
     <meta name="description" content="reef-pi - An opensource reef tank controller based on Raspberry Pi">
     <link rel="shortcut icon" type="image/x-icon" href="https://reef-pi.github.io/img/favicon.ico">
     <title>Remote Access</title>
-    <meta name="generator" content="Hugo 0.62.0" />
+    <meta name="generator" content="Hugo 0.79.0-DEV" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://reef-pi.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
     
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
     
     <!--[if lt IE 9]>
@@ -91,7 +90,7 @@ if (!doNotTrack) {
 <p>We recommend following the <a href="https://www.symantec.com/connect/blogs/tor-hidden-services-home-device-and-services-security-and-privacy">directions</a> provided by Symantec. At various place the guide gives you the code to enter in the command prompt.</p>
 </li>
 <li>
-<p>On step 3 where it tells you to &ldquo;Edit file /etc/tor/torrc&rdquo; you'll have to use the command &ldquo;sudo nano /etc/tor/torrc&rdquo;.</p>
+<p>On step 3 where it tells you to &ldquo;Edit file /etc/tor/torrc&rdquo; you&rsquo;ll have to use the command &ldquo;sudo nano /etc/tor/torrc&rdquo;.</p>
 </li>
 <li>
 <p>For step 4, follow the directions <em>except</em> make the following changes.</p>
@@ -100,10 +99,10 @@ if (!doNotTrack) {
 <pre><code>HiddenServiceDir /home/debian-tor/hidden_service/
 HiddenServicePort 8080 192.168.1.78:8080
 HiddenServiceAuthorizeClient stealth user1
-</code></pre><p>You'll notice the IP address matches the local address used to access reef-pi via your local network, just make sure it matches with what you use to access the reef-pi over your local network.</p>
-<p>You can change the &ldquo;user1&rdquo; entry to whatever you want. Remember, the <em>stealth</em> entry right before the &ldquo;user1&rdquo; is important,  that entry makes your hidden service only viewable by people with the specific key (which you'll get in step 7. The &ldquo;user1&rdquo; generates a new key. If you want to have multiple users, just change the &ldquo;user1&rdquo; entry and you'll end up with a new key.</p>
-<p>Follow the rest of the directions for getting a Tor client and browser for your computer and Andriod device (haven't been able to locate an iOS option for this yet) and you will be ready to go.</p>
-<p>Please note: Tor is slow. Right after you've created your Hidden Service it may take 10 minutes for the Tor network to populate and allow the connection. In addition, it may take 1 minute for the reef-pi page to load. Once it's loaded them the delays are considerably reduced.</p>
+</code></pre><p>You&rsquo;ll notice the IP address matches the local address used to access reef-pi via your local network, just make sure it matches with what you use to access the reef-pi over your local network.</p>
+<p>You can change the &ldquo;user1&rdquo; entry to whatever you want. Remember, the <em>stealth</em> entry right before the &ldquo;user1&rdquo; is important,  that entry makes your hidden service only viewable by people with the specific key (which you&rsquo;ll get in step 7. The &ldquo;user1&rdquo; generates a new key. If you want to have multiple users, just change the &ldquo;user1&rdquo; entry and you&rsquo;ll end up with a new key.</p>
+<p>Follow the rest of the directions for getting a Tor client and browser for your computer and Andriod device (haven&rsquo;t been able to locate an iOS option for this yet) and you will be ready to go.</p>
+<p>Please note: Tor is slow. Right after you&rsquo;ve created your Hidden Service it may take 10 minutes for the Tor network to populate and allow the connection. In addition, it may take 1 minute for the reef-pi page to load. Once it&rsquo;s loaded them the delays are considerably reduced.</p>
 
             </div>
           </div>
