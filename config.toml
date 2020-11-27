@@ -2,7 +2,6 @@ baseURL = "https://reef-pi.github.io/"
 languageCode = "en-us"
 title = "reef-pi - An opensource reef tank controller based on Raspberry Pi"
 theme = "hugo-sustain"
-publishDir = "../reef-pi.github.io"
 googleAnalytics = "UA-102968086-1"
 
 [params]
