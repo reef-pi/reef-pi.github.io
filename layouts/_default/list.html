@@ -1,0 +1,25 @@
+{{ partial "head" . }}
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+      {{ partial "header" . }}
+      <div class="container panel-default">
+        <h3 style="text-align: left" >{{ .Title }}</h3>
+          <div class="blogpost" style="text-align: left">
+             {{ .Content }}
+            <div class="panel-body" style="text-align: left">
+							{{ range .Data.Pages.ByWeight }}
+              <div class="row">
+                <h5 style="text-align: left" >
+                  <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+                </h5>
+              </div>
+							{{ end }}
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    {{ partial "footer" . }}
+  </body>
+</html>

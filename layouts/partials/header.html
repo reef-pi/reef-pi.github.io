@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/img.css" />
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ .Site.BaseURL }}"><span class='h3'>reef-pi</span></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      {{ if .Site.Menus.main }}
+        {{ range sort .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name | upper }}</a></li>
+        {{ end }}
+      {{ end }}
+      </ul>
+    </div>
+  </div>
+</nav>
