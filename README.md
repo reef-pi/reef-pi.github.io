@@ -11,13 +11,13 @@ reef-pi website is built using [hugo](https://gohugo.io/) and [github pages](htt
 - Clone this repository
 
 ```
-git clone https://github.com/reef-pi/website
+git clone https://github.com/reef-pi/reef-pi.github.io
 ```
 
 - Clone hugo-sustain theme
 
 ```
-cd website
+cd reef-pi.github.io
 git clone https://github.com/nurlansu/hugo-sustain.git themes/hugo-sustain
 ```
 
