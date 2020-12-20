@@ -4,7 +4,6 @@ date: 2017-09-27
 linktitle: temperature
 title: Temperature controller
 highlight: true
-draft: true
 weight: 6
 keywords:
 - reef-pi
