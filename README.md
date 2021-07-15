@@ -18,7 +18,7 @@ git clone https://github.com/reef-pi/reef-pi.github.io
 
 ```
 cd reef-pi.github.io
-git clone https://github.com/nurlansu/hugo-sustain.git themes/hugo-sustain
+git clone -b 1.1 --depth 1 https://github.com/nurlansu/hugo-sustain.git themes/hugo-sustain
 ```
 
 -  Run hugo from the website repository

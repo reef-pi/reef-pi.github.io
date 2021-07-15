@@ -1,13 +1,12 @@
-{{ partial "head" . }}
-  <body>
-    <div id="wrap">
-      {{ partial "header" . }}
-      <section id="about">
-        <div class="container lead">
-        <div style='text-align: left'>
-          <p>
-            Welcome to the official website of reef-pi, an opensource reef tank controller based on <a href='https://www.raspberrypi.org/'>Raspberry Pi</a>
-          </p>
+{{ define "main" }}
+{{ partial "header" . }}
+
+<section id="about">
+  <div class="container lead">
+      <div style='text-align: left'>
+        <p>
+          Welcome to the official website of reef-pi, an opensource reef tank controller based on <a href='https://www.raspberrypi.org/'>Raspberry Pi</a>
+        </p>
         <div>
           <table>
             <tr>
@@ -15,26 +14,24 @@
               <td><img src='img/aio.png' alt='aio-build' border='1'/></td>
           </table>
         </div>
-          <p>
-            reef-pi is a <a href="/additional-documentation/values">modular, affordable</a> and <a href='/additional-documentation/api/'>extendable</a> <a href='https://en.wikipedia.org/wiki/Do_it_yourself'>DIY</a> controller that can automate day to day reef keeping chores such as auto top off, temperature control, dawn to dusk light cycle, automated dosing, ph monitoring and more.
-          </p>
-          <p>
-            reef-pi project provides opensource software, parts list and documentation for building the physical controller. Users build the physical controller using these guides and software.
-          </p>
-         <p>
+        <p>
+          reef-pi is a <a href="/additional-documentation/values">modular, affordable</a> and <a href='/additional-documentation/api/'>extendable</a> <a href='https://en.wikipedia.org/wiki/Do_it_yourself'>DIY</a> controller that can automate day to day reef keeping chores such as auto top off, temperature control, dawn to dusk light cycle, automated dosing, ph monitoring and more.
+        </p>
+        <p>
+          reef-pi project provides opensource software, parts list and documentation for building the physical controller. Users build the physical controller using these guides and software.
+        </p>
+        <p>
           The <a href='/guides/'>guides</a> section provides documentation on how to build a reef-pi controller.
-          </p>
-         <p>
+        </p>
+        <p>
           Checkout <a href='/additional-documentation/resources/'>additional resources</a> for helpful articles, tutorials and other's build threads involving reef-pi.
-          </p>
-        </div>
-        <div>
-          <p>
-            reef-pi software development happens on <a href='https://github.com/reef-pi/reef-pi'>github</a>. A comprehensive <a href='/additional-documentation/development/'> development environment setup</a> guide is also available if you are interested. reef-pi's ongoing development can be followed at <a href="https://www.reef2reef.com/threads/reef-pi-an-open-source-raspberry-pi-based-reef-tank-controller.289256">reef2reef</a> master thread. Website specific bugs & improvements can be reported <a href='https://github.com/reef-pi/website/issues/new'>here</a>. For general enquiry, contact at <a href="https://twitter.com/{{ .Site.Params.Social.Twitter }}">@{{ .Site.Params.Social.Twitter }}</a> or by <a href="mailto:{{ .Site.Params.Social.Email }}">email</a>
-          </p>
-         </div> {{ partial "social.html" . }}
-      </section>
-    </div>
-    {{ partial "footer" . }}
-  </body>
-</html>
+        </p>
+      </div>
+      <div>
+        <p>
+          reef-pi software development happens on <a href='https://github.com/reef-pi/reef-pi'>github</a>. A comprehensive <a href='/additional-documentation/development/'> development environment setup</a> guide is also available if you are interested. reef-pi's ongoing development can be followed at <a href="https://www.reef2reef.com/threads/reef-pi-an-open-source-raspberry-pi-based-reef-tank-controller.289256">reef2reef</a> master thread. Website specific bugs & improvements can be reported <a href='https://github.com/reef-pi/website/issues/new'>here</a>. For general enquiry, contact at <a href="https://twitter.com/{{ .Site.Params.Social.Twitter }}">@{{ .Site.Params.Social.Twitter }}</a> or by <a href="mailto:{{ .Site.Params.Social.Email }}">email</a>
+        </p>
+    {{ partial "social.html" . }}
+  </div>
+</section>
+{{ end }}

@@ -1,39 +1,22 @@
-{{ partial "head" . }}
-  <body>
-    <div id="wrap">
+{{ define "main" }}
+<!-- Header -->
+{{ partial "header" . }}
 
-      <!-- Header -->
-      {{ partial "header" . }}
-      {{ if isset .Params "showpagemeta" }}
-        {{ .Render "projects" }}
-      {{ else }}
-      <div class="container">
-        <div class="blog-post">
-          <h3>
-            <strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong>
-          </h3>
-        </div>
-        <div class="blog-title">
-          <h4>
-            {{ range .Params.tags }}
-            <span class="label label-success">{{ . }}</span>
-            {{ end }}
-          </h4>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <div class="blogpost">
-              {{ .Content }}
-            </div>
-          </div>
-          <hr>
-        </div>
-      </div>
+<div class="container">
+  <h3 class="mt-3"><b><a href="{{ .Permalink }}">{{ .Title }}</a></b></h3>
+  <div class="blog-title my-4">
+    <h6>
+      {{ range .Params.tags }}
+      <span class="badge bg-success">{{ . }}</span>
       {{ end }}
+    </h6>
+  </div>
+  <div class="panel">
+    <div class="panel-body">
+      <div class="blogpost">
+        {{ .Content }}
+      </div>
     </div>
-
-    <!-- Footer -->
-    {{ partial "footer" . }}
-    
-  </body>
-</html>
+  </div>
+</div>
+{{ end }}

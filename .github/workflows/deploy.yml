@@ -14,7 +14,7 @@ jobs:
         with:
           hugo-version: "0.74.2"
       - run: |
-          git clone https://github.com/nurlansu/hugo-sustain.git themes/hugo-sustain
+          git clone -b 1.1 --depth 1 https://github.com/nurlansu/hugo-sustain.git themes/hugo-sustain
       - name: Build
         run: hugo --minify
       - name: Deploy
