@@ -19,7 +19,7 @@ Windows is supported for client side development only.  Many reef-pi features de
 
 ### Setup go
 
-reef-pi is built and tested with latest go. At the time of writing the guide, the latest version of go is 1.10. reef-pi should work with any version of go above 1.8.
+Install latest version of go. At the time of writing the guide, the latest version of go is 1.17. reef-pi should work with any version of go above 1.8.
 
 Use any one of these three ways to install go:
 
@@ -42,11 +42,11 @@ between sessions.
 export GOPATH=/Users/<name>/gospace
 ```
 
-### Setup nodejs
+### Setup nodejs and yarn
 
 All the User Interface components in reef-pi is written using [react](https://facebook.github.io/react/), which requires nodejs
 for development. Follow the official nodejs [installation guide](https://docs.npmjs.com/getting-started/installing-node) to install nodejs in your development machine.
-reef-pi requires nodejs version 7.0 or above.
+reef-pi requires nodejs version 14.0 or above.
 
 For OSX users, if you have homebrew installed, this is as simple as
 
@@ -61,6 +61,10 @@ choco install nodejs
 ```
 
 This will install both nodejs and npm, the package manager for nodejs based librariea. reef-pi uses npm to manage nodejs libraries.
+
+
+Install yarn by following the [official instruction](https://yarnpkg.com/getting-started/install)
+
 
 
 ### Building and running reef-pi on developer machine
@@ -123,12 +127,12 @@ make test
 
 - Javascript code linting
 ```
-npm run standard
+yarn run standard
 ```
 
 - Javascript unit tests
 ```
-npm test
+yarn test
 ```
 
 - To clean up everything(test databases, pre-built static assets of go binary) and start from scratch, run
