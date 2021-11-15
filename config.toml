@@ -1,6 +1,5 @@
 baseURL = "https://reef-pi.github.io/"
-languageCode = "en-us"
-title = "reef-pi - An opensource reef tank controller based on Raspberry Pi"
+DefaultContentLanguage = "en-us"
 theme = "hugo-sustain"
 googleAnalytics = "UA-102968086-1"
 
@@ -25,3 +24,14 @@ custom_css = ["css/img.css"]
   identifier = "additional documentation"
   weight = 100
   url = "/additional-documentation/"
+  
+[languages]
+  [languages.en-us]
+    weight = 1
+    LanguageName = "English"
+
+    title = "reef-pi - An opensource reef tank controller based on Raspberry Pi"
+  [languages.es-es]
+    weight = 2
+    LanguageName = "Español"
+    title = "reef-pi - Un controlador para acuario marino basado en Raspberry Pi"
