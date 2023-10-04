@@ -13,7 +13,7 @@ keywords:
 - coral
 ---
 
-There are times when you want to get your Raspberry Pi up and running completely headlessly. Maybe you typically use a laptop and don't have an extra keyboard. Maybe you don't have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot. 
+There are times when you want to get your Raspberry Pi up and running completely headless. Maybe you typically use a laptop and don't have an extra keyboard. Maybe you don't have an easy way to connect to an HDMI monitor. This guide will show you how you to set up your Pi to be completely headless. This will allow your Pi to connect to your wireless network and connect via SSH on its first boot. 
 
 Please read all steps before starting the process so that you're familiar with what will be required.
 

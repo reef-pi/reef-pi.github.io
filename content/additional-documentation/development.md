@@ -13,7 +13,7 @@ keywords:
 - coral
 ---
 
-reef-pi is written in [go](https://golang.org/) and [react](https://facebook.github.io/react/). This guide will walk through the steps involved in setting up go, nodejs, and finally reef-pi development environment. This guide assume OSX or Linux as the development platform.  a
+reef-pi is written in [go](https://golang.org/) and [react](https://facebook.github.io/react/). This guide will walk through the steps involved in setting up go, nodejs, and finally reef-pi development environment. This guide assume OSX or Linux as the development platform.  
 
 Windows is supported for client side development only.  Many reef-pi features depend on specific architecture and hardware features that are not available on Windows.  Mock implementations of certain hardware drivers are provided for Windows in order to facilitate UI development.  Any backend features should be developed using OSX or Linux.  
 
@@ -60,7 +60,7 @@ For Windows user, if you have [Chocolatey](https://chocolatey.org/) installed, n
 choco install nodejs
 ```
 
-This will install both nodejs and npm, the package manager for nodejs based librariea. reef-pi uses npm to manage nodejs libraries.
+This will install both nodejs and npm, the package manager for nodejs based libraries. reef-pi uses npm to manage nodejs libraries.
 
 
 Install yarn by following the [official instruction](https://yarnpkg.com/getting-started/install)
@@ -108,7 +108,7 @@ curl -X POST -c cookie.txt -d '{"user":"reef-pi", "password":"reef-pi"}' http://
 curl -b cookie.txt http://localhost:8080/api/drivers
 ```
 
-- If you are doing UI development you can run `make ui-dev` to run webpack in development mode and regeneate assets
+- If you are doing UI development you can run `make ui-dev` to run webpack in development mode and regenerate assets
 upon any ui file save
 ```
 make ui-dev
@@ -151,7 +151,7 @@ make smoke
 
 ### Running reef-pi on a raspberry pi
 
-It is likely you would want to test out a new feature on a physical raspberry pi once you have writtend the code for a new feature. The default make target will create development machine specific binary. For Raspberry Pi, reef-pi needs to be compiled for ARM 6 (raspberry pi zero) or ARM7 architecture. reef-pi's [Makefile](https://github.com/reef-pi/reef-pi/blob/master/Makefile)
+It is likely you would want to test out a new feature on a physical raspberry pi once you have written the code for a new feature. The default make target will create development machine specific binary. For Raspberry Pi, reef-pi needs to be compiled for ARM 6 (raspberry pi zero) or ARM7 architecture. reef-pi's [Makefile](https://github.com/reef-pi/reef-pi/blob/master/Makefile)
 has predefined target for this. To create raspberry pi 3 or 2 specific binary, run
 
 ```

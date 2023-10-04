@@ -29,7 +29,7 @@ hugo server
 
 Thats it, you should be able to see reef-pi website in at [http://localhost:1313](http://localhost:1313)
 
-- You can change and contents (they are under content sub folder) and hugo will regenate the webpages on the fly. If you
+- You can change and contents (they are under content sub folder) and hugo will regenerate the webpages on the fly. If you
 want to make updates on the official webpage, please send you changes as pull request against the reef-pi website repo for review
 
 Happy reefing

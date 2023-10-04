@@ -44,7 +44,7 @@ sudo systemctl start reef-pi.service
 
 - One of the common reason gotcha is dev_mode being enabled. Dev mode allows reef-pi development in non-raspberry pi system and it mask all physical control (they are faked out). Make sure dev_mode is disabled or unchecked, under **Configuration -> Settings -> Capabilities**. Note: changing any of the capabilities will require a reload to take effect.
 
-- Troubleshooting circuits: A common mistake is to have loose connection acros jumper wires or pins. A systematic way to identify and fix them is to check for continuity using a multimeter. Another common mistake is to have shorted or mismatched wiring (such as transistor based circuits), which can be identified by checking expected voltage at every connection.
+- Troubleshooting circuits: A common mistake is to have loose connection across jumper wires or pins. A systematic way to identify and fix them is to check for continuity using a multimeter. Another common mistake is to have shorted or mismatched wiring (such as transistor based circuits), which can be identified by checking expected voltage at every connection.
 
 - reef-pi uses the time settings from raspberry pi/raspbian. If timer are not acting as expected check if system time is configured correctly. Make sure timezone is configured correctly using **raspi-config**. 
 
@@ -60,7 +60,7 @@ API can be used to create backup, check a specific equipment, ato, ph probe etc,
 
 - Using reef-pi db command
 
-`reef-pi db` is a sub command made to update and retrive reef-pi data from the database itself bypassing controller and UI layer. It is intended to be used
+`reef-pi db` is a sub command made to update and retrieve reef-pi data from the database itself bypassing controller and UI layer. It is intended to be used
 for troubleshooting and fixing reef-pi from data induced issues.
 ```
 reef-pi db --help

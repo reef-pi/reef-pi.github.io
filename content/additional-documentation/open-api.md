@@ -25,7 +25,7 @@ curl -X POST -c cookie.txt -d '{"user":"reef-pi", "password":"reef-pi"}' http://
 curl -b cookie.txt http://reef-pi.local/api/equipment
 ```
 Every reef-pi installation ships with its API doc, linked directly from the footer section of the app.
-A copy of verion 3.x API is accessible from [here](/api.html)
+A copy of version 3.x API is accessible from [here](/api.html)
 
 <redoc spec-url='https://raw.githubusercontent.com/reef-pi/reef-pi/master/swagger.json'></redoc>
 <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>

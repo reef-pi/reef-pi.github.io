@@ -16,7 +16,7 @@ keywords:
 
 
 
-A typical reef-pi build involves both **water** and **electricity**, this can be potentially hazerdous. Please ensure safety consideration for yourself and all the living things in your tank.
+A typical reef-pi build involves both **water** and **electricity**, this can be potentially hazardous. Please ensure safety consideration for yourself and all the living things in your tank.
 If you are working with electronics, especially with water and high voltage together, it can be dangerous. This page is intended to inform you about this risk. It is not high voltage but high current that imposes risk. High current here stands for milliamps.
 
 Most of us aware that Higher voltages can be fatal. Salt pollutes the water (electrically) and brings down the resistance. This allows even lower voltage to be fatal. Take appropriate safety precautions.

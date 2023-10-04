@@ -40,9 +40,9 @@ A 10,000 Ohm resistor that is used in the LED controller and possibly other buil
 
 #### 12 volt, 1 amp DC barrel jack power supply
 
-A power supply component used with the DC Female panel barrel jack in termperature controller and possibly other builds.
+A power supply component used with the DC Female panel barrel jack in temperature controller and possibly other builds.
 
-#### 110v Electical Receptacle (Wall outlet)
+#### 110v Electrical Receptacle (Wall outlet)
 
 A component used in the Power Controller and possibly other builds.
 
@@ -168,7 +168,7 @@ The power cord component that connects to the Power Socket with fuse and is used
 
 #### USB to TTL Cable
 
-A cable used to connnect the Raspberry Pi to a computer or monitor. There are different versions; ensure you get the right version for you computer or monitor.  Other software may be required.
+A cable used to connect the Raspberry Pi to a computer or monitor. There are different versions; ensure you get the right version for you computer or monitor.  Other software may be required.
 
 #### YAML
 

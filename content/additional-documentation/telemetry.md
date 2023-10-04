@@ -38,9 +38,9 @@ reef-pi allows emitting telemetry data to adafruit.io. The data can be used to v
 
 ### Setting up email alerts
 
-Email alerts are useful when certain sensor data or conroller health parameter (such as cpu and memory) goes out of normal range. Email notifications are enabled from Configuration -> Telemetry
+Email alerts are useful when certain sensor data or controller health parameter (such as cpu and memory) goes out of normal range. Email notifications are enabled from Configuration -> Telemetry
 
-1. Enable notification under Configuration -> Telemtry tab. Select **Enable email notification** checkbox.
+1. Enable notification under Configuration -> Telemetry tab. Select **Enable email notification** checkbox.
 ![notification-enable](/img/telemetry/email-enable.png)
 
 2. Once selected, email settings related fields will appear. Specify email server and username details. Click on the **Update** button.
