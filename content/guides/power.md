@@ -129,7 +129,7 @@ Timers can be used to automate use cases like two part dosing, refugium light et
 
 ### A note on outlet limits
 
-reef-pi uses one GPIO  for rach outlet control. Thus, a single reef-pi can control at most 26 outlets (because there are 26 GPIOs). But a build using all 26 GPIO will not be able to support most other modules, since water level sensor (used for ATO) and mechanical swicthes/push buttons also uses GPIOs. But if you do want to use reef-pi this way, Disable spi, one wire , i2c and pwm via raspi-config utility to use all 26 GPIO.
+reef-pi uses one GPIO  for rach outlet control. Thus, a single reef-pi can control at most 26 outlets (because there are 26 GPIOs). But a build using all 26 GPIO will not be able to support most other modules, since water level sensor (used for ATO) and mechanical switches/push buttons also uses GPIOs. But if you do want to use reef-pi this way, Disable spi, one wire , i2c and pwm via raspi-config utility to use all 26 GPIO.
 
 It is safe to use reef-pi build can control at most 22 outlets. Enable i2c, pwm and disable spi,uart to use 22 GPIO pins. This leave 1 GPIO for water level sensor, 1 for temperature sensor and two for i2c communication (for pca9685 pwm IC).
 

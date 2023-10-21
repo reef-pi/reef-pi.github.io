@@ -14,7 +14,7 @@ keywords:
 - coral
 ---
 
-reef-pi can be configured to be used with the offical Raspberry Pi Touchscreen display to provide a direct access to reef-pi, without any network dependency. With a touchscreen it is possible to run reef-pi without any internet or even home wifi connection ( albeit modules like telemetry will not work). Activities like equipment on/off during water change, light intensity controls  are all possible with touchscreen. Workflows involving editing text (like the one involved in creating new timer or equipment) are harder to setup, but can be done using on screen keyboard software (e.g. matchbox-keyboard).
+reef-pi can be configured to be used with the official Raspberry Pi Touchscreen display to provide a direct access to reef-pi, without any network dependency. With a touchscreen it is possible to run reef-pi without any internet or even home wifi connection ( albeit modules like telemetry will not work). Activities like equipment on/off during water change, light intensity controls  are all possible with touchscreen. Workflows involving editing text (like the one involved in creating new timer or equipment) are harder to setup, but can be done using on screen keyboard software (e.g. matchbox-keyboard).
 
 The touchscreen display is only tested with Raspberry Pi 3, not with pi zero.
 

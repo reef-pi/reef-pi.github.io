@@ -39,6 +39,6 @@ You'll notice the IP address matches the local address used to access reef-pi vi
 
 You can change the "user1" entry to whatever you want. Remember, the *stealth* entry right before the "user1" is important,  that entry makes your hidden service only viewable by people with the specific key (which you'll get in step 7. The "user1" generates a new key. If you want to have multiple users, just change the "user1" entry and you'll end up with a new key.
 
-Follow the rest of the directions for getting a Tor client and browser for your computer and Andriod device (haven't been able to locate an iOS option for this yet) and you will be ready to go.
+Follow the rest of the directions for getting a Tor client and browser for your computer and Android device (haven't been able to locate an iOS option for this yet) and you will be ready to go.
 
 Please note: Tor is slow. Right after you've created your Hidden Service it may take 10 minutes for the Tor network to populate and allow the connection. In addition, it may take 1 minute for the reef-pi page to load. Once it's loaded them the delays are considerably reduced.

@@ -47,7 +47,7 @@ Following is assorted list of online resources related to reef-pi that you may f
 
 ## Extending reef-pi with other system
 
-- [Home assitant](https://github.com/sfgabe/home_assistant/wiki/Custom-Home-Assistant-Config-with-Reef-Pi) integration
+- [Home assistant](https://github.com/sfgabe/home_assistant/wiki/Custom-Home-Assistant-Config-with-Reef-Pi) integration
 - [Float switch wiring](https://www.reef2reef.com/threads/reef-pi-an-opensource-reef-tank-controller-based-on-raspberry-pi.289256/page-356#post-5312272) details
 - [reef brite control](https://www.reef2reef.com/threads/reef-pi-an-opensource-reef-tank-controller-based-on-raspberry-pi.289256/page-317#post-5170928) details
 - American DJ SR P8 power strip 's [DB9 pinout details](https://www.reef2reef.com/threads/diy-reef-pi-build-log.458088/#post-5156444)

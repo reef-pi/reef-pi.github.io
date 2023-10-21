@@ -18,7 +18,7 @@ keywords:
 
 Automatic top off units are systems that maintain a constant water volume inside a reef tank. Reef tanks goes through water evaporation which results in loss of water volume, which in turn increases the salinity of remaining water. Corals are highly sensitive to salinity thus unless the evaporated water is supplemented with fresh RO/DI water it will have a detrimental effect on corals. Auto top off units monitors water level periodically, and when it falls below a certain level, they switch on an ATO pump to replenish the lost water volume with fresh RO/DI water, till it reaches the expected volume. The degree of water evaporation is dependent on several factors like ambient temperature,  whether the tank has an open top or closed lid, if a fan is used to cool down tanks etc. The effect of water loss due to evaporation is dependant on tank size. Our understanding is smaller tanks such as nano and pico reefs in temperate regions,  require ATO more than bigger tanks. A stable water level is also important for optimal skimmers performance.
 
-This build guide will cover how to build an inexpensive yet effective auto top off unit using reef-pi. A beginner freindly [guide](https://learn.adafruit.com/reef-pi-water-level-controller/) is available on learn.adafruit.com
+This build guide will cover how to build an inexpensive yet effective auto top off unit using reef-pi. A beginner friendly [guide](https://learn.adafruit.com/reef-pi-water-level-controller/) is available on learn.adafruit.com
 
 ### How this work
 
