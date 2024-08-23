@@ -21,7 +21,7 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->` | safeHTML }}
 
-    {{- template "_internal/google_analytics_async.html" . }}
+    {{- template "_internal/google_analytics.html" . }}
     {{ if .IsTranslated }}
 	{{ range .Translations }}
 	<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
