@@ -12,18 +12,6 @@ custom_css = ["css/img.css"]
   Github    = "reef-pi"
   Email     = "info@reef-pi.com"
   Twitter   = "reef_pi"
-
-[[menu.main]]
-  name = "guides"
-  identifier = "guides"
-  weight = 50
-  url = "/guides/"
-
-[[menu.main]]
-  name = "additional documentation"
-  identifier = "additional documentation"
-  weight = 100
-  url = "/additional-documentation/"
   
 [languages]
   [languages.en-us]
@@ -31,7 +19,34 @@ custom_css = ["css/img.css"]
     LanguageName = "English"
 
     title = "reef-pi - An opensource reef tank controller based on Raspberry Pi"
+
+    [languages.en-us.menus]
+      [[languages.en-us.menus.main]]
+        name = "guides"
+        identifier = "guides"
+        weight = 50
+        pageRef = '/guides'
+
+      [[languages.en-us.menus.main]]
+        name = "additional documentation"
+        identifier = "additional documentation"
+        weight = 100
+        pageRef = '/additional-documentation'
+
   [languages.es-es]
     weight = 2
     LanguageName = "Español"
     title = "reef-pi - Un controlador para acuario marino basado en Raspberry Pi"
+
+  [languages.es-es.menus]
+    [[languages.es-es.menus.main]]
+      name = "Guias"
+      identifier = "guides"
+      weight = 50
+      pageRef = '/guides'
+
+    [[languages.es-es.menus.main]]
+      name = "Documentación adicional"
+      identifier = "additional documentation"
+      weight = 100
+      pageRef = '/additional-documentation'
